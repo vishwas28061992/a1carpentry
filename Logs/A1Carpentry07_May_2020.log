@@ -1,0 +1,49 @@
+Logs for: A1Carpentry , A1Carpentry
+[Thursday, May 07, 2020 02:12:47 PM] Error 14784 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1551
+[Thursday, May 07, 2020 02:13:01 PM] Error 14784 >> Error occured in ApprovalMailbox name not allowed. The server response was: Relaying disallowed as support@a1carpentryinc.com   at System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)
+   at System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)
+   at System.Net.Mail.SmtpConnection.OnClose(Object sender, EventArgs args)
+   at System.Net.ClosableStream.Close()
+   at System.Net.Mail.MailWriter.Close()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SupervisorController.SendEmail(String email, String firstName, String lastName, String status, String jobNumber) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SupervisorController.cs:line 567
+   at A1Carpentry.Controllers.SupervisorController.Approval(Int32 id) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SupervisorController.cs:line 416
+[Thursday, May 07, 2020 02:16:29 PM] Error 14784 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1551
+[Thursday, May 07, 2020 02:16:33 PM] Error 14784 >> Error occured in ApprovalMailbox name not allowed. The server response was: Relaying disallowed as support@a1carpentryinc.com   at System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)
+   at System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)
+   at System.Net.Mail.SmtpConnection.OnClose(Object sender, EventArgs args)
+   at System.Net.ClosableStream.Close()
+   at System.Net.Mail.MailWriter.Close()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SupervisorController.SendEmail(String email, String firstName, String lastName, String status, String jobNumber) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SupervisorController.cs:line 567
+   at A1Carpentry.Controllers.SupervisorController.Approval(Int32 id) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SupervisorController.cs:line 416
+[Thursday, May 07, 2020 03:02:11 PM] Error 2836 >> Error occured in CreateJobProfile (Post)Value cannot be null.
+Parameter name: source   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at A1Carpentry.Controllers.SuperAdminController.CreateJobProfile(JobsModel objJobs, List`1 ToolName) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 401
+[Thursday, May 07, 2020 03:02:15 PM] Error 2836 >> Error occured in CreateJobProfile (Post)Value cannot be null.
+Parameter name: source   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at A1Carpentry.Controllers.SuperAdminController.CreateJobProfile(JobsModel objJobs, List`1 ToolName) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 401
+[Thursday, May 07, 2020 03:02:20 PM] Error 2836 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1551
+[Thursday, May 07, 2020 03:07:21 PM] Error 2836 >> Error occured in CreateJobProfile (Post)Value cannot be null.
+Parameter name: source   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at A1Carpentry.Controllers.SuperAdminController.CreateJobProfile(JobsModel objJobs, List`1 ToolName) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 401
+[Thursday, May 07, 2020 03:07:36 PM] Error 2836 >> Exception occured in : GetJobProfileSummary Reading from the stream has failed.   at MySql.Data.MySqlClient.MySqlStream.LoadPacket()
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.ReadOk(Boolean read)
+   at MySql.Data.MySqlClient.NativeDriver.SetDatabase(String dbName)
+   at MySql.Data.MySqlClient.Driver.SetDatabase(String dbName)
+   at MySql.Data.MySqlClient.MySqlConnection.ChangeDatabase(String databaseName)
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1525
+[Thursday, May 07, 2020 03:08:13 PM] Error 2836 >> Error occured in CreateJobProfile (Post)Value cannot be null.
+Parameter name: source   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at A1Carpentry.Controllers.SuperAdminController.CreateJobProfile(JobsModel objJobs, List`1 ToolName) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 401
+[Thursday, May 07, 2020 03:08:15 PM] Error 2836 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1551

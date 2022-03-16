@@ -1,0 +1,300 @@
+﻿@model IEnumerable<A1Carpentry.Models.JobDetailsModel>
+
+
+
+@{
+    ViewBag.Title = "JobDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+
+        .popup-content-text {
+            text-align: center;
+            color: #fff;
+            font-size: 20px;
+        }
+
+        html {
+            box-sizing: border-box;
+            font-family: sans-serif;
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            -ms-overflow-style: scrollbar
+        }
+
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box !important
+        }
+    </style>
+</head>
+
+@using (Html.BeginForm("JobFinish", "TimeCard", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+{
+
+<body data-sa-theme="1">
+
+    <section class="content">
+        <header class="content__title">
+            <h1>Job Details</h1>
+        </header>
+
+        <div class="statbox widget box box-shadow">
+
+            <div class="widget-content widget-content-area">
+
+                <div class="table-responsive mb-4">
+                    <table id="data-table" class="table style-2 table-bordered  table-hover">
+                        <thead>
+                            <tr>
+                                @*<th>Job Detail ID</th>
+                                    <th>Job ID</th>
+                                    <th>Job No.</th>*@
+                                <th>Job Name</th>
+                                <th>Job Task</th>
+                                <th>Job Type</th>
+                                <th>Status</th>
+                                <th>workdone image</th>
+                                @*<th>&nbsp;</th>*@
+                                @* <th>&nbsp;</th>*@
+                                <th>Inprogress work</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    @*<td>@item.JobDetailID</td>
+                                        <td>@item.JobID</td>
+                                        <td>@item.JobNumber</td>*@
+                                    <td>@item.JobName</td>
+                                    <td>@item.JobTask</td>
+                                    <td>@item.JobType</td>
+
+                                    @*@if (item.Status == "Attachment File Pending")
+                                        {
+                                        <td class="text-danger">@item.Status</td>
+                                        }
+                                        else
+                                        {
+                                        <td class="text-success">@item.Status</td>
+                                        }*@
+
+
+                                    @if (item.Pending == "Pending")
+                                    {
+                                        <td class="text-danger">@item.Pending</td>
+                                    }
+                                    else
+                                    {
+                                        <td class="text-success">@item.Pending</td>
+                                    }
+
+
+                                    @if (item.Status == "Attachment File Pending")
+                                    {
+                                        @*<td>
+                                                <label style="display:none" id="JobDId">@item.JobDetailID</label>
+                                            </td>*@
+                                        <td>
+                                            <label style="display:none" id="JobDId">@item.JobDetailID</label>
+                                            <a href="@Url.Action("JobFinish", "TimeCard", new { id = @item.JobDetailID })" data-toggle="modal" data-target="#exampleModalCenter" class="shadow-none badge badge-warning">Upload File</a>
+                                        </td>
+                                    }
+                                    else
+                                    {
+                                        <td>
+                                            @*<label style="display:none" id="JobDId">@item.JobDetailID</label>*@
+                                        </td>
+                                    }
+
+
+                                    @if (item.Pending == "Pending")
+                                    {
+                                        @*<td>
+                                                <label style="display:none" id="JobDId">@item.JobDetailID</label>
+                                            </td>*@
+                                        <td>
+                                            <label style="display:none" id="JobDId">@item.JobDetailID</label>
+                                            <a href="@Url.Action("JobFinish", "TimeCard", new { id = @item.JobDetailID })" data-toggle="modal" data-target="#exampleModalCenter" class="shadow-none badge badge-warning">Finish Job</a>
+                                        </td>
+                                    }
+                                    else
+                                    {
+                                        <td>
+                                            @*<label style="display:none" id="JobDId">@item.JobDetailID</label>*@
+                                        </td>
+                                    }
+
+                                </tr>
+                            }
+
+                        </tbody>
+
+                    </table>
+
+
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <form method="post" enctype="multipart/form-data">
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Attach Work Done Picture</h5>
+                        <button type="button" style="color:white" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="form-group col-md-12" style="margin-top:2rem">
+                        @*@Html.textbox("Path", new { @class = "form-control textarea-autosize DenyTextReason", placeholder = "Why Deniel ?", id = "Path" })*@
+                        <input type="file" id="file" name="file" class="dropzone">
+                        <i class="form-group__bar"></i>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" id="Save" onclick="return SubmitDetails()" class="btn btn-primary">Submit</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <button type="button" class="open-AddBookDialog shadow-none btn btn-primary btn-new" data-toggle="modal" id="btnSubmit" data-target="#exampleModalCenterpopwindow">Submit</button>
+    <div class="modal fade" id="exampleModalCenterpopwindow" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Job Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="popup-content-text">  You Not Choose Any File !! Then Please Select File </p>
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" data-dismiss="modal" aria-label="Close" class="btn btn-primary">ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+}
+</html>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+<script type="text/javascript">
+
+    $('#myModal').on('shown.bs.modal', function () {
+        debugger
+
+        $('#myInput').trigger('focus')
+
+
+    })
+
+
+</script>
+
+<script type="text/javascript">
+
+    function SubmitDetails() {
+
+        debugger
+        //var Path = $("#Path").val();
+
+        //var data = new FormData();
+        //var files = $("#Path").get(0).files;
+
+        //if (files.length > 0) { data.append("HelpSectionImages", files[0]); }
+        //else {
+        //    common.showNotification('warning', 'Please select file to upload.', 'top', 'right');
+        //    return false;
+        //}
+
+
+
+        var ID = $("#JobDId");
+        var $JobDId = ID.text();
+
+        var $file = document.getElementById('file'),
+            $formData = new FormData();
+            console.log($file);
+        if ($file.files.length > 0) {
+            for (var i = 0; i < $file.files.length; i++) {
+                $formData.append('file-' + i, $file.files[i]);
+            }
+        }
+
+        $formData.append("jobDID", $("#JobDId").text());
+      //  console.log($formData);
+       /// alert($formData);
+
+        $.ajax({
+            url: '/TimeCard/JobFinish',             // Changed
+            type: 'POST',
+            data:  $formData,
+            dataType: 'json',
+            contentType: false,
+            processData: false,
+            success: function (result) {
+
+                if (result == true) {
+                    debugger;
+                    window.location.href = '@Url.Action("JobDetails", "TimeCard")';
+                }
+                 else {
+                     debugger;
+                    // window.location.href = '@Url.Action("JobDetails", "TimeCard")';
+                     debugger;
+                    // alert("Error occured in Job updating please try again..!");
+                    document.getElementById("btnSubmit").click();
+                }
+
+            }
+        });
+
+
+
+
+
+
+        @*$.ajax({
+            url: '/TimeCard/JobFinish',
+            data: { Path1: Path, JobDId: JobDId},/* Path1: Path, JobDId: JobDId, */
+            success: function (result) {
+                if (result == true) {
+                    window.location.href = '@Url.Action("AdminNotification", "Supervisor")';
+                }
+                else {
+                    window.location.href = '@Url.Action("SupervisorApproval", "Supervisor")';
+                }
+            }
+        })*@
+    };
+
+</script>

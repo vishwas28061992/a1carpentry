@@ -1,0 +1,128 @@
+Logs for: A1Carpentry , A1Carpentry
+[Friday, July 10, 2020 12:41:48 AM] Error 3408 >> Error occured in EmployeeProfile Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendEmail(UsersModel ObjUser) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1728
+   at A1Carpentry.Controllers.SuperAdminController.employeetools(List`1 ToolName) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 169
+[Friday, July 10, 2020 12:43:02 AM] Error 3408 >> Error occured in EmployeeProfile Object reference not set to an instance of an object.   at A1Carpentry.Controllers.SuperAdminController.employeetools(List`1 ToolName) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 157
+[Friday, July 10, 2020 01:04:21 AM] Error 14388 >> Couldn't able to delete Pretask Details
+[Friday, July 10, 2020 12:02:06 PM] Error 11392 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Friday, July 10, 2020 12:02:55 PM] Error 11392 >> Couldn't able to delete Employee Details (above 4userid deleted)
+[Friday, July 10, 2020 12:17:31 PM] Error 11392 >> Couldn't able to delete Employee Details
+[Friday, July 10, 2020 01:36:14 PM] Error 12332 >> Error occured in ReasonSubmit (JsonResult)Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at A1Carpentry.Controllers.SupervisorController.ReasonSubmit(String Reason, String JobDId) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SupervisorController.cs:line 122
+[Friday, July 10, 2020 01:37:33 PM] Error 12332 >> Error occured in ReasonSubmit (JsonResult)Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at A1Carpentry.Controllers.SupervisorController.ReasonSubmit(String Reason, String JobDId) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SupervisorController.cs:line 122
+[Friday, July 10, 2020 01:41:14 PM] Error 12332 >> Error occured in ReasonSubmit (JsonResult)Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at A1Carpentry.Controllers.SupervisorController.ReasonSubmit(String Reason, String JobDId) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SupervisorController.cs:line 122
+[Friday, July 10, 2020 01:42:17 PM] Error 12332 >> Error occured in ReasonSubmit (JsonResult)Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at A1Carpentry.Controllers.SupervisorController.ReasonSubmit(String Reason, String JobDId) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SupervisorController.cs:line 122
+[Friday, July 10, 2020 01:48:59 PM] Error 9868 >> Error occured in ReasonSubmit (JsonResult)Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at A1Carpentry.Controllers.SupervisorController.ReasonSubmit(String Reason, String JobDId) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SupervisorController.cs:line 122
+[Friday, July 10, 2020 01:49:02 PM] Error 9868 >> Error occured in ReasonSubmit (JsonResult)Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at A1Carpentry.Controllers.SupervisorController.ReasonSubmit(String Reason, String JobDId) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SupervisorController.cs:line 122
+[Friday, July 10, 2020 01:49:03 PM] Error 9868 >> Error occured in ReasonSubmit (JsonResult)Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at A1Carpentry.Controllers.SupervisorController.ReasonSubmit(String Reason, String JobDId) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SupervisorController.cs:line 122
+[Friday, July 10, 2020 01:49:03 PM] Error 9868 >> Error occured in ReasonSubmit (JsonResult)Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at A1Carpentry.Controllers.SupervisorController.ReasonSubmit(String Reason, String JobDId) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SupervisorController.cs:line 122
+[Friday, July 10, 2020 01:51:32 PM] Error 9868 >> Error occured in ReasonSubmit (JsonResult)Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at A1Carpentry.Controllers.SupervisorController.ReasonSubmit(String Reason, String JobDId) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SupervisorController.cs:line 122
+[Friday, July 10, 2020 02:09:37 PM] Error 11956 >> Error occured in EmployeeProfile Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendEmail(UsersModel ObjUser) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1726
+   at A1Carpentry.Controllers.SuperAdminController.employeetools(List`1 ToolName) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 169
+[Friday, July 10, 2020 02:10:17 PM] Error 11956 >> Error occured in EmployeeProfile Object reference not set to an instance of an object.   at A1Carpentry.Controllers.SuperAdminController.employeetools(List`1 ToolName) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 157
+[Friday, July 10, 2020 02:39:27 PM] Error 4996 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Friday, July 10, 2020 02:42:17 PM] Error 4996 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Friday, July 10, 2020 02:44:02 PM] Error 4996 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Friday, July 10, 2020 02:49:00 PM] Error 4996 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Friday, July 10, 2020 02:49:04 PM] Error 4996 >> Couldn't able to delete job
+[Friday, July 10, 2020 03:10:50 PM] Error 1732 >> Error occured in EmployeeProfile Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendEmail(UsersModel ObjUser) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1702
+   at A1Carpentry.Controllers.SuperAdminController.employeetools(List`1 ToolName) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 169
+[Friday, July 10, 2020 03:16:23 PM] Error 20368 >> Error occured in EmployeeProfile Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendEmail(UsersModel ObjUser) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1702
+   at A1Carpentry.Controllers.SuperAdminController.employeetools(List`1 ToolName) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 169
+[Friday, July 10, 2020 08:12:36 PM] Error 10636 >> Error occured in EmployeeProfile Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendEmail(UsersModel ObjUser) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1702
+   at A1Carpentry.Controllers.SuperAdminController.employeetools(List`1 ToolName) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 169
+[Friday, July 10, 2020 08:13:10 PM] Error 10636 >> Error occured in EmployeeProfile Object reference not set to an instance of an object.   at A1Carpentry.Controllers.SuperAdminController.employeetools(List`1 ToolName) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 160
+[Friday, July 10, 2020 08:13:14 PM] Error 10636 >> Error occured in EmployeeProfile Object reference not set to an instance of an object.   at A1Carpentry.Controllers.SuperAdminController.employeetools(List`1 ToolName) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 160
+[Friday, July 10, 2020 08:14:42 PM] Error 10636 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2204
+[Friday, July 10, 2020 08:14:46 PM] Error 10636 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2204
+[Friday, July 10, 2020 08:15:03 PM] Error 10636 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2204
+[Friday, July 10, 2020 09:34:28 PM] Information 18720 >> Could not Update JobProfile in database (Post)
+[Friday, July 10, 2020 10:40:58 PM] Error 11524 >> Error occured in EmployeeProfile Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendEmail(UsersModel ObjUser) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1702
+   at A1Carpentry.Controllers.SuperAdminController.employeetools(List`1 ToolName) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 169
+[Friday, July 10, 2020 10:41:32 PM] Error 11524 >> Error occured in EmployeeProfile Object reference not set to an instance of an object.   at A1Carpentry.Controllers.SuperAdminController.employeetools(List`1 ToolName) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 160
+[Friday, July 10, 2020 10:41:44 PM] Error 11524 >> Error occured in EmployeeProfile Object reference not set to an instance of an object.   at A1Carpentry.Controllers.SuperAdminController.employeetools(List`1 ToolName) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 160
+[Friday, July 10, 2020 10:41:50 PM] Error 11524 >> Error occured in EmployeeProfile Object reference not set to an instance of an object.   at A1Carpentry.Controllers.SuperAdminController.employeetools(List`1 ToolName) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 160
+[Friday, July 10, 2020 10:42:34 PM] Error 11524 >> Error occured in EmployeeProfile Object reference not set to an instance of an object.   at A1Carpentry.Controllers.SuperAdminController.employeetools(List`1 ToolName) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 160
+[Friday, July 10, 2020 10:46:21 PM] Error 5192 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2204
+[Friday, July 10, 2020 10:46:24 PM] Error 5192 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2204
+[Friday, July 10, 2020 10:46:28 PM] Error 5192 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2204
+[Friday, July 10, 2020 10:46:31 PM] Error 5192 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2204
+[Friday, July 10, 2020 10:46:39 PM] Information 5192 >> count 0 in jobNumber (Job)
+[Friday, July 10, 2020 10:46:55 PM] Error 5192 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Friday, July 10, 2020 11:01:24 PM] Error 5192 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Friday, July 10, 2020 11:11:53 PM] Error 5192 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2204
+[Friday, July 10, 2020 11:11:56 PM] Error 5192 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2204
+[Friday, July 10, 2020 11:11:59 PM] Error 5192 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2204
+[Friday, July 10, 2020 11:12:20 PM] Information 5192 >> count 0 in jobNumber (Job)
+[Friday, July 10, 2020 11:12:34 PM] Error 5192 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Friday, July 10, 2020 11:17:33 PM] Error 5192 >> Error occured in EmployeeProfile Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendEmail(UsersModel ObjUser) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1702
+   at A1Carpentry.Controllers.SuperAdminController.employeetools(List`1 ToolName) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 169
+[Friday, July 10, 2020 11:18:07 PM] Error 5192 >> Error occured in EmployeeProfile Object reference not set to an instance of an object.   at A1Carpentry.Controllers.SuperAdminController.employeetools(List`1 ToolName) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 160

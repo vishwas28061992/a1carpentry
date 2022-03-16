@@ -1,0 +1,4 @@
+Logs for: A1Carpentry , A1Carpentry
+[Monday, May 04, 2020 02:08:36 PM] Error 13532 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1551

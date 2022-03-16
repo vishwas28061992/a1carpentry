@@ -1,0 +1,62 @@
+﻿@model A1Carpentry.Models.UsersModel
+@{
+    ViewBag.Title = "NumberofToolnames";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+        html {
+            box-sizing: border-box;
+            font-family: sans-serif;
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            -ms-overflow-style: scrollbar
+        }
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box !important
+        }
+    </style>
+</head>
+<body data-sa-theme="1">
+    <section class="content">
+        <header class="content__title">
+            <h1>Tools Details</h1>
+        </header>
+        <div class="statbox widget box box-shadow">
+            <div class="widget-content widget-content-area">
+                  <div class="table-responsive mb-4">
+                   <table id="data-table" class="table style-2 table-bordered  table-hover">
+                       <thead>
+                           <tr>                          
+                               <th>Tool Names</th>
+                               <th>Tool Inventry Numbers </th>
+                               <th>Tool Serial Number</th>
+                               <th>Tool Type</th>                 
+                           </tr>
+                       </thead>
+                       <tbody>
+                           @foreach (var item in Model.Tools)
+                            {
+                                   <tr>
+                                       <td> @item.ToolName</td>
+                                       <td>@item.InventryNumber</td>
+                                       <td>@item.ToolSerialNumber</td>
+                                       <td>@item.ToolType</td>
+                                   </tr>
+                            }                              
+                           </tbody>
+                   </table>
+               </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+

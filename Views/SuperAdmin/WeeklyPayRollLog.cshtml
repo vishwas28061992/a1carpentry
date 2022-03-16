@@ -1,0 +1,132 @@
+﻿@{
+    ViewBag.Title = "Weekly Reports";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+
+
+        html {
+            box-sizing: border-box;
+            font-family: sans-serif;
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            -ms-overflow-style: scrollbar
+        }
+
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box !important
+        }
+    </style>
+
+</head>
+
+<body data-sa-theme="1">
+
+    <section class="content container-fluid">
+        <header class="content__title">
+            <h1>Reports</h1>
+            <div class="text-center">
+                <p id="Datamessage" style="display:none" class="text-danger"><b>Please enter valid dates to proceed</b></p>
+            </div>
+          
+        </header>
+
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @*<input type="text" class="form-control datetime-picker" placeholder="Start a date & time" id="StartDate" autocomplete="off" />*@
+                            <input type="text" class="form-control date-picker" placeholder="Select Start a date" id="StartDate" autocomplete="off" />
+                            <i class="form-group__bar"></i>
+                            <h6 style="color:green">*We will add next 7 days to the selected date.</h6>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-sm-12">	<div class="text-center">  <button type="submit" onclick="return Search()" class="btn btn-primary btn-new py-3 my-sm-4"id="load2" data-loading-text="<i class='fa fa-spinner fa-spin '></i> Processing Generate Report">Generate Report</button> </div></div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </section>
+</body>
+</html>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+<script type="text/javascript">
+
+    function Search() {
+        debugger
+        var startDate = document.getElementById("StartDate").value;
+
+        let curentdate = new Date();
+
+        if (startDate != "") {
+
+            if (curentdate < new Date(startDate)) {
+                $("#Datamessage").css("display", "block");
+            }
+            else {
+                GetReports(startDate);
+                $("#Datamessage").css("display", "none");
+            }
+
+        }
+
+    };
+
+
+    function GetReports(startDate, endDate) {
+        debugger
+        $.ajax({
+            url: '/SuperAdmin/WeeklyPayRollLogExport',
+
+            data: { startDate: startDate },
+            success: function (result) {
+                if (result != "") {
+                    window.location.href = '@Url.Action("DownloadFile", "SuperAdmin")';
+                }
+                else {
+                    window.location.href = '@Url.Action("DownloadFile", "SuperAdmin")';
+                }
+
+
+            },
+
+        });
+
+
+    };
+
+</script>
+<script>
+
+    $('.btn').on('click', function () {
+        var $this = $(this);
+        $this.button('loading');
+        setTimeout(function () {
+            $this.button('reset');
+        }, 110000);
+    });
+
+</script>

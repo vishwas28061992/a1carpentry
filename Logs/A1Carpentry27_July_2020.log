@@ -1,0 +1,16 @@
+Logs for: A1Carpentry , A1Carpentry
+[Monday, July 27, 2020 04:33:23 PM] Error 21652 >> Error occured in GetDailywork Fatal error encountered during command execution.   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at A1Carpentry.DBhelper.SqlHelper.GenerateRepots(DateTime Startdate, DateTime Enddate) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3816
+[Monday, July 27, 2020 04:33:44 PM] Error 21652 >> Error occured in GetDailywork Fatal error encountered during command execution.   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at A1Carpentry.DBhelper.SqlHelper.GenerateRepots(DateTime Startdate, DateTime Enddate) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3816
+[Monday, July 27, 2020 04:37:25 PM] Error 21652 >> Error occured in GetDailywork Fatal error encountered during command execution.   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at A1Carpentry.DBhelper.SqlHelper.GenerateRepots(DateTime Startdate, DateTime Enddate) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3816
+[Monday, July 27, 2020 04:39:16 PM] Error 21652 >> Error occured in GetDailywork Fatal error encountered during command execution.   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at A1Carpentry.DBhelper.SqlHelper.GenerateRepots(DateTime Startdate, DateTime Enddate) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3816
+[Monday, July 27, 2020 05:03:28 PM] Error 12744 >> Error occured in GetDailywork Fatal error encountered during command execution.   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at A1Carpentry.DBhelper.SqlHelper.GenerateRepots(DateTime Startdate, DateTime Enddate)

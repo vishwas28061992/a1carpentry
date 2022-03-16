@@ -1,0 +1,120 @@
+Logs for: A1Carpentry , A1Carpentry
+[Tuesday, July 14, 2020 03:25:49 PM] Error 12804 >> Exception occured in : GetTools NamesYou have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at A1Carpentry.DBhelper.SqlHelper.toolnames(String str) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3084
+[Tuesday, July 14, 2020 03:25:49 PM] Error 12804 >> Error occured in tools updated Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Int32.Parse(String s)
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at A1Carpentry.Controllers.SuperAdminController.ToolsEdit(List`1 ToolName) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 2326
+[Tuesday, July 14, 2020 03:26:09 PM] Error 12804 >> Exception occured in : GetTools NamesYou have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at A1Carpentry.DBhelper.SqlHelper.toolnames(String str) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3084
+[Tuesday, July 14, 2020 03:26:37 PM] Error 12804 >> Exception occured in : GetTools NamesYou have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at A1Carpentry.DBhelper.SqlHelper.toolnames(String str) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3084
+[Tuesday, July 14, 2020 03:31:37 PM] Error 12804 >> Exception occured in : GetAllToolsDetails Unable to connect to any of the specified MySQL hosts.   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at A1Carpentry.DBhelper.SqlHelper.GetAllToolsDetails() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1825
+[Tuesday, July 14, 2020 03:31:52 PM] Error 12804 >> Exception occured in : GetTools NamesUnable to connect to any of the specified MySQL hosts.   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at A1Carpentry.DBhelper.SqlHelper.toolnames(String str) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3076
+[Tuesday, July 14, 2020 04:29:08 PM] Error 4124 >> Exception occured in : GetTools NamesYou have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at A1Carpentry.DBhelper.SqlHelper.toolnames(String str) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3084
+[Tuesday, July 14, 2020 04:31:47 PM] Error 4124 >> Error occured in Update User table Unable to connect to any of the specified MySQL hosts.   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at A1Carpentry.DBhelper.SqlHelper.Updatetoolsinjobmodel(String toolids, Int32 id) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3478
+[Tuesday, July 14, 2020 04:31:47 PM] Information 4124 >> Could not Update JobProfile in database (Post)
+[Tuesday, July 14, 2020 04:32:02 PM] Error 4124 >> Exception occured in : GetJobDetailsToApprovewithtasklogs Unable to connect to any of the specified MySQL hosts.   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at A1Carpentry.DBhelper.SqlHelper.GetGaragdetails() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3021
+[Tuesday, July 14, 2020 04:42:27 PM] Error 4124 >> Exception occured in : GetTools NamesYou have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at A1Carpentry.DBhelper.SqlHelper.toolnames(String str) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3084
+[Tuesday, July 14, 2020 04:43:47 PM] Error 4124 >> Exception occured in : GetTools NamesYou have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at A1Carpentry.DBhelper.SqlHelper.toolnames(String str) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3084
+[Tuesday, July 14, 2020 07:29:00 PM] Error 14132 >> Error occured in UpdateEmployeeDetails in ToolsValue cannot be null.
+Parameter name: source   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at A1Carpentry.Controllers.SuperAdminController.EmployeeDetails(UsersModel objUser, List`1 ToolName) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 301
+[Tuesday, July 14, 2020 07:40:54 PM] Error 14132 >> Error occured in UpdateEmployeeDetails in ToolsValue cannot be null.
+Parameter name: source   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at A1Carpentry.Controllers.SuperAdminController.EmployeeDetails(UsersModel objUser, List`1 ToolName) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 301
+[Tuesday, July 14, 2020 07:43:45 PM] Error 14132 >> Error occured in UpdateEmployeeDetails in ToolsValue cannot be null.
+Parameter name: source   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at A1Carpentry.Controllers.SuperAdminController.EmployeeDetails(UsersModel objUser, List`1 ToolName) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 301
+[Tuesday, July 14, 2020 11:04:16 PM] Error 800 >> Error occured in UpdateJobProfile Fatal error encountered during command execution.   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at A1Carpentry.DBhelper.SqlHelper.UpdateJobProfile(JobsModel objJobs) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1989
+[Tuesday, July 14, 2020 11:04:19 PM] Information 800 >> Could not Update JobProfile in database (Post)
+[Tuesday, July 14, 2020 11:15:13 PM] Error 16428 >> Error occured in UpdateJobProfile Fatal error encountered during command execution.   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at A1Carpentry.DBhelper.SqlHelper.UpdateJobProfile(JobsModel objJobs) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1989
+[Tuesday, July 14, 2020 11:15:13 PM] Information 16428 >> Could not Update JobProfile in database (Post)
+[Tuesday, July 14, 2020 11:26:45 PM] Error 4192 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2204
+[Tuesday, July 14, 2020 11:26:48 PM] Error 4192 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2204
+[Tuesday, July 14, 2020 11:26:51 PM] Error 4192 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2204
+[Tuesday, July 14, 2020 11:26:54 PM] Information 4192 >> count 0 in jobNumber (Job)

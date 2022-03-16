@@ -1,0 +1,125 @@
+﻿@model A1Carpentry.Models.ToolsModel
+
+@{
+
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+</head>
+<body data-sa-theme="1">
+
+
+    @using (Html.BeginForm("Tools", "TimeCard", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+    {
+
+        @Html.AntiForgeryToken() // this is for prevent CSRF attack
+        @Html.ValidationSummary(true)
+
+       
+        <section class="content">
+            <div class="content__inner">
+                <header class="content__title">
+                    <h1> Create Tools </h1>
+                </header>
+
+                <div>
+                    <span class="alert alert-danger" style="display:none" id="lblError">
+                        <b>Please enter all fields to proceed. </b>
+                    </span>
+                   
+                    @if (ViewData["errormessage"] != null)
+                    {
+                        <p class="alert alert-danger" id="successMessage"><b> @ViewData["errormessage"]</b></p>
+                    }
+                </div>
+
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.ToolName, new { @class = "form-control", maxlength = "9", autocomplete = "off", placeholder = "Tool Name*" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.ToolSerialNumber, new { @class = "form-control", autocomplete = "off", placeholder = "Tool Serial Number*" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">	<div class="text-center">  <button type="submit" onclick="return Validation()" class="btn btn-primary btn-new">Submit</button> </div></div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </section>
+    }
+
+
+
+
+
+
+
+</body>
+</html>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+
+
+<script>
+    function isNumber(evt) {
+        var iKeyCode = (evt.which) ? evt.which : evt.keyCode
+        if (iKeyCode != 46 && iKeyCode > 31 && (iKeyCode < 48 || iKeyCode > 57))
+            return false;
+        return true;
+    }
+</script>
+
+
+<script type="text/javascript">
+
+
+    function Validation() {
+        debugger;
+        var validations = true;
+
+        var toolName = document.getElementById("ToolName").value;
+        var toolSerialNumber = document.getElementById("ToolSerialNumber").value;
+       
+
+        if (toolName == "" || toolName == null || toolName == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+
+        if (toolSerialNumber == "" || toolSerialNumber == null || toolSerialNumber == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+
+        return validations;
+    }
+
+
+</script>
+
+

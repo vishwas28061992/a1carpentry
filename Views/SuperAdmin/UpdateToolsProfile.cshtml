@@ -1,0 +1,245 @@
+﻿@*@model A1Carpentry.Models.ToolsModel
+
+    @{
+        ViewBag.Title = "UpdateToolsProfile";
+    }
+
+    <h2>UpdateToolsProfile</h2>
+    <body data-sa-theme="1">
+        @using (Html.BeginForm("UpdateToolsProfile", "SuperAdmin", FormMethod.Post, new { @class = "form-horizontal" }))
+        {
+            @Html.AntiForgeryToken()
+            <section class="content">
+                <div class="content__inner">
+                    <header class="content__title">
+                        <h1>Update Tools Profile </h1>
+                    </header>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-6">
+
+                                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.ToolID, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.ToolID, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.ToolID, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.ToolName, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.ToolName, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.ToolName, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.InventryNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.InventryNumber, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.InventryNumber, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.ToolSerialNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.ToolSerialNumber, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.ToolSerialNumber, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.ToolType, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.ToolType, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.ToolType, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-md-offset-2 col-md-10">
+                                            <input type="submit" value="Save" class="btn btn-default" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    @Html.ActionLink("Back to List", "Index")
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        }
+            </body>*@
+
+
+
+@model A1Carpentry.Models.ToolsModel
+@{
+
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+    </style>
+</head>
+<body data-sa-theme="1">
+    @using (Html.BeginForm("UpdateToolsProfile", "SuperAdmin", FormMethod.Post, new { @class = "form-horizontal" }))
+    {
+        @Html.AntiForgeryToken() // this is for prevent CSRF attack
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(a => a.ToolID)
+        <section class="content">
+            <div class="content__inner">
+                <header class="content__title">
+                    <h1>Update Tools Profile </h1>
+                </header>
+                <div class="text-center">
+                    <span style="display:none" id="lblError">
+                        <b style="color:red">  Please enter all fields to proceed. </b>
+                    </span>
+                    @if (ViewData["errormessage"] != null)
+                    {
+                        <p id="successMessage"> <b style="color:red">@ViewData["errormessage"]</b></p>
+                    }
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label><b>Tool Name</b></label>
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.ToolName, new { @class = "form-control", maxlength = "30", autocomplete = "off", placeholder = "Tool Name*" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <label><b>Inventry Number</b></label>
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.InventryNumber, new { @class = "form-control", maxlength = "30", autocomplete = "off", placeholder = "Inventry Number*" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <label><b>ToolSerial Number</b></label>
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.ToolSerialNumber, new { @class = "form-control", maxlength = "30", autocomplete = "off", placeholder = "ToolSerial Number*" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <label><b>Tool Type</b></label>
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.ToolType, new { @class = "form-control", maxlength = "30", autocomplete = "off", placeholder = "Tool Typee*" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <label><b>Add/Remove Employees</b></label>
+                                <div class="form-group">
+                                    @Html.ListBoxFor(m => m.SelectedEmployeeIds, new MultiSelectList(Model.EmployeeList, "Value", "Text"), new { @class = "form-control ", multiple = "multiple", id = "listEmployees", onclick = "ListBox_SelectionChanged(this)" })
+                                    @*@Html.DropDownListFor(m => m.SelectedEmployeeIds, new MultiSelectList(Model.EmployeeList, "Value", "Text"), "Add/Remove Employees", new { @class = "form-control a-select ", multiple = "multiple", id = "listEmployees" })*@
+                                    <i class="form-group__bar"></i>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                            </div>
+                            <div class="col-sm-12 pt-5 p-3">
+                                <div class="text-center">
+                                    <button type="submit" onclick="return Validation()" class="btn btn-primary btn-new">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    }
+
+
+
+
+
+
+
+</body>
+</html>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<script type="text/javascript">
+
+    var selectedEmployees = [];
+    pageLoad();
+
+    function pageLoad()
+    {
+        var ListBox = document.getElementById("listEmployees");
+    
+        for (var i = 0; i < ListBox.length; i++)
+        {
+            selectedEmployees[i] = ListBox.options[i].selected;
+        }
+    }
+
+    function ListBox_SelectionChanged(sender, args)
+    {
+        var scrollPosition = sender.scrollTop;
+    
+        for (var i = 0; i < sender.length; i++)
+        {
+            //if this is the one clicked by the user, toggle it's state
+            if (sender.options[i].selected) selectedEmployees[i] = !selectedEmployees[i];
+        
+            //Assign saved selections from array
+            sender.options[i].selected = selectedEmployees[i] === true;
+        }
+    
+        sender.scrollTop = scrollPosition;
+    }
+
+    function Validation() {
+        debugger;
+        var validations = true;
+
+        var ToolName = document.getElementById("ToolName").value;
+        var InventryNumber = document.getElementById("InventryNumber").value;
+        var ToolSerialNumber = document.getElementById("ToolSerialNumber").value;
+        var ToolType = document.getElementById("ToolType").value;
+      
+
+        if (ToolName == "" || ToolName == null || ToolName == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+        if (InventryNumber == "" || InventryNumber == null || InventryNumber == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+        if (ToolSerialNumber == "" || ToolSerialNumber == null || ToolSerialNumber == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+        if (ToolType == "" || ToolType == null || ToolType== undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+        return validations;
+    }
+</script>
+
+
+

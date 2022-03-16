@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Vendor styles -->
+    <link href="~/vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet" />
+    <link href="~/vendors/bower_components/animate.css/animate.min.css" rel="stylesheet" />
+    <link href="~/vendors/bower_components/jquery.scrollbar/jquery.scrollbar.css" rel="stylesheet" />
+    <link href="~/vendors/bower_components/dropzone/dist/dropzone.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="~/vendors/bower_components/flatpickr/dist/flatpickr.min.css">
+    <!-- App styles -->
+    <link href="~/css/app.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/table/datatable/datatables.css">
+    <link rel="stylesheet" type="text/css" href="~/table/datatable/custom_dt_customer.css">
+
+
+    <title>@ViewBag.Title - A1 Carpentry</title>
+    @Scripts.Render("~/bundles/jquery")
+    @*@Styles.Render("~/Content/css")*@
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                </div>
+            </div>
+        </div>*@
+
+    <main class="main">
+
+        <header class="header" onclick="void(0)">
+            <div class="navigation-trigger hidden-xl-up" data-sa-action="aside-open" data-sa-target=".sidebar">
+                <i class="zmdi zmdi-menu"></i>
+            </div>
+            <div class="logo hidden-sm-down">
+                <h1><a href="@Url.Action("Login","Login")"><img src="~/img/logo_inside.png" class="img-responsive"></a></h1>
+            </div>
+
+
+            <div class="clock hidden-md-down">
+                <div class="time">
+                    <span class="time__hours"></span>
+                    <span class="time__min"></span>
+                    <span class="time__sec"></span>
+                </div>
+            </div>
+        </header>
+        <aside class="sidebar">
+            <div class="scrollbar-inner">
+                <div class="user">
+                    <div class="user__info" data-toggle="dropdown">
+
+                        <img class="user__img" src="~/files/@Session["ImagePath"]" />
+                        <div>
+                            <div class="user__name">
+                                @if (Session["LogedUserName"] != null)
+                                {
+
+                                    <b> Welcome @Session["LogedUserName"].ToString()</b>
+
+                                }
+                            </div>
+                            <div></div>
+
+                        </div>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="@Url.Action("LogOut","Login")">Logout</a>
+                    </div>
+                </div>
+                <ul class="navigation">
+
+                    @if (Session["RoleID"].Equals("3"))
+                    {
+
+                        <li class="@Html.ActivePage("TimeCard", "TimeCard" )"><a href="@Url.Action("TimeCard","TimeCard")"><img src="~/img/time_card.svg" class="a1_sidemenu">Time Card </a></li>
+                        <li class="@Html.ActivePage("JobDetails", "TimeCard" )"><a href="@Url.Action("JobDetails","TimeCard")"><img src="~/img/job_details.png" class="a1_sidemenu"> Job Details </a></li>
+                        @*<li class="@Html.ActivePage("Tools", "TimeCard" )"><a href="@Url.Action("Tools","TimeCard")"><img src="~/img/jobprofile_summary.svg" class="a1_sidemenu"> Tools </a></li>*@
+                        <li class="@Html.ActivePage("ToolsDetails", "TimeCard" )"><a href="@Url.Action("ToolsDetails","TimeCard")"><img src="~/img/icon_tools.png" class="a1_sidemenu">Tools Details</a></li>
+                        <li class="@Html.ActivePage("AddToolsToUser", "TimeCard" )"><a href="@Url.Action("AddToolsToUser","TimeCard")"><img src="~/img/tools-profile.svg" class="a1_sidemenu"> AddTools</a></li>
+
+
+                    }
+
+
+                    @if (Session["RoleID"].Equals("4") || Session["RoleID"].Equals("1"))
+                    {
+                        <li class="@Html.ActivePage("EmployeeProfile", "SuperAdmin" )"><a href="@Url.Action("EmployeeProfile","SuperAdmin")"><img src="~/img/supervisor_profile.svg" class="a1_sidemenu"> Create Employee</a></li>
+
+                        <li class="@Html.ActivePage("EmployeeDetails", "SuperAdmin" )"><a href="@Url.Action("EmployeeDetails","SuperAdmin")"><img src="~/img/emp-details.svg" class="a1_sidemenu"> Employee Details</a></li>
+
+                        @*<li class="widgetactive"><a href="admin-notifications.html"><i class="zmdi zmdi-widgets"></i> Admin Notifications</a></li>*@
+                        <li class="@Html.ActivePage("CreateJobProfile", "SuperAdmin" )"><a href="@Url.Action("CreateJobProfile","SuperAdmin")"><img src="~/img/admi_job_profile.svg" class="a1_sidemenu"> Create Job </a></li>
+                        <li class="@Html.ActivePage("JobProfileSummary", "SuperAdmin" )"><a href="@Url.Action("JobProfileSummary","SuperAdmin")"><img src="~/img/job-details.svg" class="a1_sidemenu"> Job Details </a></li>
+
+                        <li class="@Html.ActivePage("CreateClient", "SuperAdmin" )"><a href="@Url.Action("CreateClient","SuperAdmin")"><img src="~/img/supervisor_profile.svg" class="a1_sidemenu"> Create Client</a></li>
+                        <li class="@Html.ActivePage("ClientDetails", "SuperAdmin" )"><a href="@Url.Action("ClientDetails","SuperAdmin")"><img src="~/img/time_card.svg" class="a1_sidemenu"> Client Details</a></li>
+
+                        <li class="@Html.ActivePage("CreateTools", "SuperAdmin" )"><a href="@Url.Action("CreateTools","SuperAdmin")"><img src="~/img/tools-profile.svg" class="a1_sidemenu"> Create tools</a></li>
+                        <li class="@Html.ActivePage("TotalToolsdetails", "SuperAdmin" )"><a href="@Url.Action("TotalToolsdetails","SuperAdmin")"><img src="~/img/tools-details.svg" class="a1_sidemenu"> Tools Details</a></li>
+
+                        <li class="@Html.ActivePage("CreateTasks", "SuperAdmin" )"><a href="@Url.Action("CreateTasks","SuperAdmin")"><img src="~/img/task.svg" class="a1_sidemenu"> Create Tasks</a></li>
+                        <li class="@Html.ActivePage("TasksDetails", "SuperAdmin" )"><a href="@Url.Action("TasksDetails","SuperAdmin")"><img src="~/img/task.svg" class="a1_sidemenu">Tasks Details</a></li>
+
+                        <li class="@Html.ActivePage("GarageDetails", "SuperAdmin" )"><a href="@Url.Action("GarageDetails","SuperAdmin")"><img src="~/img/garage-profile.svg" class="a1_sidemenu">Garage Details</a></li>
+                        @*<li class="@Html.ActivePage("Reports", "SuperAdmin" )"><a href="@Url.Action("Reports","SuperAdmin")"><img src="~/img/ReportsImg.svg" class="a1_sidemenu"> Reports</a></li>*@
+
+                        <li class="navigation__sub navigation__sub-- navigation__sub--toggled @Html.ActivePage("Reports", "SuperAdmin" )">
+                            @*<a><img src="~/img/ReportsImg.svg" class="a1_sidemenu">Reports</a>*@
+                            <a><img src="~/img/ReportsImg.svg" class="a1_sidemenu">Reports</a>
+                            <ul>
+                                <li><a href="@Url.Action("Reports","SuperAdmin")">All Reports</a></li>
+                                <li><a href="@Url.Action("DailyWorkExport","SuperAdmin")">Daily Work Reports</a></li>
+                                <li><a href="@Url.Action("HourlyReports","SuperAdmin")">Job Hour Tracker Report</a></li>
+                                <li><a href="@Url.Action("WeeklyPayRollLog","SuperAdmin")">Weekly Payroll Log Reports</a></li>
+                            </ul>
+                        </li>
+                    }
+
+                    @if (Session["RoleID"].Equals("4") || Session["RoleID"].Equals("2") || Session["RoleID"].Equals("1"))
+                    {
+
+
+                        <li class="@Html.ActivePage("SupervisorApproval", "Supervisor" )"><a href="@Url.Action("SupervisorApproval","Supervisor")"><img src="~/img/supervisor_approved.svg" class="a1_sidemenu">Supervisor Approval</a></li>
+                        @*<li class="widgetactive"><a href="admin-notifications.html"><i class="zmdi zmdi-widgets"></i> Admin Notifications</a></li>*@
+                        <li class="@Html.ActivePage("AdminNotification", "Supervisor" )"><a href="@Url.Action("AdminNotification","Supervisor")"><img src="~/img/notifications.svg" class="a1_sidemenu">Admin Notifications</a></li>
+
+                        @*<li class="widgetactive"><a href="supervisor-admin.html"><i class="zmdi zmdi-widgets"></i> Supervisor Deny</a></li>*@
+
+                    }
+
+
+                </ul>
+            </div>
+        </aside>
+
+
+    </main>
+
+    <div class="container-fluid ">
+        @RenderBody()
+
+    </div>
+
+
+
+
+    <!-- Javascript -->
+    <!-- Vendors -->
+    <script src="~/vendors/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="~/vendors/bower_components/popper.js/dist/umd/popper.min.js"></script>
+    <script src="~/vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/vendors/bower_components/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+    <script src="~/vendors/bower_components/jquery-scrollLock/jquery-scrollLock.min.js"></script>
+    <script src="~/vendors/bower_components/autosize/dist/autosize.min.js"></script>
+    <script src="~/vendors/bower_components/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+    <script src="~/vendors/bower_components/select2/dist/js/select2.full.min.js"></script>
+    @*<script src="~/vendors/bower_components/dropzone/dist/min/dropzone.min.js"></script>*@
+
+
+    <!-- Vendors: Data tables -->
+    @*<script src="~/vendors/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>*@
+    @*<script src="~/vendors/bower_components/datatables.net-buttons/js/dataTables.buttons.min.js"></script>*@
+    @*<script src="~/vendors/bower_components/datatables.net-buttons/js/buttons.print.min.js"></script>*@
+    <script src="~/vendors/bower_components/jszip/dist/jszip.min.js"></script>
+    <script src="~/vendors/bower_components/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="~/vendors/bower_components/moment/min/moment.min.js"></script>
+    <script src="~/vendors/bower_components/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="~/table/datatable/datatables.js"></script>
+
+    <!-- App functions and actions -->
+    <script src="~/js/app.min.js"></script>
+
+    <script>
+
+
+        c2 = $('#customer-info-detail-2').DataTable({
+            "lengthMenu": [5, 10, 20, 50, 100],
+            headerCallback: function (e, a, t, n, s) {
+                e.getElementsByTagName("th")[0].innerHTML = '<label class="new-control new-checkbox checkbox-outline-primary m-auto">\n<input type="checkbox" class="new-control-input chk-parent select-customers-info" id="customer-all-info">\n<span class="new-control-indicator"></span><span style="visibility:hidden">c</span>\n</label>'
+            },
+            columnDefs: [{
+                targets: 0, width: "30px", className: "", orderable: !1, render: function (e, a, t, n) {
+                    return '<label class="new-control new-checkbox checkbox-outline-primary  m-auto">\n<input type="checkbox" class="new-control-input child-chk select-customers-info" id="customer-all-info">\n<span class="new-control-indicator"></span><span style="visibility:hidden">c</span>\n</label>'
+                }
+            }],
+            "language": {
+                "paginate": {
+                    "previous": "<i class='flaticon-arrow-left-1'></i>",
+                    "next": "<i class='flaticon-arrow-right'></i>"
+                },
+                "info": "Showing page _PAGE_ of _PAGES_"
+            }
+        });
+
+        multiCheck(c2);
+
+        function collapse(widgetIndentity) {
+            var panel = 'panel';
+            var card = 'card';
+
+            if (widgetIndentity === panel) {
+                $('.js-collapse').on('click', function (event) {
+                    event.preventDefault();
+                    $(this).parent().parent().parent().parent().find('.panel-collapse').slideToggle('slow');
+                });
+            } else if (widgetIndentity === card) {
+                console.log('currently in progress');
+            }
+        }
+
+    </script>
+
+    <script>
+        $("#hide").click(function () {
+            $(".toggled").hide();
+        });
+
+        $("#show").click(function () {
+            $(".toggled").show();
+        });
+    </script>
+
+
+
+    @*@Scripts.Render("~/bundles/jquery")*@
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

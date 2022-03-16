@@ -1,0 +1,5 @@
+Logs for: A1Carpentry , A1Carpentry
+[Thursday, April 25, 2019 06:20:18 PM] Error 6916 >> Error occured in TimeCard (Post)Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at A1Carpentry.Controllers.TimeCardController.TimeCard(JobDetailsModel objJobDetails, HttpPostedFileBase file) in C:\Users\lambda\Desktop\A1CarpentryMySql\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\TimeCardController.cs:line 72

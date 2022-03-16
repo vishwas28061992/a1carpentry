@@ -1,0 +1,93 @@
+Logs for: A1Carpentry , A1Carpentry
+[Tuesday, July 21, 2020 12:26:35 PM] Error 16640 >> Exception occured in : GetTools NamesYou have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at A1Carpentry.DBhelper.SqlHelper.toolnames(String str) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3042
+[Tuesday, July 21, 2020 12:28:03 PM] Error 16640 >> Exception occured in : GetTools NamesYou have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at A1Carpentry.DBhelper.SqlHelper.toolnames(String str) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3042
+[Tuesday, July 21, 2020 01:28:25 PM] Error 16640 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2185
+[Tuesday, July 21, 2020 01:30:35 PM] Error 16640 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2185
+[Tuesday, July 21, 2020 01:30:43 PM] Error 16640 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2185
+[Tuesday, July 21, 2020 01:40:42 PM] Information 16640 >> count 0 in jobNumber (Job)
+[Tuesday, July 21, 2020 02:05:12 PM] Error 16640 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2185
+[Tuesday, July 21, 2020 02:05:15 PM] Error 16640 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2185
+[Tuesday, July 21, 2020 02:05:19 PM] Error 16640 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2185
+[Tuesday, July 21, 2020 02:05:28 PM] Error 16640 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2185
+[Tuesday, July 21, 2020 02:05:37 PM] Error 16640 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2185
+[Tuesday, July 21, 2020 02:25:04 PM] Error 16640 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2185
+[Tuesday, July 21, 2020 02:25:06 PM] Error 16640 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2185
+[Tuesday, July 21, 2020 02:25:08 PM] Error 16640 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2185
+[Tuesday, July 21, 2020 02:25:11 PM] Error 16640 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2185
+[Tuesday, July 21, 2020 02:25:13 PM] Error 16640 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2185
+[Tuesday, July 21, 2020 02:25:15 PM] Error 16640 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2185
+[Tuesday, July 21, 2020 02:27:03 PM] Error 16640 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2185
+[Tuesday, July 21, 2020 02:27:07 PM] Error 16640 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2185
+[Tuesday, July 21, 2020 02:28:43 PM] Information 16640 >> count 0 in jobNumber (Job)
+[Tuesday, July 21, 2020 02:31:04 PM] Error 16640 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2185
+[Tuesday, July 21, 2020 02:32:47 PM] Error 16640 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2185
+[Tuesday, July 21, 2020 02:32:59 PM] Error 16640 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2185
+[Tuesday, July 21, 2020 02:38:44 PM] Error 16640 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2185
+[Tuesday, July 21, 2020 02:40:28 PM] Error 16640 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2185
+[Tuesday, July 21, 2020 03:18:42 PM] Error 16640 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2185
+[Tuesday, July 21, 2020 03:18:47 PM] Error 16640 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2185
+[Tuesday, July 21, 2020 03:20:40 PM] Error 16640 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2185
+[Tuesday, July 21, 2020 09:28:10 PM] Information 16640 >> count 0 in jobNumber (Job)
+[Tuesday, July 21, 2020 09:28:18 PM] Information 16640 >> Could not saved SaveTasks in database (Post)

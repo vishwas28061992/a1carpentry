@@ -1,0 +1,72 @@
+Logs for: A1Carpentry , A1Carpentry
+[Tuesday, June 16, 2020 02:10:01 PM] Error 7232 >> Exception occured in : GetAllUserDetails Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDecimal(IFormatProvider provider)
+   at System.Convert.ToDecimal(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetAllUserDetails() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1339
+[Tuesday, June 16, 2020 02:10:23 PM] Error 7232 >> Exception occured in : GetAllUserDetails Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDecimal(IFormatProvider provider)
+   at System.Convert.ToDecimal(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetAllUserDetails() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1339
+[Tuesday, June 16, 2020 02:15:11 PM] Error 20380 >> Exception occured in : GetAllUserDetails Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDecimal(IFormatProvider provider)
+   at System.Convert.ToDecimal(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetAllUserDetails() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1339
+[Tuesday, June 16, 2020 02:15:25 PM] Error 20380 >> Exception occured in : GetAllUserDetails Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDecimal(IFormatProvider provider)
+   at System.Convert.ToDecimal(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetAllUserDetails() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1339
+[Tuesday, June 16, 2020 02:17:29 PM] Error 20380 >> Exception occured in : GetAllUserDetails Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDecimal(IFormatProvider provider)
+   at System.Convert.ToDecimal(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetAllUserDetails() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1339
+[Tuesday, June 16, 2020 02:44:49 PM] Error 3644 >> Exception occured in : GetAllUserDetails Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDecimal(IFormatProvider provider)
+   at System.Convert.ToDecimal(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetAllUserDetails() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1339
+[Tuesday, June 16, 2020 02:45:21 PM] Error 3644 >> Exception occured in : GetAllUserDetails Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDecimal(IFormatProvider provider)
+   at System.Convert.ToDecimal(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetAllUserDetails() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1339
+[Tuesday, June 16, 2020 02:52:37 PM] Error 3644 >> Exception occured in : GetAllUserDetails Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDecimal(IFormatProvider provider)
+   at System.Convert.ToDecimal(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetAllUserDetails() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1339
+[Tuesday, June 16, 2020 03:04:46 PM] Error 11776 >> Error occured in GetUserDetails Fatal error encountered during data read.   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at MySql.Data.MySqlClient.Driver.LoadServerProperties(MySqlConnection connection)
+   at MySql.Data.MySqlClient.Driver.Configure(MySqlConnection connection)
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at A1Carpentry.DBhelper.SqlHelper.GetUserDetails(String username, String password, String email) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 73
+[Tuesday, June 16, 2020 03:05:57 PM] Error 11776 >> Exception occured in : GetAllUserDetails Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDecimal(IFormatProvider provider)
+   at System.Convert.ToDecimal(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetAllUserDetails() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1339
+[Tuesday, June 16, 2020 03:06:12 PM] Error 11776 >> Exception occured in : GetAllUserDetails Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDecimal(IFormatProvider provider)
+   at System.Convert.ToDecimal(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetAllUserDetails() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1339
+[Tuesday, June 16, 2020 04:09:17 PM] Error 16956 >> Exception occured in : GetAllUserDetails Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDecimal(IFormatProvider provider)
+   at System.Convert.ToDecimal(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetAllUserDetails() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1339
+[Tuesday, June 16, 2020 04:10:16 PM] Error 16956 >> Exception occured in : GetAllUserDetails Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDecimal(IFormatProvider provider)
+   at System.Convert.ToDecimal(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetAllUserDetails() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1339
+[Tuesday, June 16, 2020 04:11:32 PM] Error 16956 >> Exception occured in : GetAllUserDetails Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDecimal(IFormatProvider provider)
+   at System.Convert.ToDecimal(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetAllUserDetails() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1339
+[Tuesday, June 16, 2020 04:50:57 PM] Error 16956 >> Exception occured in : GetAllUserDetails Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDecimal(IFormatProvider provider)
+   at System.Convert.ToDecimal(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetAllUserDetails() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1339
+[Tuesday, June 16, 2020 05:17:18 PM] Error 16956 >> Exception occured in : GetAllToolsDetails Fatal error encountered during data read.   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at MySql.Data.MySqlClient.Driver.LoadServerProperties(MySqlConnection connection)
+   at MySql.Data.MySqlClient.Driver.Configure(MySqlConnection connection)
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at A1Carpentry.DBhelper.SqlHelper.GetAllToolsDetails() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1777
+[Tuesday, June 16, 2020 05:17:33 PM] Error 16956 >> Exception occured in : GetTools NamesFatal error encountered during command execution.   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at MySql.Data.MySqlClient.Driver.LoadCharacterSets(MySqlConnection connection)
+   at MySql.Data.MySqlClient.Driver.Configure(MySqlConnection connection)
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at A1Carpentry.DBhelper.SqlHelper.toolnames(String str) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3025
+[Tuesday, June 16, 2020 05:18:17 PM] Error 16956 >> Exception occured in : GetJobDetailsToApprovewithtasklogs Fatal error encountered during data read.   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at MySql.Data.MySqlClient.Driver.LoadServerProperties(MySqlConnection connection)
+   at MySql.Data.MySqlClient.Driver.Configure(MySqlConnection connection)
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at A1Carpentry.DBhelper.SqlHelper.GetGaragdetails() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2970
+[Tuesday, June 16, 2020 05:18:49 PM] Error 16956 >> Exception occured in : GetJobDetailsToApprovewithtasklogs Fatal error encountered during data read.   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at MySql.Data.MySqlClient.Driver.LoadCharacterSets(MySqlConnection connection)
+   at MySql.Data.MySqlClient.Driver.Configure(MySqlConnection connection)
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at A1Carpentry.DBhelper.SqlHelper.GetGaragdetails() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2970
+[Tuesday, June 16, 2020 07:02:44 PM] Error 15328 >> Exception occured in : GetAllUserDetails Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDecimal(IFormatProvider provider)
+   at System.Convert.ToDecimal(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetAllUserDetails() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1339

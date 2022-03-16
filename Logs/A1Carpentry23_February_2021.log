@@ -1,0 +1,9 @@
+Logs for: A1Carpentry , A1Carpentry
+[Tuesday, February 23, 2021 08:46:12 PM] Error 1416 >> Exception occured in : GetJobDetailsToApprovewithtasklogs Unable to convert MySQL date/time value to System.DateTime   at MySql.Data.Types.MySqlDateTime.GetDateTime()
+   at MySql.Data.MySqlClient.MySqlDataReader.GetValue(Int32 i)
+   at MySql.Data.MySqlClient.MySqlDataReader.get_Item(Int32 i)
+   at A1Carpentry.DBhelper.SqlHelper.GetGaragdetails() in E:\Vishwas Part 5\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3130
+[Tuesday, February 23, 2021 08:55:16 PM] Error 1416 >> Exception occured in : GetJobDetailsToApprovewithtasklogs Unable to convert MySQL date/time value to System.DateTime   at MySql.Data.Types.MySqlDateTime.GetDateTime()
+   at MySql.Data.MySqlClient.MySqlDataReader.GetValue(Int32 i)
+   at MySql.Data.MySqlClient.MySqlDataReader.get_Item(Int32 i)
+   at A1Carpentry.DBhelper.SqlHelper.GetGaragdetails() in E:\Vishwas Part 5\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3130

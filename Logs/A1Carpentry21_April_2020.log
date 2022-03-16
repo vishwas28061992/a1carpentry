@@ -1,0 +1,33 @@
+Logs for: A1Carpentry , A1Carpentry
+[Tuesday, April 21, 2020 10:50:39 PM] Information 10228 >> count 0 in TaskNumber (PreTasks)
+[Tuesday, April 21, 2020 10:50:43 PM] Error 10228 >> Error occured in SavePreTasksFatal error encountered during command execution.   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at A1Carpentry.DBhelper.SqlHelper.SavePreTasks(PreTasksModel objPreTasks) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1770
+[Tuesday, April 21, 2020 10:50:43 PM] Information 10228 >> Could not saved SavePreTasks in database (Post)
+[Tuesday, April 21, 2020 10:51:06 PM] Error 10228 >> Exception occured in : GetAllTaskrDetails Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetAllPreTaskDetails() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2793
+[Tuesday, April 21, 2020 10:51:18 PM] Error 10228 >> Exception occured in : GetAllTaskrDetails Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetAllPreTaskDetails() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2793
+[Tuesday, April 21, 2020 10:56:17 PM] Information 10228 >> count 0 in TaskNumber (PreTasks)
+[Tuesday, April 21, 2020 10:57:53 PM] Error 10228 >> Error occured in SavePreTasksFatal error encountered during command execution.   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at A1Carpentry.DBhelper.SqlHelper.SavePreTasks(PreTasksModel objPreTasks)
+[Tuesday, April 21, 2020 10:57:53 PM] Information 10228 >> Could not saved SavePreTasks in database (Post)
+[Tuesday, April 21, 2020 11:00:01 PM] Information 10228 >> count 0 in TaskNumber (PreTasks)
+[Tuesday, April 21, 2020 11:00:22 PM] Information 10228 >> Data Null in ObjPreTasks (CreateTasks Post)
+[Tuesday, April 21, 2020 11:00:36 PM] Error 10228 >> Exception occured in : GetAllTaskrDetails Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetAllPreTaskDetails()
+[Tuesday, April 21, 2020 11:00:44 PM] Error 10228 >> Exception occured in : GetAllTaskrDetails Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetAllPreTaskDetails()
+[Tuesday, April 21, 2020 11:01:53 PM] Error 10228 >> Exception occured in : GetAllTaskrDetails Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetAllPreTaskDetails()
+[Tuesday, April 21, 2020 11:17:32 PM] Error 24664 >> Error occured in UpdateUserDetails Parameter '@PreTaskNumber' has already been defined.   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.Add(Object value)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddRange(Array values)
+   at A1Carpentry.DBhelper.SqlHelper.UpdatetaskDetails(PreTasksModel objpretask) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2847
+[Tuesday, April 21, 2020 11:17:32 PM] Information 24664 >> Could not update pretasks Details in database (Post)

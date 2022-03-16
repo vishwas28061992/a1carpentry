@@ -1,0 +1,22 @@
+Logs for: A1Carpentry , A1Carpentry
+[Tuesday, August 11, 2020 03:36:08 PM] Error 940 >> Error occured in GenerateReports Item has already been added. Key in dictionary: 'ExcelPath'  Key being added: 'ExcelPath'   at System.Collections.Hashtable.Insert(Object key, Object nvalue, Boolean add)
+   at System.Collections.Hashtable.Add(Object key, Object value)
+   at System.Collections.Specialized.NameObjectCollectionBase.BaseAdd(String name, Object value)
+   at System.Collections.Specialized.NameObjectCollectionBase.BaseSet(String name, Object value)
+   at System.Web.SessionState.SessionStateItemCollection.set_Item(String name, Object value)
+   at System.Web.SessionState.HttpSessionStateContainer.set_Item(String name, Object value)
+   at System.Web.HttpSessionStateWrapper.set_Item(String name, Object value)
+   at A1Carpentry.Controllers.SuperAdminController.GenerateReports(String startDate, String endDate) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1290
+[Tuesday, August 11, 2020 03:58:03 PM] Information 940 >> filename and FullPathA1Carpentry_20200811155749103.pdfC:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\files\A1Carpentry_20200811155749103.pdf
+[Tuesday, August 11, 2020 04:44:54 PM] Information 14032 >> filename and FullPathA1Carpentry_20200811164357870.pdfC:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\files\A1Carpentry_20200811164357870.pdf
+[Tuesday, August 11, 2020 07:38:24 PM] Information 16360 >> filename and FullPathA1Carpentry_20200811193508973.pdfC:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\files\A1Carpentry_20200811193508973.pdf
+[Tuesday, August 11, 2020 07:53:28 PM] Information 10268 >> filename and FullPathA1Carpentry_20200811195318002.pdfC:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\files\A1Carpentry_20200811195318002.pdf
+[Tuesday, August 11, 2020 08:15:23 PM] Error 4504 >> Exception occured in : GetJobDetailsToApprovewithtasklogs Index was outside the bounds of the array.   at MySql.Data.MySqlClient.Interceptors.ExceptionInterceptor.Throw(Exception exception)
+   at MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.GetValue(Int32 i)
+   at MySql.Data.MySqlClient.MySqlDataReader.get_Item(Int32 i)
+   at A1Carpentry.DBhelper.SqlHelper.GetGararagepdf() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3924
+[Tuesday, August 11, 2020 08:16:07 PM] Information 4504 >> filename and FullPathA1Carpentry_20200811201544339.pdfC:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\files\A1Carpentry_20200811201544339.pdf
+[Tuesday, August 11, 2020 08:21:32 PM] Information 17192 >> filename and FullPathA1Carpentry_20200811202055642.pdfC:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\files\A1Carpentry_20200811202055642.pdf
+[Tuesday, August 11, 2020 08:27:46 PM] Information 17192 >> filename and FullPathA1Carpentry_20200811202352697.pdfC:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\files\A1Carpentry_20200811202352697.pdf

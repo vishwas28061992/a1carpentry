@@ -1,0 +1,716 @@
+Logs for: A1Carpentry , A1Carpentry
+[Monday, June 15, 2020 06:23:23 PM] Error 14100 >> Exception occured in : GetAllUserDetails Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDecimal(IFormatProvider provider)
+   at System.Convert.ToDecimal(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetAllUserDetails() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1339
+[Monday, June 15, 2020 06:31:22 PM] Error 14100 >> Exception occured in : GetAllTaskrDetails Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetAllPreTaskDetails() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2652
+[Monday, June 15, 2020 06:43:56 PM] Error 14100 >> Exception occured in : GetAllUserDetails Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDecimal(IFormatProvider provider)
+   at System.Convert.ToDecimal(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetAllUserDetails() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1339
+[Monday, June 15, 2020 07:02:54 PM] Error 14100 >> Exception occured in : GetAllUserDetails Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDecimal(IFormatProvider provider)
+   at System.Convert.ToDecimal(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetAllUserDetails() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1339
+[Monday, June 15, 2020 07:11:58 PM] Information 14100 >> count 0 in TaskNumber (PreTasks)
+[Monday, June 15, 2020 07:12:00 PM] Information 14100 >> Data Null in ObjPreTasks (CreateTasks Post)
+[Monday, June 15, 2020 07:32:18 PM] Error 14100 >> Error occured in GetUserDetails Fatal error encountered during command execution.   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at A1Carpentry.DBhelper.SqlHelper.GetUserDetails(String username, String password, String email) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 87
+[Monday, June 15, 2020 07:35:11 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:35:18 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:35:20 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:35:23 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:35:25 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:35:29 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:35:33 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:35:36 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:35:39 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:35:42 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:35:45 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:35:48 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:35:51 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:35:54 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:35:57 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:36:00 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:36:02 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:36:05 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:36:09 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:36:12 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:36:15 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:36:18 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:36:21 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:36:24 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:36:26 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:36:29 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:36:32 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:36:35 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:36:38 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:36:40 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:36:43 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:36:45 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:36:48 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:36:51 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:36:54 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:36:59 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:37:02 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:37:05 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:37:06 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:37:08 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:37:11 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:37:14 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:37:17 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:37:20 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:37:24 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:37:26 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:37:29 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:37:31 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:37:34 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:37:36 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:37:39 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:37:44 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:37:46 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:37:49 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:37:51 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:37:54 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:37:57 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:37:59 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:38:02 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:38:04 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:38:07 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:38:09 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:38:11 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:38:14 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:38:17 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:38:19 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:38:22 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:38:24 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:38:27 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:38:30 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:38:33 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:38:35 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:38:37 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:38:40 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:38:43 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:38:45 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:44:55 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:44:57 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:45:00 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:45:02 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:45:05 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:45:07 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:45:10 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:45:13 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:45:15 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:45:19 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:45:22 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:45:25 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:45:29 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:45:33 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:45:35 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:45:38 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:45:41 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:45:45 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:45:47 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:45:50 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:45:53 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:45:58 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:46:01 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:46:03 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:46:07 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:46:10 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:46:13 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:46:16 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:46:19 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:46:21 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:46:25 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:46:28 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:46:30 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:46:33 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:46:35 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:46:38 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:46:40 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:46:43 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:46:48 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:46:51 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:46:53 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:46:56 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:46:59 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:47:02 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:47:06 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:47:09 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:47:11 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:47:14 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:47:17 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:47:20 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:47:23 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:47:26 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:47:29 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:47:32 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:47:34 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:47:37 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:47:41 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:47:44 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:47:47 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:47:49 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:47:52 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:47:55 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:47:58 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:48:01 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:48:04 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:48:07 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:48:10 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:48:14 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:48:17 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:48:20 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:48:23 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:48:26 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:48:29 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:48:32 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:48:34 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:48:37 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:48:39 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:48:42 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:48:45 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:48:49 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:48:52 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:48:55 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:48:58 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:49:01 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:49:04 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:49:08 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:49:10 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:49:13 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:49:16 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:49:20 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:49:22 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:49:25 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:49:28 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:49:32 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:49:35 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:49:38 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:49:40 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:49:43 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:49:45 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:49:48 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:49:51 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:49:54 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:49:56 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:50:00 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:50:02 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:50:05 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:50:08 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:50:12 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:50:15 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:50:18 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:50:20 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:50:23 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:50:25 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:50:27 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:52:25 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:52:34 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:52:36 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:52:38 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:52:41 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:52:44 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:52:47 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:52:49 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:52:53 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:52:57 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:52:59 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:53:03 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:53:07 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:53:09 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:53:13 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:53:16 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:53:18 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:53:21 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:53:24 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:53:27 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:53:30 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:53:33 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:53:36 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:53:39 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:53:42 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:53:45 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:53:48 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:53:51 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:53:55 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:53:58 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:54:00 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:54:03 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:54:06 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:54:09 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:54:12 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:54:16 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:54:19 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 07:54:23 PM] Error 14100 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Monday, June 15, 2020 08:10:26 PM] Error 15708 >> Exception occured in : GetAllUserDetails Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDecimal(IFormatProvider provider)
+   at System.Convert.ToDecimal(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetAllUserDetails() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1339
+[Monday, June 15, 2020 08:11:02 PM] Error 15708 >> Exception occured in : GetAllTaskrDetails Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetAllPreTaskDetails() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2654
+[Monday, June 15, 2020 08:15:45 PM] Error 10516 >> Exception occured in : GetAllUserDetails Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDecimal(IFormatProvider provider)
+   at System.Convert.ToDecimal(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetAllUserDetails() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1339
+[Monday, June 15, 2020 09:12:50 PM] Error 13764 >> Error occured in JobTypesList Fatal error encountered during data read.   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at MySql.Data.MySqlClient.Driver.LoadServerProperties(MySqlConnection connection)
+   at MySql.Data.MySqlClient.Driver.Configure(MySqlConnection connection)
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at A1Carpentry.DBhelper.SqlHelper.JobTypesList() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 234

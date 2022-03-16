@@ -1,0 +1,392 @@
+﻿@model A1Carpentry.Models.UsersModel
+@{
+    ViewBag.Title = "ToolsDetailsinsuperadmin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.5/js/jquery.dataTables.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.5/css/jquery.dataTables.css" />
+    <style>
+        .popup-content-text {
+            text-align: center;
+            color: #fff;
+            font-size: 20px;
+        }
+     
+        html {
+            box-sizing: border-box;
+            font-family: sans-serif;
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            -ms-overflow-style: scrollbar
+        }
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box !important
+        }
+        .aria-label {
+        }
+    </style>
+</head>
+<body data-sa-theme="1">
+    @*@using (Html.BeginForm("employeetools", "SuperAdmin", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+        {*@
+    <section class="content">
+        <header class="content__title">
+            <h1>Tools Details</h1>
+        </header>
+        <div class="statbox widget box box-shadow">
+            <div class="widget-content widget-content-area">
+                <div class="table-responsive mb-4" id="displayeddata">
+                    <table id="data-table" class="table style-2 table-bordered  table-hover">
+                        <thead>
+                            <tr>
+                                @*<th>Tool Id</th>*@
+                                <th>Inventry Number</th>
+                                <th>Tool Serial Number</th>
+                                <th>Tool Name</th>
+                                <th>Add Tools</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.Tools@*(ViewBag.tools as List<A1Carpentry.Models.ToolsModel>)*@)
+{
+//foreach (var list in item.Tools)
+//{
+if (item.ToolID > 0)
+{
+<tr>
+    @*<td>@item.ToolID</td>*@
+    <td>@item.InventryNumber</td>
+    <td>@item.ToolSerialNumber</td>
+    <td>@item.ToolName</td>
+    <td>
+        @*@foreach (var lst in (ViewBag.userstools as List<A1Carpentry.Models.UsersModel>))
+        {
+            for (var i = 0; i < lst.TooldsArray.Length; i++)
+            {
+                if (lst.TooldsArray[i] == @item.ToolID)
+                {
+                    @lst.Username
+                }
+                {
+
+                }
+
+            }
+
+        }*@
+        <input type="checkbox" id="ToolName" class="cbCheck" name="checkbox" value="@item.ToolID">
+    </td>
+</tr>
+}
+}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-sm-12 pt-5 p-3">
+                    <div class="text-center">
+                        <button type="button" class="open-AddBookDialog shadow-none btn btn-primary btn-new" data-toggle="modal" onclick="Validation()" data-target="#exampleModalCenter">
+                            Submit
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    @*}*@
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Create Employee</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="popup-content-text"> </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                    <button type="submit" id="Save" onclick="checboxidsstored()" class="btn btn-primary">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>
+
+
+@*<script>
+    $(document).ready(function () {
+        debugger;
+
+        var table = $('#data-table').DataTable();
+        var count = 0;
+        $('#data-table tbody').on('click', '.cbCheck', function () {
+            if (this.checked == true) {
+                 console.log(table.row(this.closest('tr')).data());
+                count++;
+                //list = table.row(this.closest('tr')).data();
+                // console(list);
+
+
+
+            }
+        });
+        ('#data-table tbody').on('click', '.cbCheck', function () {
+            debugger;
+            if (this.checked == false) {
+                console.log(table.row(this.closest('tr')).data());
+                count--;
+                tdb = table.row(this.closest('tr')).data();
+                // console.log(table.row(this.closest('tr')).blah);
+            }
+        });
+       
+
+    });
+
+</script>*@
+@*<script>
+    var checkedvalues = [];
+    $(document).ready(function () {
+        // var ids = "";
+        $("#data-table").click(function () {
+            debugger;
+
+            var table = $('#data-table').DataTable();
+            $('.cbCheck:checkbox:checked').(function () {
+                ids = $(this).val();
+                checkedvalues.push($(this).val());
+                // ids.push($(this).val());
+                // alert(ids);
+                //ids = ids + ",";
+                //alert(ids);
+                alert(checkedvalues);
+
+
+            });
+            // console.log(ids);
+
+        });
+        //console.log(ids);
+    });
+</script>*@
+<script>
+    var count = 0;
+    var ToolName = [];
+    var i = 0;
+    $('table tr td').on('click', '.cbCheck', function () {
+        if ($(this).is(':checked')) {
+            ToolName[i++] = $(this).val();
+            //console.log(ToolName);
+            count++;
+        }
+        else {
+            var item = $(this).val();
+            ToolName.splice(ToolName.indexOf(item), 1);
+            // console.log(ToolName);
+            count--;
+        }
+       
+    });
+</script>
+<script>
+    function Validation() {
+        debugger;
+        $("p").text("Assigned To Number of Tools= " + count);
+        //alert(count);
+        //console.log(count);
+    }
+</script>
+@*<script>
+    $(document).ready(function () {
+        var i = 0;
+        $('table tr td').on('click', '.cbCheck', function () {
+            if ($(this).is(':checked')) {
+                alert($(this).val());
+                ToolName[i++] = $(this).val();
+                // data.push($(this).val());
+                //console.log(ToolName);
+            }
+            else {
+                var item = $(this).val();
+                ToolName.splice(ToolName.indexOf(item), 1);
+                //var index = data.indexOf(item);     secound method
+                //if (index !== -1) data.splice(index, 1);
+                //console.log(ToolName)
+            }
+        });
+    }
+</script>*@
+<script>
+     function checboxidsstored() {
+            debugger
+            $.ajax({
+                url: '/SuperAdmin/employeetools',
+                type: "post",
+                data: { ToolName: ToolName },
+                success: function (result) {
+                    if (result == 0)
+                    {
+                         window.location.href = '@Url.Action("Login", "Login")';  
+                    }
+                    else
+                    {
+                   
+                        window.location = '/SuperAdmin/EmployeeDetails'
+                    }
+                },
+            });
+        }
+</script>
+@*<script type="text/javascript">
+    $(function () {
+        //Assign Click event to Button.
+        $("#btnGet").click(function () {
+            var message = "Id Name                  Country\n";
+            //Loop through all checked CheckBoxes in GridView.
+            $("#Table1 input[type=checkbox]:checked").each(function () {
+                var row = $(this).closest("tr")[0];
+                message += row.cells[1].innerHTML;
+                message += "   " + row.cells[2].innerHTML;
+                message += "   " + row.cells[3].innerHTML;
+                message += "\n";
+            });
+            //Display selected Row data in Alert Box.
+            alert(message);
+            return false;
+        });
+    });
+</script>*@
+@*<script>
+    $(document).ready(function () {
+        debugger;
+        var table = $('#data-table').DataTable();
+        var idschecked = "";
+        var idsunchecked = "";
+        var count;
+        $('#data-table tbody').on('click', '.cbCheck', function () {
+            if (this.checked == false) {
+                debugger;
+                console.log(table.row(this.closest('tr')).data());
+              //  var data = (table.row(this.closest('tr')).data());
+                var data = $(table).closest("tr").find('checkbox').;  
+                console.log((data)); 
+             //   console.log(data[3].);
+                //alert(data[3]);
+                count++;
+                //list = table.row(this.closest('tr')).data();
+                idschecked  = idschecked + table.row(this.closest('tr')).data()+ ",";
+                // console(list);
+            }
+        });
+        $('#data-table tbody').on('click', '.cbCheck', function () {
+            if (this.checked == true) {
+                debugger;
+                var data = $(table).closest("tr").find('checkbox').val();
+                console.log(data);
+                console.log(table.row(this.closest('tr')).data());
+                count++;
+                //list = table.row(this.closest('tr')).data();
+                idschecked = idschecked + table.row(this.closest('tr')).data() + ",";
+                // console(list);
+            }
+        });
+    });
+</script>*@
+@*<script>
+    function checboxidsstored() {
+        alert(count);
+        console.log(count);
+    }
+</script>*@
+@*<script>
+        $(document).ready(function () {
+            $('#data-table').DataTable();
+
+            $('#data-table').on('click', function () {
+                var data = new Object();
+               // var sads = new Object();
+                $.each($('#data-table :checkbox:checked'), function (a, b) {
+                  sads=  $('[name="ToolName"]').prop('checked', this.checked);
+                    data[a] = $(this).val();
+                });
+                console.log(data);
+                console.log(sads);
+            });
+        });
+    </script>*@
+<script>
+        //var table = $('#data-table').DataTable();
+        //var tdb;
+        //$('#data-table tbody').on('click', '.checkbox', function () {
+        //    if (this.checked == true) {
+        //        console.log(table.row(this.closest('tr')).data());
+        //        tdb = table.row(this.closest('tr')).data();
+        //        alert(tdb);
+        //        console.log(tdb);
+        //    }
+        //});
+        //$('#data-table tbody').on('click', '.checkbox', function () {
+        //    if (this.checked == false) {
+        //        console.log(table.row(this.closest('tr')).data());
+
+        //    }
+        //});
+        //$(' #myTable tr td: nth - child(1), #myTable th: nth - child(1)')
+        //{
+        //    display: none
+        //}
+        //console.log(tdb);
+
+
+
+</script>*
+<script>
+    //function PreTaskID_Change(Current) {
+
+
+    //    alert($(Current).val());
+    //    console.log($(Current).val());
+    //}
+    //function chagedfunction(Current) {
+    //    alert(Current);
+    //    console.log();
+    //}
+    //$('.checkbox').each(function (index) {
+    //    debugger;
+    //    $(this).on("click",  function () {
+    //        var boll = $(this).data('checkbox');
+    //        var id = $(this).attr('id');
+    ////    });
+    //$('.checkbox').each(function () {
+    //    console.log('HAi TESTING '+$(this).blah);
+    //});
+    //    $(this).on('click', '.checkbox', function () {
+    //        if (this.checked == true) {
+    //            console.log(table.row(this.closest('tr')).data());
+    //            tdb = table.row(this.closest('tr')).data();
+    //            var ids =$(this).attr('id');
+    //});
+  //  });
+</script>
+<script type="text/javascript">
+    $(document).on("click", ".open-AddBookDialog", function () {
+        debugger;
+        $('.exampleModalCenter').modal('show');
+    });
+</script>

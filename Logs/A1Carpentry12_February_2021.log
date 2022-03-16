@@ -1,0 +1,170 @@
+Logs for: A1Carpentry , A1Carpentry
+[Friday, February 12, 2021 07:50:18 PM] Error 11896 >> Error occured in GetUserName Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at System.Array.ConvertAll[TInput,TOutput](TInput[] array, Converter`2 converter)
+   at A1Carpentry.DBhelper.SqlHelper.GetUserTools() in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3609
+[Friday, February 12, 2021 07:50:22 PM] Error 11896 >> Error occured in GetUserName Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at System.Array.ConvertAll[TInput,TOutput](TInput[] array, Converter`2 converter)
+   at A1Carpentry.DBhelper.SqlHelper.GetUserTools() in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3609
+[Friday, February 12, 2021 07:50:29 PM] Error 11896 >> Exception occured in : GetJobDetailsToApprovewithtasklogs Unable to convert MySQL date/time value to System.DateTime   at MySql.Data.Types.MySqlDateTime.GetDateTime()
+   at MySql.Data.MySqlClient.MySqlDataReader.GetValue(Int32 i)
+   at MySql.Data.MySqlClient.MySqlDataReader.get_Item(Int32 i)
+   at A1Carpentry.DBhelper.SqlHelper.GetGaragdetails() in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3129
+[Friday, February 12, 2021 07:50:32 PM] Error 11896 >> Exception occured in : GetJobDetailsToApprovewithtasklogs Unable to convert MySQL date/time value to System.DateTime   at MySql.Data.Types.MySqlDateTime.GetDateTime()
+   at MySql.Data.MySqlClient.MySqlDataReader.GetValue(Int32 i)
+   at MySql.Data.MySqlClient.MySqlDataReader.get_Item(Int32 i)
+   at A1Carpentry.DBhelper.SqlHelper.GetGaragdetails() in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3129
+[Friday, February 12, 2021 08:07:28 PM] Error 13952 >> Error occured in GetUserName Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at System.Array.ConvertAll[TInput,TOutput](TInput[] array, Converter`2 converter)
+   at A1Carpentry.DBhelper.SqlHelper.GetUserTools() in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3609
+[Friday, February 12, 2021 08:07:35 PM] Error 13952 >> Exception occured in : GetJobDetailsToApprovewithtasklogs Unable to convert MySQL date/time value to System.DateTime   at MySql.Data.Types.MySqlDateTime.GetDateTime()
+   at MySql.Data.MySqlClient.MySqlDataReader.GetValue(Int32 i)
+   at MySql.Data.MySqlClient.MySqlDataReader.get_Item(Int32 i)
+   at A1Carpentry.DBhelper.SqlHelper.GetGaragdetails() in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3129
+[Friday, February 12, 2021 08:14:45 PM] Error 13952 >> Error occured in GetUserName Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at System.Array.ConvertAll[TInput,TOutput](TInput[] array, Converter`2 converter)
+   at A1Carpentry.DBhelper.SqlHelper.GetUserTools() in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3609
+[Friday, February 12, 2021 08:15:36 PM] Error 13952 >> Error occured in EmployeeProfile Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendEmail(UsersModel ObjUser) in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1701
+   at A1Carpentry.Controllers.SuperAdminController.employeetools(List`1 ToolName) in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 188
+[Friday, February 12, 2021 08:15:37 PM] Error 13952 >> Error occured in EmployeeProfile Object reference not set to an instance of an object.   at A1Carpentry.Controllers.SuperAdminController.employeetools(List`1 ToolName) in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 175
+[Friday, February 12, 2021 08:15:37 PM] Error 13952 >> Error occured in EmployeeProfile Object reference not set to an instance of an object.   at A1Carpentry.Controllers.SuperAdminController.employeetools(List`1 ToolName) in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 175
+[Friday, February 12, 2021 08:16:55 PM] Error 13952 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2330
+[Friday, February 12, 2021 08:17:01 PM] Error 13952 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2330
+[Friday, February 12, 2021 08:17:05 PM] Information 13952 >> count 0 in jobNumber (Job)
+[Friday, February 12, 2021 08:19:36 PM] Information 13952 >> count 0 in jobNumber (Job)
+[Friday, February 12, 2021 08:19:39 PM] Error 13952 >> Error occured in GetUserName Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at System.Array.ConvertAll[TInput,TOutput](TInput[] array, Converter`2 converter)
+   at A1Carpentry.DBhelper.SqlHelper.GetUserTools() in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3609
+[Friday, February 12, 2021 08:20:25 PM] Information 13952 >> count 0 in TaskNumber (PreTasks)
+[Friday, February 12, 2021 08:20:25 PM] Information 13952 >> Data Null in ObjPreTasks (CreateTasks Post)
+[Friday, February 12, 2021 08:20:52 PM] Error 13952 >> Exception occured in : GetJobDetailsToApprovewithtasklogs Unable to convert MySQL date/time value to System.DateTime   at MySql.Data.Types.MySqlDateTime.GetDateTime()
+   at MySql.Data.MySqlClient.MySqlDataReader.GetValue(Int32 i)
+   at MySql.Data.MySqlClient.MySqlDataReader.get_Item(Int32 i)
+   at A1Carpentry.DBhelper.SqlHelper.GetGaragdetails() in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3129
+[Friday, February 12, 2021 08:21:21 PM] Error 13952 >> Exception occured in : GetJobDetailsToApprovewithtasklogs Unable to convert MySQL date/time value to System.DateTime   at MySql.Data.Types.MySqlDateTime.GetDateTime()
+   at MySql.Data.MySqlClient.MySqlDataReader.GetValue(Int32 i)
+   at MySql.Data.MySqlClient.MySqlDataReader.get_Item(Int32 i)
+   at A1Carpentry.DBhelper.SqlHelper.GetGaragdetails() in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3129
+[Friday, February 12, 2021 08:21:42 PM] Error 13952 >> Error occured in GenerateReports The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.5.1 Authentication Required.   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendAttachmentEmail(String Email, HttpPostedFileBase fileUploader) in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1813
+   at A1Carpentry.Controllers.SuperAdminController.GenerateReports(String startDate, String endDate) in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1307
+[Friday, February 12, 2021 08:22:07 PM] Error 13952 >> Exception occured in : GetJobDetailsToApprovewithtasklogs Unable to convert MySQL date/time value to System.DateTime   at MySql.Data.Types.MySqlDateTime.GetDateTime()
+   at MySql.Data.MySqlClient.MySqlDataReader.GetValue(Int32 i)
+   at MySql.Data.MySqlClient.MySqlDataReader.get_Item(Int32 i)
+   at A1Carpentry.DBhelper.SqlHelper.GetGaragdetails() in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3129
+[Friday, February 12, 2021 09:00:38 PM] Error 17788 >> Error occured in GetUserName Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at System.Array.ConvertAll[TInput,TOutput](TInput[] array, Converter`2 converter)
+   at A1Carpentry.DBhelper.SqlHelper.GetUserTools() in E:\Vishwas Part 3\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3609
+[Friday, February 12, 2021 09:06:30 PM] Error 19700 >> Error occured in GetUserName Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at System.Array.ConvertAll[TInput,TOutput](TInput[] array, Converter`2 converter)
+   at A1Carpentry.DBhelper.SqlHelper.GetUserTools() in E:\Vishwas Part 3\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3609
+[Friday, February 12, 2021 09:15:14 PM] Error 19700 >> Error occured in GetUserName Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at System.Array.ConvertAll[TInput,TOutput](TInput[] array, Converter`2 converter)
+   at A1Carpentry.DBhelper.SqlHelper.GetUserTools() in E:\Vishwas Part 3\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3609
+[Friday, February 12, 2021 09:23:55 PM] Error 15332 >> Error occured in GetUserName Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at System.Array.ConvertAll[TInput,TOutput](TInput[] array, Converter`2 converter)
+   at A1Carpentry.DBhelper.SqlHelper.GetUserTools() in E:\Vishwas Part 3\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3609
+[Friday, February 12, 2021 09:24:30 PM] Error 15332 >> Error occured in GetUserName Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at System.Array.ConvertAll[TInput,TOutput](TInput[] array, Converter`2 converter)
+   at A1Carpentry.DBhelper.SqlHelper.GetUserTools() in E:\Vishwas Part 3\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3609
+[Friday, February 12, 2021 09:30:07 PM] Error 15332 >> Error occured in GetUserName Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at System.Array.ConvertAll[TInput,TOutput](TInput[] array, Converter`2 converter)
+   at A1Carpentry.DBhelper.SqlHelper.GetUserTools() in E:\Vishwas Part 3\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3609
+[Friday, February 12, 2021 09:31:23 PM] Error 15332 >> Error occured in GetUserName Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at System.Array.ConvertAll[TInput,TOutput](TInput[] array, Converter`2 converter)
+   at A1Carpentry.DBhelper.SqlHelper.GetUserTools() in E:\Vishwas Part 3\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3609
+[Friday, February 12, 2021 09:37:19 PM] Error 15332 >> Error occured in GetUserName Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at System.Array.ConvertAll[TInput,TOutput](TInput[] array, Converter`2 converter)
+   at A1Carpentry.DBhelper.SqlHelper.GetUserTools() in E:\Vishwas Part 3\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3609
+[Friday, February 12, 2021 09:40:17 PM] Error 15332 >> Error occured in GetUserName Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at System.Array.ConvertAll[TInput,TOutput](TInput[] array, Converter`2 converter)
+   at A1Carpentry.DBhelper.SqlHelper.GetUserTools() in E:\Vishwas Part 3\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3609
+[Friday, February 12, 2021 09:41:08 PM] Error 15332 >> Error occured in GetUserName Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at System.Array.ConvertAll[TInput,TOutput](TInput[] array, Converter`2 converter)
+   at A1Carpentry.DBhelper.SqlHelper.GetUserTools() in E:\Vishwas Part 3\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3609
+[Friday, February 12, 2021 09:43:44 PM] Error 15332 >> Error occured in GetUserName Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at System.Array.ConvertAll[TInput,TOutput](TInput[] array, Converter`2 converter)
+   at A1Carpentry.DBhelper.SqlHelper.GetUserTools() in E:\Vishwas Part 3\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3609
+[Friday, February 12, 2021 09:43:55 PM] Error 15332 >> Error occured in GetUserName Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at System.Array.ConvertAll[TInput,TOutput](TInput[] array, Converter`2 converter)
+   at A1Carpentry.DBhelper.SqlHelper.GetUserTools() in E:\Vishwas Part 3\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3609
+[Friday, February 12, 2021 09:49:03 PM] Error 21860 >> Exception occured in : GetAllToolsDetails Fatal error encountered during data read.   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetAllToolsDetails() in E:\Vishwas Part 3\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1858
+[Friday, February 12, 2021 09:49:19 PM] Error 21860 >> Exception occured in : GetAllUserDetails Fatal error encountered during data read.   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at MySql.Data.MySqlClient.Driver.LoadCharacterSets(MySqlConnection connection)
+   at MySql.Data.MySqlClient.Driver.Configure(MySqlConnection connection)
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at A1Carpentry.DBhelper.SqlHelper.GetUserTools() in E:\Vishwas Part 3\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3596
+[Friday, February 12, 2021 09:49:30 PM] Error 21860 >> Exception occured in : GetAllUserDetails Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at System.Array.ConvertAll[TInput,TOutput](TInput[] array, Converter`2 converter)
+   at A1Carpentry.DBhelper.SqlHelper.GetUserTools() in E:\Vishwas Part 3\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3625
+[Friday, February 12, 2021 09:49:58 PM] Error 21860 >> Exception occured in : GetAllUserDetails Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at System.Array.ConvertAll[TInput,TOutput](TInput[] array, Converter`2 converter)
+   at A1Carpentry.DBhelper.SqlHelper.GetUserTools() in E:\Vishwas Part 3\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3625
+[Friday, February 12, 2021 09:56:22 PM] Error 22364 >> Error occured in tools Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at System.Array.ConvertAll[TInput,TOutput](TInput[] array, Converter`2 converter)
+   at A1Carpentry.Controllers.SuperAdminController.TotalToolsdetails() in E:\Vishwas Part 3\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 2777
+[Friday, February 12, 2021 09:56:59 PM] Error 22364 >> Error occured in tools Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at System.Array.ConvertAll[TInput,TOutput](TInput[] array, Converter`2 converter)
+   at A1Carpentry.Controllers.SuperAdminController.TotalToolsdetails() in E:\Vishwas Part 3\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 2777
+[Friday, February 12, 2021 09:57:31 PM] Error 22364 >> Error occured in tools Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at System.Array.ConvertAll[TInput,TOutput](TInput[] array, Converter`2 converter)
+   at A1Carpentry.Controllers.SuperAdminController.TotalToolsdetails() in E:\Vishwas Part 3\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 2777
+[Friday, February 12, 2021 10:34:01 PM] Error 22232 >> Error occured in EmployeeProfile Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendEmail(UsersModel ObjUser) in E:\Vishwas Part 3\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1701
+   at A1Carpentry.Controllers.SuperAdminController.employeetools(List`1 ToolName) in E:\Vishwas Part 3\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 188
+[Friday, February 12, 2021 10:34:53 PM] Error 22232 >> Error occured in EmployeeProfile Object reference not set to an instance of an object.   at A1Carpentry.Controllers.SuperAdminController.employeetools(List`1 ToolName) in E:\Vishwas Part 3\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 175
+[Friday, February 12, 2021 10:37:51 PM] Error 13428 >> Error occured in EmployeeProfile Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendEmail(UsersModel ObjUser) in E:\Vishwas Part 3\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1701
+   at A1Carpentry.Controllers.SuperAdminController.employeetools(List`1 ToolName) in E:\Vishwas Part 3\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 188

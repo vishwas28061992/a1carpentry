@@ -1,0 +1,4 @@
+Logs for: A1Carpentry , A1Carpentry
+[Saturday, February 13, 2021 01:03:31 AM] Error 24476 >> Error occured in EmployeeProfile Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendEmail(UsersModel ObjUser) in E:\Vishwas Part 3\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1767
+   at A1Carpentry.Controllers.SuperAdminController.employeetools(List`1 ToolName) in E:\Vishwas Part 3\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 188

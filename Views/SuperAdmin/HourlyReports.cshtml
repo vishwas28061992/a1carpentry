@@ -1,0 +1,203 @@
+﻿@model A1Carpentry.Models.HourlyReportsModel
+
+
+
+@{
+    ViewBag.Title = "Reports";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int Sno = 1;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+
+
+        html {
+            box-sizing: border-box;
+            font-family: sans-serif;
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            -ms-overflow-style: scrollbar
+        }
+
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box !important
+        }
+    </style>
+
+</head>
+
+<body data-sa-theme="1">
+    @*@using (Html.BeginForm("GenerateHourReport", "SuperAdmin", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+        {*@
+
+
+    <section class="content container-fluid">
+        <header class="content__title">
+            <h1>Job Hour Tracker Reports</h1>
+            <div class="text-center">
+                <p id="Datamessage" style="display:none" class="text-danger"><b>Please enter valid dates to proceed</b></p>
+                <span class="col-sm-3" style="color:red;font-weight:bold;display:none" id="lblError">
+                    <b>Please select both start date and JobID </b>
+                </span>
+                @*<span class="col-sm-3" style="color:red;font-weight:bold;display:none" id="lblError">
+                        <b>Please enter valid dates to proceed</b>
+                    </span>*@
+            </div>
+        </header>
+
+
+
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    @*<div class="col-md-6">
+                            <div class="form-group">
+                                    <input type="text" class="form-control datetime-picker" placeholder="Start a date & time" id="StartDate" autocomplete="off" />
+                                <i class="form-group__bar"></i>
+                            </div>
+                        </div>*@
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.DropDownListFor(m => m.JobID, new SelectList(Model.lstJobs, "JobID", "JobName"), " -- Select Job Name* --", new { @class = "form-control a-select ", id = "JobID" })
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12">	<div class="text-center">  <button type="submit" onclick="return Search()" class="btn btn-primary btn-new py-3 my-sm-4" id="load2" data-loading-text="<i class='fa fa-spinner fa-spin '></i> Processing Generate Hour Report">Generate Hour Report</button> </div></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <button type="button" class="open-AddBookDialog shadow-none btn btn-primary btn-new" display="none" data-toggle="modal" id="btnSubmit" data-target="#exampleModalCenterpopwindow">Submit</button>
+    <div class="modal fade" id="exampleModalCenterpopwindow" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Create Employee</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="popup-content-text"> Data Not Found  </p>
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" data-dismiss="modal" aria-label="Close" class="btn btn-primary">ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @*}*@
+</body>
+</html>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+<script type="text/javascript">
+
+    function Search() {
+        debugger
+
+                var validations = true;
+
+                //var startDate = document.getElementById("StartDate").value;
+        var jobID = document.getElementById("JobID").value;
+
+              //  let curentdate = new Date();
+
+              //  if (startDate == "" || startDate == null || startDate == undefined) {
+                //    document.getElementById("lblError").style.display = "inline";
+                  //  validations = false;
+              //  }
+
+                if (jobID == "" || jobID == null || jobID == undefined) {
+                    document.getElementById("lblError").style.display = "inline";
+                    validations = false;
+                }
+
+
+
+                else
+                    {
+
+                            GetReports(jobID);
+                            $("#Datamessage").css("display", "none");
+
+                       }
+
+                //if (startDate != "" && jobID != "") {
+                //    if (curentdate < new Date(startDate)) {
+                //        $("#Datamessage").css("display", "block");
+                //    }
+                //    else {
+                //        GetReports(startDate, jobID);
+                //        $("#Datamessage").css("display", "none");
+                //    }
+
+                //}
+
+                return validations;
+            };
+
+
+
+    function GetReports(jobID) {
+        debugger
+        $.ajax({
+            url: '/SuperAdmin/GenerateHourReport',
+            data: {jobID: jobID},
+            success: function (result) {
+                if (result == "1") {
+                    window.location.href = '@Url.Action("DownloadFile", "SuperAdmin")';
+                } if (result =="0") {
+                      window.location.href = '@Url.Action("Login", "Login")';
+                    }
+                if (result == "2") {
+                    //alert('Error occured please try again later');
+                   // alert('Data Not Found');
+                    $("p").text("Data Not Found");
+                    document.getElementById("btnSubmit").click();
+                     window.location.href = '@Url.Action("HourlyReports", "SuperAdmin")';
+                }
+
+
+            },
+
+        });
+
+
+    };
+
+</script>
+
+<script>
+
+    $('.btn').on('click', function () {
+        var $this = $(this);
+        $this.button('loading');
+        setTimeout(function () {
+            $this.button('reset');
+        }, 90000);
+    });
+
+</script>
+

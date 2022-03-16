@@ -1,0 +1,48 @@
+﻿@model IEnumerable<A1Carpentry.Models.TasksModel>
+@{
+    ViewBag.Title = "NumberofTasks";
+}
+    <html lang="en">
+    <body data-sa-theme="1">
+        <section class="content">
+            <header class="content__title">
+                <h1>Job Number Tasks</h1>
+            </header>
+            <div class="statbox widget box box-shadow">
+                <div class="widget-content widget-content-area">
+                    <div class="table-responsive mb-4">
+                        <table id="data-table" class="table style-2 table-bordered  table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Task Id</th>
+                                    <th>Task name</th>
+                                    <th>Task Description</th>
+                                    @*<th>Edit</th>
+                                    <th>Delete</th>*@
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        @*<td>@(nsno++)</td>*@
+                                        <td>@item.TaskID</td>
+                                        <td>@item.TaskName</td>
+                                        <td>@item.TaskDescription</td>
+                                        @*<td>
+                                            <a href="@Url.Action("UpdatetaskProfile","SuperAdmin", new { id = @item.TaskID})" class="shadow-none badge badge-warning">Edit</a>
+                                        </td>
+                                        <td>
+                                            <a href="@Url.Action("DeletetaskProfile","SuperAdmin", new { id = @item.TaskID})" class="shadow-none badge badge-danger">Delete</a>
+                                        </td>*@
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+    </html>
+

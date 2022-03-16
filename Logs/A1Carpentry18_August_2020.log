@@ -1,0 +1,2 @@
+Logs for: A1Carpentry , A1Carpentry
+[Tuesday, August 18, 2020 09:52:28 PM] Error 12760 >> Error occured in UpdateEmployeeDetails in ToolsObject reference not set to an instance of an object.   at A1Carpentry.Controllers.TimeCardController.SaveUserTools(List`1 ToolName)

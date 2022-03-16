@@ -1,0 +1,186 @@
+﻿﻿@model A1Carpentry.Models.UsersModel
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+
+</head>
+<body data-sa-theme="1">
+
+
+    @using (Html.BeginForm("updatetools", "SuperAdmin", FormMethod.Get, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+    {
+
+        @Html.AntiForgeryToken() // this is for prevent CSRF attack
+        @Html.ValidationSummary(true)
+
+        @Html.HiddenFor(m => m.UserID)
+        <input type="hidden" id="UserId" value="@Model.UserID" />
+
+
+        <section class="content">
+            <div class="content__inner">
+                <header class="content__title">
+                    <h1> Update Employee Profile </h1>
+                </header>
+
+                <div>
+                    <span style="display:none" id="lblError">
+                        <b style="color:red">Please enter all fields to proceed</b>
+                    </span>
+                    @if (ViewData["errormessage"] != null)
+                    {
+                        <p id="successMessage"><b style="color:red"> @ViewData["errormessage"] </b></p>
+                    }
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label><b>First Name</b></label>
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control", autocomplete = "off", placeholder = "First Name*" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+
+                            </div>
+                            <div class="col-sm-6">
+                                <label><b>Last Name</b></label>
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.LastName, new { @class = "form-control", autocomplete = "off", placeholder = "Last Name*" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-sm-6">
+                                <label><b>Rate</b></label>
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.Rate, "{0:G29}", new { @class = "form-control", maxlength = "9", autocomplete = "off", placeholder = "Rate ($)*", onkeypress = "javascript:return isNumber(event)" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+
+                            </div>
+
+
+                            @*<div class="col-sm-6">
+                                    <label><b>Tool Name</b></label>
+                                    <div class="form-group">
+                                        @Html.TextBoxFor(m => m.ToolName, new { @class = "form-control", maxlength = "9", autocomplete = "off", placeholder = "Tool Name*" })
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>*@
+
+                            @*<div class="col-sm-6">
+                                    <label><b>Tool SerialNumber</b></label>
+                                    <div class="form-group">
+                                        @Html.TextBoxFor(m => m.ToolSerialNumber, new { @class = "form-control", autocomplete = "off", placeholder = "Tool Serial Number*" })
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>*@
+
+                            <div class="col-sm-6">
+                                <label><b>Status</b></label>
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.Status, new { @class = "form-control", autocomplete = "off", placeholder = "Status*" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-12">	<div class="text-center">  <button type="submit" onclick="return Validation()" class="btn btn-primary btn-new">Update</button> </div></div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </section>
+    }
+
+
+
+
+
+
+
+</body>
+</html>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+<script>
+    function isNumber(evt) {
+        var iKeyCode = (evt.which) ? evt.which : evt.keyCode
+        if (iKeyCode != 46 && iKeyCode > 31 && (iKeyCode < 48 || iKeyCode > 57))
+            return false;
+
+        return true;
+    }
+</script>
+
+<script type="text/javascript">
+
+
+    function Validation() {
+        debugger;
+        var validations = true;
+
+        var firstName = document.getElementById("FirstName").value;
+        var lastName = document.getElementById("LastName").value;
+        var rate = document.getElementById("Rate").value;
+        var toolName = document.getElementById("ToolName").value;
+        var toolSerialNumber = document.getElementById("ToolSerialNumber").value;
+        var status = document.getElementById("Status").value;
+
+
+        if (firstName == "" || firstName == null || firstName == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+
+        if (lastName == "" || lastName == null || lastName == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+
+        if (rate == "" || rate == null || rate == undefined || rate == 0) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+
+
+        if (toolName == "" || toolName == null || toolName == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+
+        if (toolSerialNumber == "" || toolSerialNumber == null || toolSerialNumber == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+
+        if (status == "" || status == null || status == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+
+        return validations;
+
+    }
+
+
+</script>

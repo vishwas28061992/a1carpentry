@@ -1,0 +1,65 @@
+﻿
+@{
+
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+</head>
+<body data-sa-theme="1">
+
+
+    
+        <section class="content">
+            <div class="content__inner">
+                <header class="content__title">
+                    <h1> Download Excel Files </h1>
+                </header>
+
+                <div>
+                    
+                    @if (ViewData["successmessage"] != null)
+                    {
+                        <p class="alert alert-success" id="successMessage"><b> @ViewData["successmessage"]</b></p>
+                    }
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-2">
+
+                                <div class="form-group text-center">
+                                    @Html.ActionLink("Download Excel File", "DownloadExcel", "SuperAdmin", new { @class = "btn btn-primary btn-new" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+   
+
+
+
+
+
+
+</body>
+</html>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

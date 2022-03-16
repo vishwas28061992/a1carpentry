@@ -1,0 +1,26 @@
+Logs for: A1Carpentry , A1Carpentry
+[Friday, November 29, 2019 12:16:41 PM] Error 7648 >> Error occured in GetUserDetails Unable to connect to any of the specified MySQL hosts.   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at A1Carpentry.DBhelper.SqlHelper.GetUserDetails(String username, String password, String email) in C:\Users\lambda\Desktop\ATT Lighter Version\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 85
+[Friday, November 29, 2019 12:20:38 PM] Error 15144 >> Error occured in GetUserDetails Table 'db_a493bf_a1carp.Users' doesn't exist   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at A1Carpentry.DBhelper.SqlHelper.GetUserDetails(String username, String password, String email) in C:\Users\lambda\Desktop\ATT Lighter Version\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 103
+[Friday, November 29, 2019 12:24:56 PM] Error 13480 >> Exception occured in : GetAdminNotifications Table 'db_a493bf_a1carp.AdminNotifications' doesn't exist   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at A1Carpentry.DBhelper.SqlHelper.GetAdminNotifications() in C:\Users\lambda\Desktop\ATT Lighter Version\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1464

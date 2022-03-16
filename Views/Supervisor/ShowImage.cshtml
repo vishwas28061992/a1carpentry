@@ -1,0 +1,116 @@
+﻿
+@{
+
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+
+    <link rel="stylesheet" href="~/css/app.min.css" />
+
+
+</head>
+<body data-sa-theme="1">
+    <section class="content">
+        <div class="content__inner">
+            <header class="content__title">
+
+                <h1>Image Preview</h1>
+                @if (ViewData["Id"].ToString() == "Supervisor")
+                {
+                    <div class="text-right "><a href="@Url.Action("SupervisorApproval","Supervisor")" class="btn btn-success">Back To Supervisor Approval</a></div>
+                }
+                else if (ViewData["Id"].ToString() == "Admin")
+                {
+                    <div class="text-right "><a href="@Url.Action("AdminNotification","Supervisor")" class="btn btn-success">Back To Admin Notification</a></div>
+                }
+
+            </header>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-body" id='myFunction'>
+
+
+                            <div class="row">
+                                <div class="col-sm-6">
+
+                                    <div class="form-group container_profile">
+                                        <img class="img-responsive" style="width:100%;height:100%;" src="~/files/@ViewData["Image"]">
+                                        <div class="sbottom-left" style="color:red;font-weight:bold"> @ViewData["userName"]  @ViewData["EndDate"]<br />@ViewData["JobNumber"]</div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-sm-6">
+                                  
+                                    <p>
+                                        <b> Notification ID :</b> @ViewData["UserId"]
+                                        
+                                    </p>
+                                    <p>
+                                        <b> Employee Name:</b> @ViewData["userName"]
+                                    </p>
+                                    <p>
+                                        <b> Job Name :</b> @ViewData["JobTask"]
+                                    </p>
+                                    <p>
+                                        <b> Job Task :</b> @ViewData["JobTask"]
+                                    </p>
+
+                                    @if (ViewData["JobNumber"].ToString() != "")
+                                    {
+                                    <p>
+                                        <b>  Job Number :</b> @ViewData["JobNumber"]
+                                    </p>
+                                    }
+
+
+                                    <p>
+                                        <b>  Job Type :</b> @ViewData["JobType"]
+                                    </p>
+                                    <p>
+                                        <b>  Start Time :</b>@ViewData["StartDate"]
+                                    </p>
+                                    <p>
+                                        <b>  End Time :</b> @ViewData["EndDate"]
+                                    </p>
+                                    <p>
+                                        <b>  Reason :</b>@ViewData["Reason"]
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <div class="text-center"><button onclick="myFunction()" class="btn btn-success">Print</button></div>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script type="text/javascript">
+        function myFunction() {
+            window.print();
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>

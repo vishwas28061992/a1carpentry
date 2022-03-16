@@ -1,0 +1,7 @@
+Logs for: A1Carpentry , A1Carpentry
+[Tuesday, April 14, 2020 05:36:27 PM] Information 10112 >> count 0 in jobNumber (Job)
+[Tuesday, April 14, 2020 05:41:23 PM] Information 10112 >> count 0 in jobNumber (Job)
+[Tuesday, April 14, 2020 06:13:56 PM] Error 4128 >> Error occured in EmployeeProfile (Post)Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendEmail(UsersModel ObjUser) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1375
+   at A1Carpentry.Controllers.SuperAdminController.EmployeeProfile(UsersModel objUser, HttpPostedFileBase file) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 160
+[Tuesday, April 14, 2020 06:29:37 PM] Information 4128 >> filename and FullPathA1Carpentry_20200414182925276.pdfC:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\files\A1Carpentry_20200414182925276.pdf

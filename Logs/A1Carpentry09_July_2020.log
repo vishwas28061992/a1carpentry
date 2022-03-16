@@ -1,0 +1,25 @@
+Logs for: A1Carpentry , A1Carpentry
+[Thursday, July 09, 2020 03:42:43 PM] Error 15060 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Thursday, July 09, 2020 09:04:05 PM] Error 12540 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Thursday, July 09, 2020 09:22:13 PM] Error 12540 >> Couldn't able to delete Employee Details
+[Thursday, July 09, 2020 11:44:29 PM] Error 21444 >> Error occured in EmployeeProfile Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendEmail(UsersModel ObjUser) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1728
+   at A1Carpentry.Controllers.SuperAdminController.employeetools(List`1 ToolName) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 169
+[Thursday, July 09, 2020 11:46:19 PM] Error 21444 >> Error occured in EmployeeProfile Object reference not set to an instance of an object.   at A1Carpentry.Controllers.SuperAdminController.employeetools(List`1 ToolName) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 157
+[Thursday, July 09, 2020 11:46:23 PM] Error 21444 >> Error occured in EmployeeProfile Object reference not set to an instance of an object.   at A1Carpentry.Controllers.SuperAdminController.employeetools(List`1 ToolName) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 157
+[Thursday, July 09, 2020 11:46:35 PM] Error 21444 >> Error occured in EmployeeProfile Object reference not set to an instance of an object.   at A1Carpentry.Controllers.SuperAdminController.employeetools(List`1 ToolName) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 157
+[Thursday, July 09, 2020 11:46:41 PM] Error 21444 >> Error occured in EmployeeProfile Object reference not set to an instance of an object.   at A1Carpentry.Controllers.SuperAdminController.employeetools(List`1 ToolName) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 157
+[Thursday, July 09, 2020 11:46:46 PM] Error 21444 >> Error occured in EmployeeProfile Object reference not set to an instance of an object.   at A1Carpentry.Controllers.SuperAdminController.employeetools(List`1 ToolName) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 157
+[Thursday, July 09, 2020 11:58:18 PM] Error 22112 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Thursday, July 09, 2020 11:58:42 PM] Error 22112 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475
+[Thursday, July 09, 2020 11:59:18 PM] Error 22112 >> Exception occured in : GetJobProfileSummary Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1475

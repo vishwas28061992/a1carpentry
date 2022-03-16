@@ -1,0 +1,624 @@
+﻿@model A1Carpentry.Models.JobsModel
+
+@{
+    
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+
+        .custom-scrollbar-css::-webkit-scrollbar-thumb {
+            border-radius: 1rem;
+            background-color: #00d2ff;
+            background-image: linear-gradient(to top, #00d2ff 0%, #3a7bd5 100%);
+        }
+
+        .my-custom-scrollbar {
+            position: relative;
+            height: 100px;
+            overflow: auto;
+        }
+
+        .table-wrapper-scroll-y {
+            display: block;
+        }
+    </style>
+
+</head>
+<body data-sa-theme="1">
+
+
+    @using (Html.BeginForm("moretasksadded", "SuperAdmin", FormMethod.Get, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+    {
+
+        @Html.AntiForgeryToken() // this is for prevent CSRF attack
+        @Html.ValidationSummary(true)
+
+        @Html.HiddenFor(a => a.JobID)
+        @Html.HiddenFor(a => a.Client)
+
+
+
+        <section class="content">
+            <div class="content__inner">
+                <header class="content__title">
+                    <h1> Create Job Profile </h1>
+
+                </header>
+
+                <div class="text-center">
+
+                    <span style="display:none" id="lblError">
+                        <b style="color:red">  Please enter all fields to proceed. </b>
+                    </span>
+                    <span style="display:none" id="lblDateError">
+                        <b style="color:red">   End date cannot be less than start date. </b>
+                    </span>
+                    <span style="display:none" id="errormessage">
+                        <b style="color:red"> Please select current date or above. </b>
+                    </span>
+
+
+                    @if (ViewData["errormessage"] != null)
+                    {
+                        <p id="successMessage"> <b style="color:red">@ViewData["errormessage"]</b></p>
+                    }
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+
+                        <div class="row">
+
+                            <div class="col-sm-6">
+                                @* <label><b>Job Number</b></label>*@
+                                @if (Model.IsEdit == true)
+                                {
+                                    <label><b>Job Number</b></label>
+                                }
+
+                                <div class="form-group">
+
+                                    @Html.TextBoxFor(m => m.JobNumber, new { @class = "form-control", maxlength = "9", autocomplete = "off", placeholder = "Job Number*" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+
+                            </div>
+                            <div class="col-sm-6">
+                                @if (Model.IsEdit == true)
+                                {
+                                    <label><b>Job Name</b></label>
+                                }
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.JobName, new { @class = "form-control", maxlength = "20", autocomplete = "off", placeholder = "Job Name*" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+
+                            </div>
+
+                            @*<div class="col-sm-6">
+
+        @if (Model.IsEdit == true)
+        {
+            <label><b>PreTaskID</b></label>
+        }
+        <div class="form-group">
+            @Html.DropDownListFor(m => m.PreTaskID, new SelectList(Model.lstPreTasks, "PreTaskID", "PreTaskName"), " -- Select Job Task* -- ", new { @class = "form-control", @readonly = "true", id = "PreTaskID" })
+            <i class="form-group__bar"></i>
+        </div>*@
+                            @*<div class="form-group">
+            @Html.TextAreaFor(m => m.TaskDescription, new { @class = "form-control", @readonly = "true", autocomplete = "off", placeholder = "Task Description*" })
+            <i class="form-group__bar"></i>
+        </div>*@
+
+                            @*</div>*@
+
+
+                            <div class="col-sm-6">
+                                @if (Model.IsEdit == true)
+                                {
+                                    <label><b>StartDate</b></label>
+                                }
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.StartDate, new { @class = "form-control datetime-picker", autocomplete = "off", placeholder = "Start a date & time*" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                @if (Model.IsEdit == true)
+                                {
+                                    <label><b>EndDate</b></label>
+                                }
+
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.EndDate, new { @class = "form-control datetime-picker", autocomplete = "off", placeholder = "End a date & time*" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+                            </div>
+
+
+                            <div class="col-sm-6">
+                                @if (Model.IsEdit == true)
+                                {
+                                    <label><b>JobTypeID</b></label>
+                                }
+                                <div class="form-group">
+                                    @Html.DropDownListFor(m => m.JobTypeID, new SelectList(Model.JobTypes, "JobTypeID", "JobType"), " -- Select Job Type* -- ", new { @class = "form-control a-select ", id = "JobTypeID", onchange = "ShowHideDiv()" })
+                                </div>
+
+
+                            </div>
+
+                            <div class="col-sm-6">
+                                @if (Model.IsEdit == true)
+                                {
+                                    <label><b>ClientID</b></label>
+                                }
+                                <div class="form-group">
+                                    @Html.DropDownListFor(m => m.ClientID, new SelectList(Model.lstClients, "ClientID", "ClientName"), " -- Select Client* -- ", new { @class = "form-control a-select ", id = "ClientID" })
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-sm-6" id="dvContractCost" style="display: none">
+                                @if (Model.IsEdit == true)
+                                {
+                                    <label><b>Contract Cost</b></label>
+                                }
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.ContractCost, new { @class = "form-control", maxlength = "9", autocomplete = "off", placeholder = "Contract Cost($)*", onkeypress = "javascript:return isNumber(event)" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+
+                            </div>
+
+                            <div class="col-sm-6" id="dvTimeSummaryCost" style="display: none">
+                                @if (Model.IsEdit == true)
+                                {
+                                    <label><b>TimeSummary Cost</b></label>
+                                }
+
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.TimeSummaryCost, new { @class = "form-control", maxlength = "9", autocomplete = "off", placeholder = "Time Summary Cost($)*", onkeypress = "javascript:return isNumber(event)" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+
+                            </div>
+
+                            <div class="col-sm-6" id="dvMaterialSummaryCost" style="display: none">
+                                @if (Model.IsEdit == true)
+                                {
+                                    <label><b>MaterialSummary Cost</b></label>
+                                }
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.MaterialSummaryCost, new { @class = "form-control", maxlength = "9", autocomplete = "off", placeholder = "Material Summary Cost($)*", onkeypress = "javascript:return isNumber(event)" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+
+                            </div>
+
+                            @*<div class="col-sm-6">
+            @if (Model.IsEdit == true)
+            {
+                <label><b>Task Description</b></label>
+            }
+            <div class="form-group">
+                @Html.TextAreaFor(m => m.TaskDescription, new { @class = "form-control", @readonly = "true", autocomplete = "off", placeholder = "Task Description*" })
+                <i class="form-group__bar"></i>
+            </div>
+
+        </div>*@
+
+
+                            <div class="col-sm-6" id="dvOtherDescription" style="display: none">
+                                @if (Model.IsEdit == true)
+                                {
+                                    <label><b>Other Description</b></label>
+                                }
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.OtherDescription, new { @class = "form-control", maxlength = "9", autocomplete = "off", placeholder = "Other Description*"})
+                                    <i class="form-group__bar"></i>
+                                </div>
+
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+                            <div class="col-sm-6">
+                                @if (Model.IsEdit == true)
+                                {
+                                    <label><b>Job Description</b></label>
+                                }
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.JobDescription, new { @class = "form-control", autocomplete = "off", placeholder = "Job Description*" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+
+                            </div>
+
+
+                            @*<div class="col-sm-6">
+                <div class=" mb-4">
+                    <div class="p-5">
+                        <h4 class="mb-4">Garage Tools</h4>
+                        <div id="content-1" class="carp-scroll  custom-scrollbar-css p-2">
+
+                            @foreach (var item in Model.Tools)
+                            {
+                                <div class="form-control chkbox-brd ">
+
+                                    @if (item.ToolID > 0)
+                                    {
+                                        if (item.ToolID > 0)
+                                        {
+                                            <input type="checkbox" id="ToolName" name="ToolName" value="@item.ToolID">
+                                            <label class="" for="customCheck">@item.ToolName</label>
+                                        }
+                                    }
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>*@
+
+
+                            @*<h4 class="list-group-item-text">Tool Names</h4>*@
+
+                            @*@foreach (var item in Model.Tools)
+        {
+            if (item.ToolID >0)
+            {
+            <input type="checkbox" id="ToolName" name="ToolName" value="@item.ToolID"  />@item.ToolName
+            }
+        }*@
+                            @*foreach (var item in Model.Tools)
+            {
+
+                if (item.ToolID > 0)
+                {
+                    //<input type="checkbox" id="check_@item.ToolID" name="ToolName" value="@item.ToolID" />@item.ToolName
+                    <input type="checkbox" id="ToolName" name="ToolName" value="@item.ToolID" />@item.ToolName
+                }
+
+            }
+
+
+
+        }*@
+                            @*@if (Model.IsEdit == false)
+                            {*@
+
+                                @*<div class="col-lg-12">
+                <label class="label-content">Tool names</label>
+
+            </div>*@
+
+
+
+
+
+                                @*<div class="table-wrapper-scroll-y my-custom-scrollbar">
+
+                <table class="table table-bordered table-striped mb-0">
+                    <tbody>
+                        <tr>
+
+                            <div class="col-sm-12">
+                                <div class="container">
+                                    <div class="row">
+
+
+                                        @foreach (var item in Model.Tools)
+                                        {
+
+                                            if (item.ToolID > 0)
+                                            {
+                                                <div class="col-lg-3 col-sm-3">
+                                                    <input type="checkbox" id="ToolName" name="ToolName" value="@item.ToolID">
+                                                    <label class="" for="customCheck">@item.ToolName</label>
+                                                </div>
+
+                                            }
+
+                                        }
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>*@
+
+
+
+
+
+
+
+
+
+
+
+
+                       
+                            @*<div class="col-sm-12 p-3">	<div class="text-center">
+        <button type="submit" onclick="return Validation()" class="btn btn-primary btn-new">next</button> </div></div>  <a href="@Url.Action("moretasksadded", "SuperAdmin", new {})" class="btn btn-primary btn-new">Next</a>
+                                 </div>
+                            *@
+
+
+                            <div class="col-sm-12 pt-5 p-3">
+                                <div class="text-center">
+                                    <button type="submit" onclick="return Validation()" class="btn btn-primary btn-new">Next</button>
+                                </div>
+                            </div> @*<a href="@Url.Action("moretasksadded", "SuperAdmin", new {})" class="btn btn-primary btn-new">Next</a>*@
+                        </div>
+                            </div>
+
+
+                    </div>
+                        </div>
+</section>
+    }
+
+
+
+
+
+
+
+</body>
+</html>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<script type="text/javascript">
+    function ShowHideDiv() {
+        //debugger;
+        var ddlJobType = document.getElementById("JobTypeID").value;
+        //alert(ddlJobType);
+        if (ddlJobType == 3) {
+            document.getElementById("dvOtherDescription").style.display = "inline";
+        }
+        if (ddlJobType == 2) {
+            document.getElementById("dvContractCost").style.display = "inline";
+            document.getElementById("dvTimeSummaryCost").style.display = "none";
+            document.getElementById("dvMaterialSummaryCost").style.display = "none";
+        }
+        else if (ddlJobType == 1) {
+
+            document.getElementById("dvTimeSummaryCost").style.display = "inline";
+            document.getElementById("dvMaterialSummaryCost").style.display = "inline";
+            document.getElementById("dvContractCost").style.display = "none";
+
+        }
+        else {
+            document.getElementById("dvContractCost").style.display = "none";
+            document.getElementById("dvTimeSummaryCost").style.display = "none";
+            document.getElementById("dvMaterialSummaryCost").style.display = "none";
+        }
+
+
+    }
+</script>
+
+@*<script>
+        var savelist = function () {
+            var arryItem = [];
+            var comsaperatedids = "";
+            $("#list]]")
+
+        }
+
+
+    </script>*@
+
+
+
+
+
+
+<script>
+
+    $('#PreTaskID').change(function () {
+        //debugger;
+        LoadTasksById($(this).val(), '')
+    });
+
+    function LoadTasksById(PreTasksID, taskID) {
+        //debugger
+        $.ajax({
+            url: '/SuperAdmin/GetTasksByPreTasksID',
+            data: { PreTasksID: PreTasksID },
+            success: function (response) {
+                if (response != null) {
+                    $('#TaskDescription').val(response.PreTaskDescription);
+                    $('#JobTypeID').val(response.JobTypeID);
+                    ShowHideDiv();
+                    //alert(JSON.stringify(response));
+                } else {
+                    alert("Something went wrong");
+                }
+            },
+            failure: function (response) {
+                //<img src="chrome-extension://fdcgdnkidjaadafnichfpabhfomcebme/images/zenmateLogoBlack.png" srcset="images/zenmateLogoBlack@2x.png" style="-webkit-font-smoothing: antialiased; box-sizing: border-box; outline: 0px !important; border: 0px; height: 40px; color: rgb(0, 0, 0); font-family: &quot;Open Sans&quot;, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 200; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(250, 250, 250); text-decoration-style: initial; text-decoration-color: initial;"/>
+                alert(response.responseText);
+            },
+            error: function (response) {
+                alert(response.responseText);
+            }
+        })
+    };
+
+
+</script>
+
+<script>
+    function isNumber(evt) {
+        var iKeyCode = (evt.which) ? evt.which : evt.keyCode
+        if (iKeyCode != 46 && iKeyCode > 31 && (iKeyCode < 48 || iKeyCode > 57))
+            return false;
+
+        return true;
+    }
+</script>
+
+
+<script type="text/javascript">
+
+
+    function Validation() {
+        debugger;
+        var validations = true;
+
+        var jobNumber = document.getElementById("JobNumber").value;
+        var jobName = document.getElementById("JobName").value;
+        var jobDescription = document.getElementById("JobDescription").value;
+        var startDate = document.getElementById("StartDate").value;
+        // var endDate = document.getElementById("EndDate").value;
+        var jobTypeID = document.getElementById("JobTypeID").value;
+
+        var contractCost = document.getElementById("ContractCost").value;
+        var timeSummaryCost = document.getElementById("TimeSummaryCost").value;
+        var materialSummaryCost = document.getElementById("MaterialSummaryCost").value;
+
+        //var preTaskID = document.getElementById("PreTaskID").value;
+        var clientID = document.getElementById("ClientID").value;
+
+
+
+        var d = new Date(Date.now());
+        //  var date_format = d.getFullYear().toString() + "-" + ((d.getMonth() + 1).toString().length == 2 ? (d.getMonth() + 1).toString() : "0" + (d.getMonth() + 1).toString()) + "-" + (d.getDate().toString().length == 2 ? d.getDate().toString() : "0" + d.getDate().toString()) + " " + (d.getHours().toString().length == 2 ? d.getHours().toString() : "0" + d.getHours().toString()) + ":" + ((parseInt(d.getMinutes() / 5) * 5).toString().length == 2 ? (parseInt(d.getMinutes() / 5) * 5).toString() : "0" + (parseInt(d.getMinutes() / 5) * 5).toString()) + ":00";
+        var date_format = d.getFullYear().toString() + "-" + ((d.getMonth() + 1).toString().length == 2 ? (d.getMonth() + 1).toString() : "0" + (d.getMonth() + 1).toString()) + "-" + (d.getDate().toString().length == 2 ? d.getDate().toString() : "0" + d.getDate().toString()) + " " + "12" + ":00";
+
+
+
+
+
+        if (jobNumber == "" || jobNumber == null || jobNumber == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+
+        if (jobName == "" || jobName == null || jobName == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+
+        if (jobDescription == "" || jobDescription == null || jobDescription == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+
+
+
+
+        //if (startDate == "" || startDate == null || startDate == undefined) {
+        //  document.getElementById("lblError").style.display = "inline";
+        // validations = false;
+        // }
+
+        //if (endDate == "" || endDate == null || endDate == undefined) {
+        //    document.getElementById("lblError").style.display = "inline";
+        //    validations = false;
+        //}
+
+
+        if (jobTypeID == 0 || jobTypeID == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+
+        //if (preTaskID == 0 || preTaskID == undefined) {
+        //    document.getElementById("lblError").style.display = "inline";
+        //    validations = false;
+        //}
+
+        if (clientID == 0 || clientID == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+
+        //if (startDate = "" || startDate == null || startDate == undefined || endDate = "" || endDate == null || endDate == undefined) {
+        //    document.getElementById("lblError").style.display = "inline";
+        //    validations = false;
+        //}
+
+        //if (endDate != "") {
+        //    if (startDate > endDate) {
+        //        document.getElementById("lblDateError").style.display = "inline";
+        //        validations = false;
+        //    } end shold be opetional
+        //}
+        //  if (startDate != "" || startDate !== null || startDate !== undefined) below single line code write
+        if (startDate != "") {
+            if (startDate < date_format) {
+                document.getElementById("errormessage").style.display = "inline";
+                validations = false;
+            }
+        }
+
+
+        if (jobTypeID == 1 && timeSummaryCost == "" && materialSummaryCost == "") {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+
+        if (jobTypeID == 2 && contractCost == "") {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+
+        return validations;
+
+    }
+
+
+</script>
+
+
+<script>
+    $(function () {
+
+        $("#content-1").mCustomScrollbar({
+
+            theme: "rounded-dots-dark"
+
+
+        });
+    });
+
+
+</script>
+
+
+
+

@@ -1,0 +1,36 @@
+Logs for: A1Carpentry , A1Carpentry
+[Wednesday, January 22, 2020 02:56:59 PM] Error 3900 >> Error occured in GetJobNumberByJobID Timeout in IO operation   at MySql.Data.MySqlClient.TimedStream.StopTimer()
+   at MySql.Data.MySqlClient.TimedStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+   at MySql.Data.MySqlClient.MySqlStream.ReadFully(Stream stream, Byte[] buffer, Int32 offset, Int32 count)
+   at MySql.Data.MySqlClient.MySqlStream.LoadPacket()
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.ReadOk(Boolean read)
+   at MySql.Data.MySqlClient.NativeDriver.SetDatabase(String dbName)
+   at MySql.Data.MySqlClient.Driver.SetDatabase(String dbName)
+   at MySql.Data.MySqlClient.MySqlConnection.ChangeDatabase(String databaseName)
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at A1Carpentry.DBhelper.SqlHelper.GetJobNumberByJobID(Int32 jobId) in C:\Users\lambda\Desktop\ATT Lighter Version\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2652
+[Wednesday, January 22, 2020 03:02:27 PM] Error 12684 >> Error occured in GenerateReports Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendAttachmentEmail(String Email, HttpPostedFileBase fileUploader) in C:\Users\lambda\Desktop\ATT Lighter Version\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1399
+   at A1Carpentry.Controllers.SuperAdminController.GenerateReports(String startDate, String endDate) in C:\Users\lambda\Desktop\ATT Lighter Version\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 881
+[Wednesday, January 22, 2020 03:03:18 PM] Error 12684 >> Error occured in GenerateReports Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendAttachmentEmail(String Email, HttpPostedFileBase fileUploader) in C:\Users\lambda\Desktop\ATT Lighter Version\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1399
+   at A1Carpentry.Controllers.SuperAdminController.GenerateReports(String startDate, String endDate) in C:\Users\lambda\Desktop\ATT Lighter Version\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 881
+[Wednesday, January 22, 2020 03:20:24 PM] Error 2700 >> Error occured in GenerateReports Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendAttachmentEmail(String Email, HttpPostedFileBase fileUploader) in C:\Users\lambda\Desktop\ATT Lighter Version\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1399
+   at A1Carpentry.Controllers.SuperAdminController.GenerateReports(String startDate, String endDate) in C:\Users\lambda\Desktop\ATT Lighter Version\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 881
+[Wednesday, January 22, 2020 03:22:29 PM] Error 2700 >> Error occured in GenerateReports Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendAttachmentEmail(String Email, HttpPostedFileBase fileUploader) in C:\Users\lambda\Desktop\ATT Lighter Version\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1399
+   at A1Carpentry.Controllers.SuperAdminController.GenerateReports(String startDate, String endDate) in C:\Users\lambda\Desktop\ATT Lighter Version\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 881
+[Wednesday, January 22, 2020 06:13:58 PM] Error 16780 >> Error occured in EmployeeProfile (Post)Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendEmail(UsersModel ObjUser) in C:\Users\lambda\Desktop\ATT Lighter Version\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1365
+   at A1Carpentry.Controllers.SuperAdminController.EmployeeProfile(UsersModel objUser, HttpPostedFileBase file) in C:\Users\lambda\Desktop\ATT Lighter Version\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 150
+[Wednesday, January 22, 2020 06:30:29 PM] Error 10088 >> Error occured in EmployeeProfile (Post)Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendEmail(UsersModel ObjUser) in C:\Users\lambda\Desktop\ATT Lighter Version\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1367
+   at A1Carpentry.Controllers.SuperAdminController.EmployeeProfile(UsersModel objUser, HttpPostedFileBase file) in C:\Users\lambda\Desktop\ATT Lighter Version\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 152
+[Wednesday, January 22, 2020 06:46:03 PM] Error 11580 >> Error occured in GenerateReports Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendAttachmentEmail(String Email, HttpPostedFileBase fileUploader) in C:\Users\lambda\Desktop\ATT Lighter Version\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1409
+   at A1Carpentry.Controllers.SuperAdminController.GenerateReports(String startDate, String endDate) in C:\Users\lambda\Desktop\ATT Lighter Version\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 891
+[Wednesday, January 22, 2020 06:49:21 PM] Error 11580 >> Error occured in GenerateReports Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendAttachmentEmail(String Email, HttpPostedFileBase fileUploader) in C:\Users\lambda\Desktop\ATT Lighter Version\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1409
+   at A1Carpentry.Controllers.SuperAdminController.GenerateReports(String startDate, String endDate) in C:\Users\lambda\Desktop\ATT Lighter Version\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 891

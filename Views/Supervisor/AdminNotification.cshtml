@@ -1,0 +1,121 @@
+﻿@model IEnumerable<A1Carpentry.Models.AdminNotificationsModel>
+
+
+
+@{
+    ViewBag.Title = "AdminNotifications";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <style>
+
+
+        /*html {
+            box-sizing: border-box;
+            font-family: sans-serif;
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            -ms-overflow-style: scrollbar
+        }
+
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box !important
+        }*/
+    </style>
+
+</head>
+
+<body data-sa-theme="1">
+
+    <section class="content">
+        <header class="content__title">
+            <h1>Admin Notifications (Denied Task by Supervisor)</h1>
+        </header>
+
+        <div class="statbox widget box box-shadow">
+
+            <div class="widget-content widget-content-area">
+
+                <div class="table-responsive mb-4">
+                    <table id="data-table" class="table style-2 table-bordered  table-hover">
+                        <thead>
+                            <tr>
+                                <th>Admin Notification ID</th>
+                                <th>Emp Name</th>
+                                <th>Job No</th>
+                                <th>Work Done Image</th>
+                                <th>Job Name</th>
+                                <th>Job Task</th>
+                                <th>Job Type</th>
+                                <th>Start Time</th>
+                                <th>End Time</th>
+                                <th>Location(Lat&Long)</th>
+                                @*<th>Latitude</th>
+                                    <th>Longitude</th>*@
+                                <th>Reason</th>
+                                <th>&nbsp;</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.AdminNotificationsID</td>
+                                    <td>@item.EmployeeName</td>
+                                    <td>@item.JobNumber</td>
+                                    <td>
+                                        <a href="@Url.Action("ShowImage","Supervisor", new { adminId=@item.AdminNotificationsID,userName=@item.EmployeeName,jobNumber=item.JobNumber,jobName=@item.JobName,jobTask=@item.JobTask,jobType=@item.JobType,endDate=@item.EndTime,startDate =@item.StartTime,reason = @item.Reason,path = @item.AttachmentFilePath, id = "Admin"} )">
+                                            <img class="img-thumbnail rounded-circle" height="50" width="50" src="~/files/@item.AttachmentFilePath">
+                                        </a>
+                                    </td>
+                                    <td>@item.JobName</td>
+                                    <td>@item.JobTask</td>
+                                    <td>@item.JobType</td>
+                                    <td>@item.StartTime</td>
+                                    <td>@item.EndTime</td>
+                                    <td>@item.Latitude , @item.Longitude  </td>
+                                    @*<td>@item.Longitude</td>*@
+                                    <td>@item.Reason</td>
+
+
+                                    @if (item.ReApprove == 0)
+                                    {
+                                        <td>
+                                            <a href="@Url.Action("ReApproval", "Supervisor", new { id = @item.JobDetailID })" class="shadow-none badge badge-success">Re-Approve</a>
+                                        </td>
+                                    }
+                                    else
+                                    {
+                                        <td>
+                                            <button class="shadow-none badge badge-warning" disabled="disabled">Re-Approved</button>
+                                        </td>
+                                    }
+
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+
+</html>

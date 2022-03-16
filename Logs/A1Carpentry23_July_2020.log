@@ -1,0 +1,25 @@
+Logs for: A1Carpentry , A1Carpentry
+[Thursday, July 23, 2020 02:15:16 PM] Error 9880 >> Error occured in SaveJobDetails Parameter '@Approval' has already been defined.   at MySql.Data.MySqlClient.MySqlParameterCollection.InternalAdd(MySqlParameter value, Int32 index)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.Add(Object value)
+   at MySql.Data.MySqlClient.MySqlParameterCollection.AddRange(Array values)
+   at A1Carpentry.DBhelper.SqlHelper.SaveJobDetails(JobDetailsModel objJobDetails) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 622
+[Thursday, July 23, 2020 02:15:16 PM] Information 9880 >> Could not saved SaveJobDetails in database (Post)
+[Thursday, July 23, 2020 03:11:06 PM] Error 3468 >> Error occured in GetUserDetails Unable to connect to any of the specified MySQL hosts.   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at A1Carpentry.DBhelper.SqlHelper.GetUserDetails(String username, String password, String email) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 73
+[Thursday, July 23, 2020 03:11:17 PM] Error 3468 >> Error occured in GetUserDetails Unable to connect to any of the specified MySQL hosts.   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at A1Carpentry.DBhelper.SqlHelper.GetUserDetails(String username, String password, String email) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 73
+[Thursday, July 23, 2020 05:02:09 PM] Information 3468 >> GetUserDetails is null 

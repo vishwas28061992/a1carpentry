@@ -1,0 +1,7 @@
+Logs for: A1Carpentry , A1Carpentry
+[Friday, June 12, 2020 04:21:17 PM] Error 19144 >> Exception occured in : GetAllUserDetails Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDecimal(IFormatProvider provider)
+   at System.Convert.ToDecimal(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetAllUserDetails() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1339
+[Friday, June 12, 2020 04:22:45 PM] Error 19144 >> Exception occured in : GetAllUserDetails Object cannot be cast from DBNull to other types.   at System.DBNull.System.IConvertible.ToDecimal(IFormatProvider provider)
+   at System.Convert.ToDecimal(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetAllUserDetails() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1339

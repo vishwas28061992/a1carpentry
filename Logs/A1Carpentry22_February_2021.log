@@ -1,0 +1,31 @@
+Logs for: A1Carpentry , A1Carpentry
+[Monday, February 22, 2021 07:27:55 PM] Error 9172 >> Error occured in EmployeeProfile Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendEmail(UsersModel ObjUser) in E:\Vishwas Part 3\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1761
+   at A1Carpentry.Controllers.SuperAdminController.employeetools(List`1 ToolName) in E:\Vishwas Part 3\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 188
+[Monday, February 22, 2021 07:29:39 PM] Error 9172 >> Exception occured in : GetJobDetailsToApprovewithtasklogs Unable to convert MySQL date/time value to System.DateTime   at MySql.Data.Types.MySqlDateTime.GetDateTime()
+   at MySql.Data.MySqlClient.MySqlDataReader.GetValue(Int32 i)
+   at MySql.Data.MySqlClient.MySqlDataReader.get_Item(Int32 i)
+   at A1Carpentry.DBhelper.SqlHelper.GetGaragdetails() in E:\Vishwas Part 3\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3130
+[Monday, February 22, 2021 08:34:14 PM] Error 10356 >> Exception occured in : GetJobDetailsToApprovewithtasklogs Unable to convert MySQL date/time value to System.DateTime   at MySql.Data.Types.MySqlDateTime.GetDateTime()
+   at MySql.Data.MySqlClient.MySqlDataReader.GetValue(Int32 i)
+   at MySql.Data.MySqlClient.MySqlDataReader.get_Item(Int32 i)
+   at A1Carpentry.DBhelper.SqlHelper.GetGaragdetails() in E:\Vishwas Part 3\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3130
+[Monday, February 22, 2021 08:34:30 PM] Error 10356 >> Exception occured in : GetJobDetailsToApprovewithtasklogs Unable to convert MySQL date/time value to System.DateTime   at MySql.Data.Types.MySqlDateTime.GetDateTime()
+   at MySql.Data.MySqlClient.MySqlDataReader.GetValue(Int32 i)
+   at MySql.Data.MySqlClient.MySqlDataReader.get_Item(Int32 i)
+   at A1Carpentry.DBhelper.SqlHelper.GetGaragdetails() in E:\Vishwas Part 3\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3130
+[Monday, February 22, 2021 08:36:18 PM] Error 10356 >> Exception occured in : GetJobDetailsToApprovewithtasklogs Unable to convert MySQL date/time value to System.DateTime   at MySql.Data.Types.MySqlDateTime.GetDateTime()
+   at MySql.Data.MySqlClient.MySqlDataReader.GetValue(Int32 i)
+   at MySql.Data.MySqlClient.MySqlDataReader.get_Item(Int32 i)
+   at A1Carpentry.DBhelper.SqlHelper.GetGaragdetails() in E:\Vishwas Part 3\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3130
+[Monday, February 22, 2021 08:38:01 PM] Error 10356 >> Exception occured in : GetJobDetailsToApprovewithtasklogs Unable to convert MySQL date/time value to System.DateTime   at MySql.Data.Types.MySqlDateTime.GetDateTime()
+   at MySql.Data.MySqlClient.MySqlDataReader.GetValue(Int32 i)
+   at MySql.Data.MySqlClient.MySqlDataReader.get_Item(Int32 i)
+   at A1Carpentry.DBhelper.SqlHelper.GetGaragdetails() in E:\Vishwas Part 3\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3130
+[Monday, February 22, 2021 08:39:19 PM] Error 10356 >> Exception occured in : GetJobDetailsToApprovewithtasklogs Unable to convert MySQL date/time value to System.DateTime   at MySql.Data.Types.MySqlDateTime.GetDateTime()
+   at MySql.Data.MySqlClient.MySqlDataReader.GetValue(Int32 i)
+   at MySql.Data.MySqlClient.MySqlDataReader.get_Item(Int32 i)
+   at A1Carpentry.DBhelper.SqlHelper.GetGaragdetails() in E:\Vishwas Part 3\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 3130
+[Monday, February 22, 2021 08:57:00 PM] Error 2152 >> Error occured in EmployeeProfile Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendEmail(UsersModel ObjUser) in E:\Vishwas Part 5\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1761
+   at A1Carpentry.Controllers.SuperAdminController.employeetools(List`1 ToolName) in E:\Vishwas Part 5\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 188

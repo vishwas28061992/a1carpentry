@@ -1,0 +1,176 @@
+﻿@model A1Carpentry.Models.UsersModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Vendor styles -->
+    <link href="~/vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet" />
+    <link href="~/vendors/bower_components/animate.css/animate.min.css" rel="stylesheet" />
+
+    <!-- App styles -->
+    <link href="~/css/app.min.css" rel="stylesheet" />
+</head>
+
+@using (Html.BeginForm("Login", "Login", FormMethod.Post)){
+
+    @Html.AntiForgeryToken();
+
+    <body data-sa-theme="2">
+        <div class="login">
+            <!-- Login -->
+
+            <div class="login__block active" id="l-login">
+                <div class="col-md-12 text-center mb-4">
+                    <img alt="logo" src="~/img/logo-a1.png" class="theme-logo">
+                </div>
+
+                @if (ViewBag.errormessage != null)
+                {
+                    <p class="alert alert-danger" id="ErrorMessage" style="color:white"> <b>@ViewBag.errormessage</b></p>
+                }
+
+
+                <span class="col-sm-3" style="color:red;font-weight:bold;display:none" id="lblError">
+                    <b>Invalid email or password.</b>
+                </span>
+
+
+
+                <div class="login__block__header">
+                    <i class="zmdi zmdi-account-circle"></i>
+                    Sign in
+
+                    @*<div class="actions actions--inverse login__block__actions">
+                            <div class="dropdown">
+                                <i data-toggle="dropdown" class="zmdi zmdi-more-vert actions__item"></i>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item" data-sa-action="login-switch" data-sa-target="#l-register" href="#">Create an account</a>
+                                    <a class="dropdown-item" data-sa-action="login-switch" data-sa-target="#l-forget-password" href="#">Forgot password?</a>
+                                </div>
+                            </div>
+                        </div>*@
+
+                </div>
+                <div class="login__block__body">
+                    <div class="form-group">
+                        @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control text-center", autocomplete = "off", placeholder = "User Name" })
+                    </div>
+                    <div class="form-group">
+                        @Html.PasswordFor(model => model.Password, new { @class = "form-control text-center", autocomplete = "off", placeholder = "Password" })
+                    </div>
+                    <button class="btn btn--icon login__block__btn" id="Login" type="submit"><i class="zmdi zmdi-long-arrow-right"></i></button> @*onclick="return Validation()"*@
+                </div>
+            </div>
+            <!-- Register -->
+            <div class="login__block" id="l-register">
+                <div class="login__block__header">
+                    <i class="zmdi zmdi-account-circle"></i>
+                    Create an account
+
+                    <div class="actions actions--inverse login__block__actions">
+                        <div class="dropdown">
+                            <i data-toggle="dropdown" class="zmdi zmdi-more-vert actions__item"></i>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" data-sa-action="login-switch" data-sa-target="#l-login" href="#">Already have an account?</a>
+                                <a class="dropdown-item" data-sa-action="login-switch" data-sa-target="#l-forget-password" href="#">Forgot password?</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="login__block__body">
+                    <div class="form-group">
+                        <input type="text" class="form-control text-center" placeholder="User Name">
+                    </div>
+                    <div class="form-group form-group--centered">
+                        <input type="text" class="form-control text-center" placeholder="password">
+                    </div>
+                    <div class="form-group form-group--centered">
+                        <input type="password" class="form-control text-center" placeholder="password">
+                    </div>
+                    <div class="form-group">
+                        <label class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-description">Accept the license agreement</span>
+                        </label>
+                    </div>
+                    <a href="index.html" class="btn btn--icon login__block__btn"><i class="zmdi zmdi-plus"></i></a>
+                </div>
+            </div>
+            <!-- Forgot Password -->
+            <div class="login__block" id="l-forget-password">
+                <div class="login__block__header">
+                    <i class="zmdi zmdi-account-circle"></i>
+                    Forgot Password?
+
+                    <div class="actions actions--inverse login__block__actions">
+                        <div class="dropdown">
+                            <i data-toggle="dropdown" class="zmdi zmdi-more-vert actions__item"></i>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" data-sa-action="login-switch" data-sa-target="#l-login" href="#">Already have an account?</a>
+                                <a class="dropdown-item" data-sa-action="login-switch" data-sa-target="#l-register" href="#">Create an account</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="login__block__body">
+                    <p class="mb-5">Lorem ipsum dolor fringilla enim feugiat commodo sed ac lacus.</p>
+                    <div class="form-group">
+                        <input type="text" class="form-control text-center" placeholder="Admin">
+                    </div>
+                    <a href="index.html" class="btn btn--icon login__block__btn"><i class="zmdi zmdi-check"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Javascript -->
+        <!-- Vendors -->
+        <script src="~/vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="~/vendors/bower_components/popper.js/dist/umd/popper.min.js"></script>
+        <script src="~/vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <!-- App functions and actions -->
+        <script src="~/js/app.min.js"></script>
+    </body>
+}
+</html>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<script type="text/javascript">
+    debugger;
+
+    function Validation() {
+
+        var validations = true;
+
+        var firstName = document.getElementById("FirstName").value;
+        var password = document.getElementById("Password").value;
+
+
+        if (firstName == "" || firstName == null || firstName == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            Validations = false;
+        }
+
+        if (password == "" || password == null || password == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            Validations = false;
+        }
+
+        return validations;
+
+    }
+
+
+</script>

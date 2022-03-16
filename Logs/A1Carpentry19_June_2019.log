@@ -1,0 +1,5 @@
+Logs for: A1Carpentry , A1Carpentry
+[Wednesday, June 19, 2019 12:02:38 PM] Error 15152 >> Error occured in Reports Index was outside the bounds of the array.   at System.Net.Mime.MailBnfHelper.ReadToken(String data, Int32& offset, StringBuilder builder)
+   at System.Net.Mime.ContentDisposition.ParseValue()
+   at System.Net.Mime.ContentDisposition..ctor(String disposition)
+   at A1Carpentry.Controllers.ServicesController.CronJobPayroll() in C:\Users\lambda\Desktop\ATT Lighter Version\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\ServicesController.cs:line 108

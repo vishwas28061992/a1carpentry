@@ -1,0 +1,96 @@
+﻿
+
+
+<h2>BadgePrint</h2>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    
+    <script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.1.min.js"></script>
+    <script type="text/javascript">
+
+        function PrintElem(elem) {
+            debugger;
+            Popup($(elem).html());
+            //window.print();
+        }
+        
+
+        function Popup(data) {
+            debugger;
+            var mywindow = window.open('', 'my div', 'height=400,width=600');
+            mywindow.document.write('<html><head><title>Appointment Details</title>');
+            /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+            mywindow.document.write('</head><body>');
+            mywindow.document.write(data);
+            mywindow.document.write('</body></html>');
+
+            mywindow.print();
+          //  window.print();
+           // return true;
+        }
+
+    </script>
+</head>
+<body>
+
+    <div class="col-md-12"  style="padding-top:100px">
+        <div id="mydiv" style="padding-top:20px">
+            
+
+            <table width="20%" align="center" cellspacing="2" cellpadding="0" style="border: 1px solid black; height:50%">
+                <tr>
+                    <td>
+                        Name:
+                    </td>
+                    <td>
+                        Will Smith
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Appt at :
+                    </td>
+                    <td>
+                        10:30 AM
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Visit Purpose:
+                    </td>
+                    <td>
+                        Bussiness Deal
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Start Time:
+                    </td>
+                    <td>
+                        10:30 AM 27/12/2019
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        End Time:
+                    </td>
+                    <td>
+                        12:30 PM 27/12/2019
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <div class="text-center" style="padding-top:20px">
+            <!---input type="button"  class="btn btn-primary btn-new" value="Print Div" onclick="PrintElem('#mydiv')" />-->
+                <button type="button" onclick="return PrintElem('#mydiv')" class="btn btn-primary btn-new">Submit</button>
+            </div>
+        </div>
+
+
+
+    </body>
+    </html>

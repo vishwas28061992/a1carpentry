@@ -1,0 +1,19 @@
+Logs for: A1Carpentry , A1Carpentry
+[Friday, June 19, 2020 12:06:43 PM] Error 10140 >> Error occured in EmployeeProfile Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendEmail(UsersModel ObjUser) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1550
+   at A1Carpentry.Controllers.SuperAdminController.employeetools(UsersModel objJobs, List`1 ToolName) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 165
+[Friday, June 19, 2020 12:09:59 PM] Error 10140 >> Error occured in EmployeeProfile (Post)Value cannot be null.
+Parameter name: input   at System.Text.RegularExpressions.Regex.Match(String input)
+   at A1Carpentry.CommonUtils.CommonUtils.ValidateEmail(String email) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\CommonUtils\CommonUtils.cs:line 22
+   at A1Carpentry.Controllers.SuperAdminController.ToolsDetailsinsuperadmin(UsersModel objUser, HttpPostedFileBase file) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 437
+[Friday, June 19, 2020 12:14:35 PM] Error 10140 >> Error occured in EmployeeProfile Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendEmail(UsersModel ObjUser) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1550
+   at A1Carpentry.Controllers.SuperAdminController.employeetools(UsersModel objJobs, List`1 ToolName) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 165
+[Friday, June 19, 2020 12:16:48 PM] Error 10140 >> Error occured in EmployeeProfile Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendEmail(UsersModel ObjUser) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1550
+   at A1Carpentry.Controllers.SuperAdminController.employeetools(UsersModel objJobs, List`1 ToolName) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 165
+[Friday, June 19, 2020 03:42:23 PM] Error 12776 >> Error occured in EmployeeProfile (Post)Value cannot be null.
+Parameter name: input   at System.Text.RegularExpressions.Regex.Match(String input)
+   at A1Carpentry.CommonUtils.CommonUtils.ValidateEmail(String email) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\CommonUtils\CommonUtils.cs:line 22
+   at A1Carpentry.Controllers.SuperAdminController.ToolsDetailsinsuperadmin(UsersModel objUser, HttpPostedFileBase file) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 437
+[Friday, June 19, 2020 03:47:29 PM] Error 12776 >> Error occured in SaveTools (Post)Object reference not set to an instance of an object.   at A1Carpentry.Controllers.SuperAdminController.CreateTools(ToolsModel objtools)

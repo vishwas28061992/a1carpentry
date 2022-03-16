@@ -1,0 +1,5 @@
+Logs for: A1Carpentry , A1Carpentry
+[Thursday, June 06, 2019 04:16:20 PM] Error 1188 >> Error occured in ReasonSubmit (JsonResult)Mailbox unavailable. The server response was: <demouser@a1carpentryinc.com> No such user here   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SupervisorController.SendEmail(String email, String firstName, String lastName, String status, String jobNumber) in C:\Users\lambda\Desktop\ATT Lighter Version\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SupervisorController.cs:line 560
+   at A1Carpentry.Controllers.SupervisorController.ReasonSubmit(String Reason, String JobDId) in C:\Users\lambda\Desktop\ATT Lighter Version\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SupervisorController.cs:line 282

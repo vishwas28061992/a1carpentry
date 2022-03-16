@@ -1,0 +1,4 @@
+Logs for: A1Carpentry , A1Carpentry
+[Wednesday, February 24, 2021 07:43:45 PM] Error 10080 >> Error occured in EmployeeProfile Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendEmail(UsersModel ObjUser) in E:\Vishwas Part 5\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1761
+   at A1Carpentry.Controllers.SuperAdminController.employeetools(List`1 ToolName) in E:\Vishwas Part 5\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 188

@@ -1,0 +1,16 @@
+Logs for: A1Carpentry , A1Carpentry
+[Thursday, January 23, 2020 12:34:53 PM] Error 6140 >> Error occured in EmployeeProfile (Post)Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendEmail(UsersModel ObjUser) in C:\Users\lambda\Desktop\ATT Lighter Version\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1375
+   at A1Carpentry.Controllers.SuperAdminController.EmployeeProfile(UsersModel objUser, HttpPostedFileBase file) in C:\Users\lambda\Desktop\ATT Lighter Version\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 160
+[Thursday, January 23, 2020 12:43:53 PM] Error 6140 >> Error occured in GenerateReports Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendAttachmentEmail(String Email, HttpPostedFileBase fileUploader) in C:\Users\lambda\Desktop\ATT Lighter Version\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1409
+   at A1Carpentry.Controllers.SuperAdminController.GenerateReports(String startDate, String endDate) in C:\Users\lambda\Desktop\ATT Lighter Version\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 891
+[Thursday, January 23, 2020 12:54:50 PM] Error 6140 >> Error occured in GenerateReports Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendAttachmentEmail(String Email, HttpPostedFileBase fileUploader) in C:\Users\lambda\Desktop\ATT Lighter Version\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1409
+   at A1Carpentry.Controllers.SuperAdminController.GenerateReports(String startDate, String endDate) in C:\Users\lambda\Desktop\ATT Lighter Version\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 891
+[Thursday, January 23, 2020 12:55:59 PM] Error 6140 >> Error occured in GenerateReports Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendAttachmentEmail(String Email, HttpPostedFileBase fileUploader) in C:\Users\lambda\Desktop\ATT Lighter Version\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1409
+   at A1Carpentry.Controllers.SuperAdminController.GenerateReports(String startDate, String endDate) in C:\Users\lambda\Desktop\ATT Lighter Version\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 891
+[Thursday, January 23, 2020 01:01:36 PM] Error 6140 >> Error occured in GenerateReports Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendAttachmentEmail(String Email, HttpPostedFileBase fileUploader) in C:\Users\lambda\Desktop\ATT Lighter Version\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1409
+   at A1Carpentry.Controllers.SuperAdminController.GenerateReports(String startDate, String endDate) in C:\Users\lambda\Desktop\ATT Lighter Version\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 891

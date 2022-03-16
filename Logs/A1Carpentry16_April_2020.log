@@ -1,0 +1,98 @@
+Logs for: A1Carpentry , A1Carpentry
+[Thursday, April 16, 2020 12:16:37 PM] Error 20484 >> Error occured in GetUserDetails Fatal error encountered during command execution.   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at MySql.Data.MySqlClient.Driver.Configure(MySqlConnection connection)
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at A1Carpentry.DBhelper.SqlHelper.GetUserDetails(String username, String password, String email) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 85
+[Thursday, April 16, 2020 12:21:06 PM] Error 20484 >> Exception occured in : GetAllTaskrDetails Fatal error encountered during command execution.   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at MySql.Data.MySqlClient.Driver.Configure(MySqlConnection connection)
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at A1Carpentry.DBhelper.SqlHelper.GetAllPreTaskDetails() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2758
+[Thursday, April 16, 2020 12:40:20 PM] Error 12340 >> Exception occured in : GetAllUserDetails Fatal error encountered during command execution.   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at A1Carpentry.DBhelper.SqlHelper.GetAllUserDetails() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1398
+[Thursday, April 16, 2020 12:58:37 PM] Error 15264 >> Couldn't able to delete Employee Details (above 4userid deleted)
+[Thursday, April 16, 2020 01:00:33 PM] Error 15264 >> Couldn't able to delete Pretask Details
+[Thursday, April 16, 2020 01:00:46 PM] Error 15264 >> Couldn't able to delete Pretask Details
+[Thursday, April 16, 2020 01:42:14 PM] Information 15872 >> count 0 in TaskNumber (PreTasks)
+[Thursday, April 16, 2020 02:09:11 PM] Error 16460 >> Exception occured in : GetAllTaskrDetails Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetAllPreTaskDetails() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2805
+[Thursday, April 16, 2020 02:09:20 PM] Error 16460 >> Exception occured in : GetAllTaskrDetails Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetAllPreTaskDetails() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2805
+[Thursday, April 16, 2020 02:09:38 PM] Error 16460 >> Exception occured in : GetAllTaskrDetails Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ToInt32(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetAllPreTaskDetails() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2805
+[Thursday, April 16, 2020 03:06:57 PM] Information 11368 >> count 0 in TaskNumber (PreTasks)
+[Thursday, April 16, 2020 06:47:49 PM] Information 1976 >> count 0 in TaskNumber (PreTasks)
+[Thursday, April 16, 2020 07:40:26 PM] Error 18540 >> Error occured in UpdateUserDetails Unknown column 'ErrorMessage' in 'field list'   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at A1Carpentry.DBhelper.SqlHelper.UpdatetaskDetails(PreTasksModel objpretask) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2862
+[Thursday, April 16, 2020 07:40:26 PM] Information 18540 >> Could not update pretasks Details in database (Post)
+[Thursday, April 16, 2020 08:01:22 PM] Information 18824 >> count 0 in TaskNumber (PreTasks)
+[Thursday, April 16, 2020 08:01:24 PM] Information 18824 >> Data Null in ObjPreTasks (CreateTasks Post)
+[Thursday, April 16, 2020 08:07:31 PM] Error 18824 >> Error occured in UpdateUserDetails Unknown column 'ErrorMessage' in 'field list'   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at A1Carpentry.DBhelper.SqlHelper.UpdatetaskDetails(PreTasksModel objpretask) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2862
+[Thursday, April 16, 2020 08:07:31 PM] Information 18824 >> Could not update pretasks Details in database (Post)
+[Thursday, April 16, 2020 08:35:03 PM] Error 15832 >> Error occured in UpdateUserDetails Fatal error encountered during command execution.   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at A1Carpentry.DBhelper.SqlHelper.UpdatetaskDetails(PreTasksModel objpretask) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2862
+[Thursday, April 16, 2020 08:35:03 PM] Information 15832 >> Could not update pretasks Details in database (Post)
+[Thursday, April 16, 2020 08:44:47 PM] Error 12540 >> Error occured in UpdateUserDetails Fatal error encountered during command execution.   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at A1Carpentry.DBhelper.SqlHelper.UpdatetaskDetails(PreTasksModel objpretask) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2865
+[Thursday, April 16, 2020 08:44:47 PM] Information 12540 >> Could not update pretasks Details in database (Post)
+[Thursday, April 16, 2020 09:06:17 PM] Error 16728 >> Error occured in EmployeeProfile (Post)Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendEmail(UsersModel ObjUser) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1410
+   at A1Carpentry.Controllers.SuperAdminController.EmployeeProfile(UsersModel objUser, HttpPostedFileBase file) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 160
+[Thursday, April 16, 2020 09:08:31 PM] Error 16728 >> Error occured in UpdateUserDetails Fatal error encountered during command execution.   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at A1Carpentry.DBhelper.SqlHelper.UpdatetaskDetails(PreTasksModel objpretask) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2865
+[Thursday, April 16, 2020 09:08:31 PM] Information 16728 >> Could not update pretasks Details in database (Post)
+[Thursday, April 16, 2020 09:11:21 PM] Error 8552 >> Error occured in UpdateUserDetails Fatal error encountered during command execution.   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at A1Carpentry.DBhelper.SqlHelper.UpdatetaskDetails(PreTasksModel objpretask) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2865
+[Thursday, April 16, 2020 09:11:21 PM] Information 8552 >> Could not update pretasks Details in database (Post)
+[Thursday, April 16, 2020 10:27:28 PM] Information 19880 >> GetUserDetails is null 
+[Thursday, April 16, 2020 10:52:31 PM] Error 14592 >> Error occured in EmployeeProfile (Post)Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendEmail(UsersModel ObjUser) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1410
+   at A1Carpentry.Controllers.SuperAdminController.EmployeeProfile(UsersModel objUser, HttpPostedFileBase file) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 160
+[Thursday, April 16, 2020 11:00:34 PM] Error 14592 >> Error occured in UpdateUserDetails Fatal error encountered during command execution.   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at A1Carpentry.DBhelper.SqlHelper.UpdatetaskDetails(PreTasksModel objpretask) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2865
+[Thursday, April 16, 2020 11:04:00 PM] Error 14592 >> Error occured in UpdateUserDetails Fatal error encountered during command execution.   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at A1Carpentry.DBhelper.SqlHelper.UpdatetaskDetails(PreTasksModel objpretask)
+[Thursday, April 16, 2020 11:04:00 PM] Information 14592 >> Could not update pretasks Details in database (Post)
+[Thursday, April 16, 2020 11:06:57 PM] Error 14592 >> Error occured in UpdateUserDetails Unknown column 'ErrorMessage' in 'field list'   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at A1Carpentry.DBhelper.SqlHelper.UpdatetaskDetails(PreTasksModel objpretask)
+[Thursday, April 16, 2020 11:06:57 PM] Information 14592 >> Could not update pretasks Details in database (Post)
+[Thursday, April 16, 2020 11:08:45 PM] Error 14592 >> Error occured in UpdateUserDetails Fatal error encountered during command execution.   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at A1Carpentry.DBhelper.SqlHelper.UpdatetaskDetails(PreTasksModel objpretask)
+[Thursday, April 16, 2020 11:08:45 PM] Information 14592 >> Could not update pretasks Details in database (Post)

@@ -1,0 +1,154 @@
+﻿@model A1Carpentry.Models.PreTasksModel
+
+@{
+
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+</head>
+<body data-sa-theme="1">
+
+
+    @using (Html.BeginForm("CreateTasks", "SuperAdmin", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+    {
+
+        @Html.AntiForgeryToken() // this is for prevent CSRF attack
+        @Html.ValidationSummary(true)
+
+
+        <section class="content">
+            <div class="content__inner">
+                <header class="content__title">
+                    <h1> Create Tasks </h1>
+                </header>
+
+                <div class="text-center">
+                    <span class="col-sm-3" style="color:red;font-weight:bold;display:none" id="lblError">
+                        <b>Please enter all fields to proceed</b>
+                    </span>
+                  
+
+                    @if (ViewData["errormessage"] != null)
+                    {
+                        <p class="alert alert-danger" id="successMessage"><b>@ViewData["errormessage"]</b></p>
+                    }
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+
+                        <div class="row margin_timetrack">
+                            <div class="col-lg-10  col-lg-offset-1 col-md-10 col-md-offset-1">
+                                <div class="form-group">
+                                    @*@Html.Label("Task Number*")*@
+                                    @Html.TextBoxFor(m => m.PreTaskNumber, new { @class = "form-control", autocomplete = "off", maxlength = "9", placeholder = "Task Number*" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.PreTaskName, new { @class = "form-control", autocomplete = "off", placeholder = "Task Name*" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+
+                            </div>
+                            <div class="col-sm-6">               
+                                    <b></b>                             
+                                <div class="form-group">
+                                    @Html.DropDownListFor(m => m.JobTypeID, new SelectList(Model.JobTypes, "JobTypeID", "JobType"), " -- Select Job Type* -- ", new { @class = "form-control a-select ", autocomplete = "off", id = "JobTypeID" })
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+                                <div class="form-group">
+                                    @Html.TextAreaFor(m => m.PreTaskDescription, new { @class = "form-control", autocomplete = "off", placeholder = "Task Description*" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="col-sm-12">	<div class="text-center">  <button type="submit" onclick="return Validation()" class="btn btn-primary btn-new">Submit</button> </div></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+    }
+
+
+
+
+
+
+
+</body>
+</html>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+<script type="text/javascript">
+
+
+    function Validation() {
+        debugger;
+        var validations = true;
+
+
+        var preTaskNumber = document.getElementById("PreTaskNumber").value;
+        var preTaskName = document.getElementById("PreTaskName").value;
+        var preTaskDescription = document.getElementById("PreTaskDescription").value;
+        var JobTypeID = document.getElementById("JobTypeID").value;
+
+
+        if (preTaskNumber == "" || preTaskNumber == null || preTaskNumber == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+
+        if (preTaskName == "" || preTaskName == null || preTaskName == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+
+        if (preTaskDescription == "" || preTaskDescription == null || preTaskDescription == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+        if (JobTypeID == "" || JobTypeID == null || JobTypeID == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+
+        return validations;
+
+    }
+
+
+</script>
+<script>
+
+    $(document).ready(function () {
+        var ddTask = $('#JobTypeID');
+        ddTask.children().remove();
+        ddTask.append($("<option>").val(3).text("Genral type")); });
+   
+
+</script>

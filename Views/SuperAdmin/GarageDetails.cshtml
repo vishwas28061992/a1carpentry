@@ -1,0 +1,309 @@
+﻿﻿@model IEnumerable<A1Carpentry.Models.UsersModel>
+@{
+    ViewBag.Title = "GarageDetails";
+}
+
+<h2>GarageDetails</h2>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+        .popup-content-text {
+            text-align: center;
+            color: #fff;
+            font-size: 20px;
+        }
+
+        .btn-w {
+            width: 120px;
+        }
+
+        .nbtn-center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        html {
+            box-sizing: border-box;
+            font-family: sans-serif;
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            -ms-overflow-style: scrollbar
+        }
+
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box !important
+        }
+
+        .a-carp {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body data-sa-theme="1">
+    <section class="content container-fluid">
+        <header class="content__title">
+            <h1>Garage Details</h1>
+        </header>
+        <div class="statbox widget box box-shadow">
+            <div class="widget-content widget-content-area">
+                <div class="table-responsive mb-4">
+                    <table id="data-table" class="table style-2 table-bordered  table-hover">
+                        <thead>
+                            <tr>
+                                <th>USER</th>
+                                <th>Number of tools</th>
+                                <th>Tool Taken Date</th>
+                                <th>Tool Return Date</th>
+                                <th>Tools Edit</th>
+                                @*<th>Return Tools</th>*@
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.Username</td>
+                                    @if (@item.ToolIds.Equals("0"))
+                                    {
+                                        <td>0</td>
+                                    }
+                                    else
+                                    {
+                                        <td>@item.count</td>
+                                    }
+                                    <td>@item.CreatedOn</td>
+                                    <td>@item.RetunDate</td>
+
+                                    @if (@item.ToolIds.Equals("0"))
+                                    {
+                                        @*<td class="text-success">Total Tools Submitted</td>*@
+                                        <td>
+                                            @*<button type="button" class="shadow-none badge badge-danger" data-toggle="modal" data-target="#exampleModal">Tools Submit</button>*@
+                                            <a href="@Url.Action("","", new { id =@item.UserID,str=@item.ToolIds})" class="shadow-none badge badge-success" data-toggle="modal" data-target="#exampleModal">No Tools</a>
+                                        </td>
+                                    }
+                                    else
+                                    {
+                                        <td>
+                                            <a href="@Url.Action("ToolsEditprofile","SuperAdmin", new { id =@item.UserID,str=@item.ToolIds})" class="shadow-none badge badge-info">Tools Edit  </a>
+
+                                        </td>
+                                    }
+                                    @*<td>
+                                            <a href="@Url.Action("ToolsEditprofile","SuperAdmin", new { id =@item.UserID,str=@item.ToolIds})" class="shadow-none badge badge-info">Return Tools</a>
+                                        </td>*@
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            @*<a href="@Url.Action("GetgarageDetails","SuperAdmin", new { })" class="shadow-none badge badge-success" data-toggle="modal" data-target="#exampleModal">Export</a>*@
+            <button type="button" onclick="GetGarageDetails()" class="btn btn-info btn-w">Export</button>
+        </div>
+    </section>
+</body>
+<div class="col-sm-12 p-5 p-3">
+    <div class="text-center">
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Garage Details</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="popup-content-text">All Tools Are Sumbited</p>
+                    </div>
+                    <div class="modal-footer">
+                        @*<a href="@Url.Action("GarageDetails","SuperAdmin", new { })" class="btn btn-danger btn-new">ok</a>*@
+                        <div class="nbtn-center">
+                            <button type="button" data-dismiss="modal" aria-label="Close" class="btn btn-primary btn-w">Ok</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</html>
+
+
+
+
+
+@*@model IEnumerable<A1Carpentry.Models.UsersModel>
+    @{
+        ViewBag.Title = "GarageDetails";
+    }
+
+    <h2>GarageDetails</h2>
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <style>
+            .popup-content-text {
+                text-align: center;
+                color: #fff;
+                font-size: 20px;
+            }
+
+            html {
+                box-sizing: border-box;
+                font-family: sans-serif;
+                line-height: 1.15;
+                -webkit-text-size-adjust: 100%;
+                -ms-text-size-adjust: 100%;
+                -ms-overflow-style: scrollbar
+            }
+
+            *,
+            ::after,
+            ::before {
+                box-sizing: border-box !important
+            }
+
+            .a-carp {
+                font-size: 30px;
+            }
+        </style>
+    </head>
+
+    <body data-sa-theme="1">
+        <section class="content container-fluid">
+            <header class="content__title">
+                <h1>Garage Details</h1>
+            </header>
+            <div class="statbox widget box box-shadow">
+                <div class="widget-content widget-content-area">
+                    <div class="table-responsive mb-4">
+                        <table id="data-table" class="table style-2 table-bordered  table-hover">
+                            <thead>
+                                <tr>
+                                    <th>USER</th>
+                                    <th>Number of tools</th>
+                                    <th>Tool Taken Date</th>
+                                    <th>Tool Return Date</th>
+                                    <th>Tools Edit</th>*@
+@*<th>Return Tools</th>*@
+
+
+@*</tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.Username</td>
+            @if (@item.ToolIds.Equals("0"))
+            {
+                <td>0</td>
+            }
+            else
+            {
+                <td>@item.count</td>
+            }
+            <td>@item.CreatedOn</td>
+            <td>@item.RetunDate</td>
+
+            @if (@item.ToolIds.Equals("0"))
+            {*@
+@*<td class="text-success">Total Tools Submitted</td>*@
+@*<td>*@
+@*<button type="button" class="shadow-none badge badge-danger" data-toggle="modal" data-target="#exampleModal">Tools Submit</button>*@
+@*<a href="@Url.Action("","", new { id =@item.UserID,str=@item.ToolIds})" class="shadow-none badge badge-success" data-toggle="modal" data-target="#exampleModal">No Tools</a>
+                                </td>
+                                    }
+                                    else
+                                    {
+    <td>
+                                            <a href="@Url.Action("ToolsEditprofile","SuperAdmin", new { id =@item.UserID,str=@item.ToolIds})" class="shadow-none badge badge-info">Tools Edit  </a>
+
+                                        </td>
+                                    }*@
+
+@*<td>
+        <a href="@Url.Action("ToolsEditprofile","SuperAdmin", new { id =@item.UserID,str=@item.ToolIds})" class="shadow-none badge badge-info">Return Tools</a>
+
+    </td>*@
+@*</tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+    <div class="col-sm-12 p-5 p-3">
+        <div class="text-center">
+
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel"></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="popup-content-text">All Tools Are Sumbited</p>
+                        </div>
+                        <div class="modal-footer">*@
+@*<a href="@Url.Action("GarageDetails","SuperAdmin", new { })" class="btn btn-danger btn-new">ok</a>*@
+@*<button type="button"data-dismiss="modal" aria-label="Close"class="btn btn-primary">Ok</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </html>*@
+
+
+<script>
+     function GetGarageDetails() {
+        debugger
+        $.ajax({
+            url: '/SuperAdmin/GetgarageDetails',
+           // data: { },
+            success: function (result) {
+                if (result != "") {
+                    window.location = '/SuperAdmin/DownloadPdf?file=' + result;
+
+                }
+                else {
+
+                    window.location.href = '@Url.Action("Login", "Login")';
+                }
+
+
+            },
+
+        });
+
+
+    };
+</script>

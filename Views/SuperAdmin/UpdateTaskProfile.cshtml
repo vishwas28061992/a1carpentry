@@ -1,0 +1,150 @@
+﻿@model A1Carpentry.Models.PreTasksModel
+@{
+    ViewBag.Title = "UpdateTaskProfile";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+
+</head>
+<body data-sa-theme="1">
+
+
+    @using (Html.BeginForm("updatedTasks", "SuperAdmin", FormMethod.Post, new { @class = "form-horizontal" }))
+    {
+
+        @Html.AntiForgeryToken() // this is for prevent CSRF attack
+        @Html.ValidationSummary(true)
+
+        @Html.HiddenFor(m => m.PreTaskID)
+        <input type="hidden" id="UserId" value="@Model.PreTaskID" />
+
+
+        <section class="content">
+            <div class="content__inner">
+                <header class="content__title">
+                    <h1> Update Task Profile </h1>
+                </header>
+
+                <div class="text-center">
+                    <span class="col-sm-3" style="color:red;font-weight:bold;display:none" id="lblError">
+                        <b>Please enter all fields to proceed</b>
+                    </span>
+
+
+                    @if (ViewData["errormessage"] != null)
+                    {
+                        <p class="alert alert-danger" id="successMessage"><b>@ViewData["errormessage"]</b></p>
+                    }
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label><b>Task Number</b></label>
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.PreTaskNumber, new { @class = "form-control", autocomplete = "off", maxlength = "9", placeholder = "Task Number*" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <label><b>Task Name</b></label>
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.PreTaskName, new { @class = "form-control", autocomplete = "off", placeholder = "Task Name*" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+                            </div>
+
+                            
+                            <div class="col-sm-6">
+                                <label><b>Job Type</b></label>
+                                <div class="form-group">
+                                    @Html.DropDownListFor(m => m.JobTypeID, new SelectList(Model.JobTypes, "JobTypeID", "JobType"), " -- Select Job Type* -- ", new { @class = "form-control a-select ", id = "JobTypeID" })
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <label><b>Task Description</b></label>
+                                <div class="form-group">
+                                    @Html.TextAreaFor(m => m.PreTaskDescription, new { @class = "form-control", autocomplete = "off", placeholder = "Task Description*" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-12">	<div class="text-center">  <button type="submit" onclick="return Validation()" class="btn btn-primary btn-new">Update</button> </div></div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </section>
+    }
+
+
+
+
+
+
+
+</body>
+</html>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+<script>
+    function isNumber(evt) {
+        var iKeyCode = (evt.which) ? evt.which : evt.keyCode
+        if (iKeyCode != 46 && iKeyCode > 31 && (iKeyCode < 48 || iKeyCode > 57))
+            return false;
+
+        return true;
+    }
+</script>
+
+<script type="text/javascript">
+
+
+    function Validation() {
+        debugger;
+        var validations = true;
+
+
+        var preTaskNumber = document.getElementById("PreTaskNumber").value;
+        var preTaskName = document.getElementById("PreTaskName").value;
+        var preTaskDescription = document.getElementById("PreTaskDescription").value;
+
+
+        if (preTaskNumber == "" || preTaskNumber == null || preTaskNumber == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+
+        if (preTaskName == "" || preTaskName == null || preTaskName == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+
+        if (preTaskDescription == "" || preTaskDescription == null || preTaskDescription == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+
+        return validations;
+
+    }
+
+</script>

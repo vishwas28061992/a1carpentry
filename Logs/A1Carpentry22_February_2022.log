@@ -1,0 +1,28 @@
+Logs for: A1Carpentry , A1Carpentry
+[Tuesday, February 22, 2022 09:59:52 AM] Error 7048 >> Error occured in tools Sequence contains no matching element   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source, Func`2 predicate)
+   at A1Carpentry.DBhelper.SqlHelper.GetAllUnassignedToolsDetails() in F:\GIT\DevOpsRepo\Test2\Test1\Projects\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1896
+   at A1Carpentry.Controllers.SuperAdminController.TotalToolsdetails() in F:\GIT\DevOpsRepo\Test2\Test1\Projects\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 2835
+[Tuesday, February 22, 2022 10:13:26 AM] Error 12320 >> Error occured in EmployeeProfile Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendEmail(UsersModel ObjUser) in F:\GIT\DevOpsRepo\Test2\Test1\Projects\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1761
+   at A1Carpentry.Controllers.SuperAdminController.employeetools(List`1 ToolName) in F:\GIT\DevOpsRepo\Test2\Test1\Projects\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 188
+[Tuesday, February 22, 2022 10:17:15 AM] Error 12320 >> Error occured in EmployeeProfile Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendEmail(UsersModel ObjUser) in F:\GIT\DevOpsRepo\Test2\Test1\Projects\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1761
+   at A1Carpentry.Controllers.SuperAdminController.employeetools(List`1 ToolName) in F:\GIT\DevOpsRepo\Test2\Test1\Projects\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 188
+[Tuesday, February 22, 2022 10:18:15 AM] Error 12320 >> Error occured in UpdateToolsDetails (Post)Value cannot be null.
+Parameter name: second   at System.Linq.Enumerable.Except[TSource](IEnumerable`1 first, IEnumerable`1 second)
+   at A1Carpentry.Controllers.SuperAdminController.UpdateToolsProfile(ToolsModel objTools) in F:\GIT\DevOpsRepo\Test2\Test1\Projects\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 897
+[Tuesday, February 22, 2022 10:19:06 AM] Error 12320 >> Error occured in UpdateToolsDetails (Post)Value cannot be null.
+Parameter name: second   at System.Linq.Enumerable.Except[TSource](IEnumerable`1 first, IEnumerable`1 second)
+   at A1Carpentry.Controllers.SuperAdminController.UpdateToolsProfile(ToolsModel objTools) in F:\GIT\DevOpsRepo\Test2\Test1\Projects\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 897
+[Tuesday, February 22, 2022 10:56:39 AM] Error 12320 >> Error occured in GetUserDetails Reading from the stream has failed.   at MySql.Data.MySqlClient.MySqlStream.LoadPacket()
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.ReadOk(Boolean read)
+   at MySql.Data.MySqlClient.NativeDriver.SetDatabase(String dbName)
+   at MySql.Data.MySqlClient.Driver.SetDatabase(String dbName)
+   at MySql.Data.MySqlClient.MySqlConnection.ChangeDatabase(String databaseName)
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at A1Carpentry.DBhelper.SqlHelper.GetUserDetails(String username, String password, String email) in F:\GIT\DevOpsRepo\Test2\Test1\Projects\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 79
+[Tuesday, February 22, 2022 11:13:25 AM] Error 9496 >> Error occured in EmployeeProfile Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendEmail(UsersModel ObjUser) in F:\GIT\DevOpsRepo\Test2\Test1\Projects\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1761
+   at A1Carpentry.Controllers.SuperAdminController.employeetools(List`1 ToolName) in F:\GIT\DevOpsRepo\Test2\Test1\Projects\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 188
+[Tuesday, February 22, 2022 11:18:03 AM] Information 9496 >> GetUserDetails is null 

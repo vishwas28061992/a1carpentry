@@ -1,0 +1,123 @@
+﻿@model A1Carpentry.Models.ClientModel
+
+@{
+
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+</head>
+<body data-sa-theme="1">
+
+
+    @using (Html.BeginForm("CreateClient", "SuperAdmin", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+    {
+
+        @Html.AntiForgeryToken() // this is for prevent CSRF attack
+        @Html.ValidationSummary(true)
+
+
+        <section class="content">
+            <div class="content__inner">
+                <header class="content__title">
+                    <h1> Create Client </h1>
+                </header>
+
+                <div class="text-center">
+
+                    <span class="col-sm-3" style="color:red;font-weight:bold;display:none" id="lblError">
+                        <b>Please enter all fields to proceed</b>
+                    </span>
+
+                    @*<span class="alert alert-danger" style="display:none" id="lblError">
+            <b>  Please enter all fields to proceed. </b>
+        </span>*@
+
+
+                    @if (ViewData["errormessage"] != null)
+                    {
+                        <p class="alert alert-danger" id="successMessage"><b> @ViewData["errormessage"]</b></p>
+                    }
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+
+                        <div class="row margin_timetrack">
+                            <div class="col-lg-10  col-lg-offset-1 col-md-10 col-md-offset-1">
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.ClientName, new { @class = "form-control", autocomplete = "off", placeholder = "Client Name*" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+                                <div class="form-group">
+                                    @Html.TextAreaFor(m => m.ClientDescription, new { @class = "form-control", autocomplete = "off", placeholder = "Client Description*" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="col-sm-12">	<div class="text-center">  <button type="submit" onclick="return Validation()" class="btn btn-primary btn-new">Submit</button> </div></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+    }
+
+
+
+
+
+
+
+</body>
+</html>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+<script type="text/javascript">
+
+
+    function Validation() {
+        debugger;
+        var validations = true;
+
+
+        var clientName = document.getElementById("ClientName").value;
+        var clientDescription = document.getElementById("ClientDescription").value;
+
+
+        if (clientName == "" || clientName == null || clientName == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+
+        if (clientDescription == "" || clientDescription == null || clientDescription == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+
+
+        return validations;
+
+    }
+
+
+</script>

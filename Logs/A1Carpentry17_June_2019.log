@@ -1,0 +1,4 @@
+Logs for: A1Carpentry , A1Carpentry
+[Monday, June 17, 2019 06:11:46 PM] Error 3944 >> Error occured in Reports Server cannot append header after HTTP headers have been sent.   at System.Web.HttpResponse.AppendHeader(String name, String value)
+   at System.Web.HttpResponseWrapper.AddHeader(String name, String value)
+   at A1Carpentry.Controllers.SuperAdminController.Reports(String startDate, String endDate) in C:\Users\lambda\Desktop\ATT Lighter Version\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 686

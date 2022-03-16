@@ -1,0 +1,606 @@
+﻿@*@model IEnumerable<A1Carpentry.Models.UsersModel>
+
+
+
+    @{
+        ViewBag.Title = "EmployeeDetails";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <style>
+            .popup-content-text {
+                text-align: center;
+                color: #fff;
+                font-size: 20px;
+            }
+
+            html {
+                box-sizing: border-box;
+                font-family: sans-serif;
+                line-height: 1.15;
+                -webkit-text-size-adjust: 100%;
+                -ms-text-size-adjust: 100%;
+                -ms-overflow-style: scrollbar
+            }
+
+            *,
+            ::after,
+            ::before {
+                box-sizing: border-box !important
+            }
+        </style>
+    </head>
+
+    <body data-sa-theme="1">
+        <section class="content container-fluid">
+            <header class="content__title">
+                <h1>Employee Details</h1>
+            </header>
+            <div class="statbox widget box box-shadow">
+                <div class="widget-content widget-content-area">
+                    <div class="table-responsive mb-4">
+                        <table id="data-table" class="table style-2 table-bordered  table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Image</th>
+                                    <th>Name</th>
+                                    <th>Role</th>
+                                    <th>Email</th>
+                                    <th>Rate</th>*@
+@*<th>SocialInsuranceNumber</th>*@
+@*<th>Created By</th>
+    <th>Created On</th>
+    <th>Number of Tools Assigned</th>*@
+@*<th>Tool Name</th>
+    <th>Tool Serial NO</th>*@
+@*<th>Status</th>
+    <th>Edit</th>
+    @if (Session["RoleID"].Equals("4"))
+    {
+        <th>Delete</th>
+    }*@
+@*<th>ModifiedBy</th>
+    <th>ModifiedOn</th>*@
+
+@*</tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+        <tr>
+
+            @if (item.ImagePath != "")
+            {
+                <td><img class="img-thumbnail rounded-circle" height="50" width="50" src="~/files/@item.ImagePath" /></td>
+
+            }
+            else
+            {
+                <td><img class="img-thumbnail rounded-circle" height="50" width="50" src="~/files/NA.png" /></td>
+
+            }
+
+            <td>@item.FirstName  @item.LastName</td>
+            @if (item.RoleID == 1)
+            {
+                <td>
+                    Admin
+                </td>
+            }
+            else if (item.RoleID == 2)
+            {
+                <td>
+                    Supervisor
+                </td>
+            }
+            else if (item.RoleID == 3)
+            {
+                <td>
+                    User
+                </td>
+            }
+            else if (item.RoleID == 4)
+            {
+                <td>
+                    SuperAdmin
+                </td>
+            }
+            <td>@item.Email</td>
+            <td>@item.Rate</td>*@
+@*<td>@item.SocialInsuranceNo</td>*@
+@*@if (item.CreatedBy == 1)
+    {
+        <td>
+            Admin
+        </td>
+    }
+    else if (item.CreatedBy == 2)
+    {
+        <td>
+            Supervisor
+        </td>
+    }
+    else if (item.CreatedBy == 3)
+    {
+        <td>
+            User
+        </td>
+    }
+    else if (item.CreatedBy == 4)
+    {
+        <td>
+            SuperAdmin
+        </td>
+    }
+
+    <td>@item.CreatedOn</td>
+    @if (@item.ToolIds.Equals("0"))
+    {
+        <td>0</td>
+    }
+    else
+    {
+        <td>@item.count</td>
+    }*@
+@*<td>@item.ToolName</td>
+    <td>@item.ToolSerialNumber</td>*@
+@*<td>@item.Status</td>
+    <td>
+        <a href="@Url.Action("UpdateEmployeeProfile","SuperAdmin", new { id = @item.UserID, IsEdit = true })" class="shadow-none badge badge-warning">Edit</a>
+    </td>*@
+@*<td>@item.ModifiedBy</td>
+    <td>@item.ModifiedOn</td>*@
+@* @if (Session["RoleID"].Equals("4"))
+          {
+
+    <td>*@
+@*<a href="@Url.Action("","", new { id = @item.UserID })" class="shadow-none badge badge-danger">Delete</a>*@
+@*<button type="button" class="shadow-none badge badge-danger" data-toggle="modal" data-target="#exampleModal">
+        Delete
+    </button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>are you sure delete this recrode</p>
+                </div>
+                <div class="modal-footer">*@
+@*<a href="@Url.Action("EmployeeDetails","SuperAdmin", new { id = @item.UserID })" class="shadow-none badge badge-danger">No</a>*@
+@*<button type="button" class="shadow-none badge badge-danger" data-dismiss="modal">Close</button>*@
+@*<a href="@Url.Action("DeleteEmployeeProfile","SuperAdmin", new { id = @item.UserID })" class="shadow-none badge badge-success" onclick="clickin(@item.UserID)">Yes</a>*@
+
+@*</div>
+            </div>
+        </div>
+    </div>*@
+@*<a href="@Url.Action("DeleteEmployeeProfile","SuperAdmin", new { id = @item.UserID })" class="shadow-none badge badge-danger" onclick="deletedrecrod(this)">Delete</a>*@
+
+
+@*<label for="myalue" id="123" class="123" style="vertical-align: middle; display:none"></label>
+    <a data-toggle="modal" data-target="#exampleModalCenter" data-id="@item.UserID" title="Add this item" onclick="senduserid(@item.UserID)" class="open-AddBookDialog shadow-none badge badge-danger" href="#">Deny</a>*@
+@*<a href="@Url.Action("DeleteEmployeeProfile","SuperAdmin", new { id = @item.UserID })" class="open-AddBookDialog shadow-none badge badge-danger" data-toggle="modal" onclick="senduserid(@item.UserID)" data-target="#exampleModalCenter">Yes</a>*@
+
+@*<button type="button" class="open-AddBookDialog shadow-none badge badge-danger" data-toggle="modal" onclick="senduserid(@item.UserID)" data-target="#exampleModalCenter">
+                                        Delete
+                                    </button>
+
+                                </td>
+                                    }
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="popup-content-text"> Are you sure delete this Record </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                    <button type="button" id="Save" onclick="return SubmitDetails()" class="btn btn-primary">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>*@
+
+@*<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Deniel Reason</h5>
+                    <button type="button" style="color:white" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="form-group col-md-12">
+                    <p>n vbhdvhgeyfgyegyfhbdhbvhfdghgvy</p>
+                    <i class="form-group__bar"></i>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" name="hiddenValue" id="hiddenValue" value="" />
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+
+                    <button type="button" id="Save" onclick="return SubmitDetails()" class="btn btn-warning">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>*@
+
+
+@*</body>
+    </html>
+    <script>
+        var id;
+        function senduserid(data) {
+            id = data;
+            //alert(data);
+        }
+    </script>
+
+    <script type="text/javascript">
+        $(document).on("click", ".open-AddBookDialog", function () {
+            debugger;
+            $('.exampleModalCenter').modal('show');
+        });
+    </script>
+    <script>
+         function SubmitDetails() {
+            debugger
+          $.ajax({
+              url: '/SuperAdmin/DeleteEmployeeProfile',                 // Changed
+              type: "Get",
+              data: { id: id },
+
+
+              success: function (result) {
+                  debugger;
+                  if (result == true) {
+                      debugger;
+                        window.location.href = '@Url.Action("EmployeeDetails", "SuperAdmin")';
+                    }
+                  else {
+                      debugger;
+                       window.location.href = '@Url.Action("Login", "Login")';
+                    }
+                }
+            })
+
+        };
+    </script>*@
+
+﻿@model IEnumerable<A1Carpentry.Models.UsersModel>
+
+
+
+@{
+    ViewBag.Title = "EmployeeDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+
+        .popup-content-text {
+            text-align: center;
+            color: #fff;
+            font-size: 20px;
+        }
+
+        html {
+            box-sizing: border-box;
+            font-family: sans-serif;
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            -ms-overflow-style: scrollbar
+        }
+
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box !important
+        }
+    </style>
+</head>
+
+<body data-sa-theme="1">
+    <section class="content container-fluid">
+        <header class="content__title">
+            <h1>Employee Details</h1>
+        </header>
+        <div class="statbox widget box box-shadow">
+            <div class="widget-content widget-content-area">
+                <div class="table-responsive mb-4">
+                    <table id="data-table" class="table style-2 table-bordered  table-hover">
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Role</th>
+                                <th>Email</th>
+                                <th>Rate</th>
+                                @*<th>SocialInsuranceNumber</th>*@
+                                @* <th>Created By</th>*@
+                                <th>Created On</th>
+                                <th>Tools Assigned</th>
+                                @*<th>Tool Name</th>
+                                    <th>Tool Serial NO</th>*@
+                                @* <th>Status</th>*@
+                                <th>Edit</th>
+                                @if (Session["RoleID"].Equals("4"))
+                                {
+                                    <th>Delete</th>
+                                }
+                                @*<th>ModifiedBy</th>
+                                    <th>ModifiedOn</th>*@
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+
+                                    @if (item.ImagePath != "")
+                                    {
+                                        <td><img class="img-thumbnail rounded-circle" height="50" width="50" src="~/files/@item.ImagePath" /></td>
+
+                                    }
+                                    else
+                                    {
+                                        <td><img class="img-thumbnail rounded-circle" height="50" width="50" src="~/files/NA.png" /></td>
+
+                                    }
+
+                                    <td>@item.FirstName  @item.LastName</td>
+                                    @if (item.RoleID == 1)
+                                    {
+                                        <td>
+                                            Admin
+                                        </td>
+                                    }
+                                    else if (item.RoleID == 2)
+                                    {
+                                        <td>
+                                            Supervisor
+                                        </td>
+                                    }
+                                    else if (item.RoleID == 3)
+                                    {
+                                        <td>
+                                            User
+                                        </td>
+                                    }
+                                    else if (item.RoleID == 4)
+                                    {
+                                        <td>
+                                            SuperAdmin
+                                        </td>
+                                    }
+                                    <td>@item.Email</td>
+                                    <td>@item.Rate</td>
+                                    @*<td>@item.SocialInsuranceNo</td>*@
+                                    @*  @if (item.CreatedBy == 1)
+                                        {
+                                            <td>
+                                                Admin
+                                            </td>
+                                        }
+                                        else if (item.CreatedBy == 2)
+                                        {
+                                            <td>
+                                                Supervisor
+                                            </td>
+                                        }
+                                        else if (item.CreatedBy == 3)
+                                        {
+                                            <td>
+                                                User
+                                            </td>
+                                        }
+                                        else if (item.CreatedBy == 4)
+                                        {
+                                            <td>
+                                                SuperAdmin
+                                            </td>
+                                        }*@
+
+                                    <td>@item.CreatedOn</td>
+                                    @if (@item.ToolIds.Equals("0"))
+                                    {
+                                        <td>0</td>
+                                    }
+                                    else
+                                    {
+                                        <td>@item.count</td>
+                                    }
+                                    @*<td>@item.ToolName</td>
+                                        <td>@item.ToolSerialNumber</td>*@
+                                    @*  <td>@item.Status</td>*@
+                                    <td>
+                                        <a href="@Url.Action("UpdateEmployeeProfile","SuperAdmin", new { id = @item.UserID, IsEdit = true })" class="shadow-none badge badge-warning">Edit</a>
+                                    </td>
+                                    @*<td>@item.ModifiedBy</td>
+                                        <td>@item.ModifiedOn</td>*@
+                                    @if (Session["RoleID"].Equals("4"))
+                                    {
+
+                                        <td>
+                                            @*<a href="@Url.Action("","", new { id = @item.UserID })" class="shadow-none badge btn btn-danger  btn-nw-danger">Delete</a>*@
+                                            @*<button type="button" class="shadow-none badge badge-danger" data-toggle="modal" data-target="#exampleModal">
+                                                    Delete
+                                                </button>
+                                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">Employee Record</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                 <p class="popup-content-text"> Are you sure to delete this record</p>
+                                                            </div>
+                                                            <div class="modal-footer">*@
+                                            @*<a href="@Url.Action("EmployeeDetails","SuperAdmin", new { id = @item.UserID })" class="shadow-none badge badge-danger">No</a>*@
+                                            @*<button type="button" class="shadow-none badge badge-danger" data-dismiss="modal">Close</button>*@
+                                            @*<a href="@Url.Action("DeleteEmployeeProfile","SuperAdmin", new { id = @item.UserID })" class="shadow-none badge badge-success" onclick="clickin(@item.UserID)">Yes</a>*@
+
+                                            @*</div>
+                                                        </div>
+                                                    </div>
+                                                </div>*@
+                                            @*<a href="@Url.Action("DeleteEmployeeProfile","SuperAdmin", new { id = @item.UserID })" class="shadow-none badge badge-danger btn-nw-danger" onclick="deletedrecrod(this)">Delete</a>*@
+
+
+                                            @*<label for="myalue" id="123" class="123" style="vertical-align: middle; display:none"></label>
+                                                <a data-toggle="modal" data-target="#exampleModalCenter" data-id="@item.UserID" title="Add this item" onclick="senduserid(@item.UserID)" class="open-AddBookDialog shadow-none badge badge-danger" href="#">Deny</a>*@
+                                            @*<a href="@Url.Action("DeleteEmployeeProfile","SuperAdmin", new { id = @item.UserID })" class="open-AddBookDialog shadow-none badge badge-danger" data-toggle="modal" onclick="senduserid(@item.UserID)" data-target="#exampleModalCenter">Yes</a>*@
+
+                                            <button type="button" class="open-AddBookDialog shadow-none badge  badge-danger btn-nw-danger" data-toggle="modal" onclick="senduserid(@item.UserID)" data-target="#exampleModalCenter">
+                                                Delete
+                                            </button>
+
+                                        </td>
+                                    }
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Employee Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="popup-content-text">  Are you sure want to delete this Employee </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                    <button type="button" id="Save" onclick="return SubmitDetails()" class="btn btn-primary">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Deniel Reason</h5>
+                        <button type="button" style="color:white" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="form-group col-md-12">
+                        <p>n vbhdvhgeyfgyegyfhbdhbvhfdghgvy</p>
+                        <i class="form-group__bar"></i>
+                    </div>
+                    <div class="modal-body">
+                        <input type="hidden" name="hiddenValue" id="hiddenValue" value="" />
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+
+                        <button type="button" id="Save" onclick="return SubmitDetails()" class="btn btn-warning btn-nw-danger">Yes</button>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+
+
+</body>
+</html>
+<script>
+    var id;
+    function senduserid(data) {
+        id = data;
+        //alert(data);
+    }
+</script>
+
+<script type="text/javascript">
+    $(document).on("click", ".open-AddBookDialog", function () {
+        debugger;
+        $('.exampleModalCenter').modal('show');
+    });
+</script>
+<script>
+     function SubmitDetails() {
+        debugger
+      $.ajax({
+          url: '/SuperAdmin/DeleteEmployeeProfile',                 // Changed
+          type: "Get",
+          data: { id: id },
+
+
+          success: function (result) {
+              debugger;
+              if (result == true) {
+                  debugger;
+                    window.location.href = '@Url.Action("EmployeeDetails", "SuperAdmin")';
+                }
+              else {
+                  debugger;
+                   window.location.href = '@Url.Action("Login", "Login")';
+                }
+            }
+        })
+
+    };
+</script>
+
+
+
+

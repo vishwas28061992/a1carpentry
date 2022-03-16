@@ -1,0 +1,658 @@
+﻿@model IEnumerable<A1Carpentry.Models.ToolsModel>
+@using System.Linq
+
+@{
+    ViewBag.Title = "ToolsEditprofile";
+
+}
+
+<h2>ToolsEditprofile</h2>
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <style>
+        .popup-content-text {
+            text-align: center;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .my-custom-scrollbar {
+            position: relative;
+            height: 100px;
+            overflow: auto;
+        }
+
+        .table-wrapper-scroll-y {
+            display: block;
+        }
+
+
+        .carp-scroll {
+            height: 220px;
+            width: 350px;
+            overflow-y: scroll;
+        }
+
+
+        .chkbox-brd {
+            border: none
+        }
+
+        .custom-scrollbar-css::-webkit-scrollbar-thumb {
+            border-radius: 1rem;
+            background-color: #00d2ff;
+            background-image: linear-gradient(to top, #00d2ff 0%, #3a7bd5 100%);
+        }
+
+        .btn-modal-nw-popup {
+            margin-top: -19px;
+            height: 40px;
+        }
+
+        .nbtn-center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-w {
+            width: 120px;
+        }
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body data-sa-theme="1">
+
+    @Html.AntiForgeryToken() // this is for prevent CSRF attack
+    @Html.ValidationSummary(true)
+    <section class="content">
+        <header class="content__title">
+            <h1> Garage Tools </h1>
+        </header>
+
+        <div class="statbox widget box box-shadow">
+            <div class="widget-content widget-content-area">
+                <div class="table-responsive mb-4" id="displayeddata">
+
+
+                    <table id="data-table" class="table style-2 table-bordered  table-hover">
+                        <thead>
+                            <tr>
+                                <th>Inventry Number</th>
+                                <th>Tool Serial Number</th>
+                                <th>Tool Name</th>
+                                <th>Add Tools</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+
+                                if (item.ToolID > 0)
+                                {
+                                    if ((ViewBag.toolnames as List<A1Carpentry.Models.ToolsModel>
+                                        ).Any(c => c.ToolID == item.ToolID))
+                                    {
+                                        <tr>
+                                            <td>@item.InventryNumber</td>
+                                            <td>@item.ToolSerialNumber</td>
+                                            <td>@item.ToolName</td>
+                                            <td>
+                                                <input type="checkbox" id="ToolName" class="cbCheck" name="checkbox" value="@item.ToolID">
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-sm-12 p-5 p-3">
+                    <div class="text-center">
+                        <a href="@Url.Action("GarageDetails","SuperAdmin", new { })" class="btn btn-danger btn-new">Back</a>
+                        <button type="button" onclick="return Validation()" class="btn btn-primary btn-new" data-toggle="modal" data-target="#exampleModal">Return</button>
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog " role="document">
+                                <div class="modal-content modal-popup-bg">
+                                    <div class="modal-header modal-header-bg-new">
+                                        <h5 class="modal-title" id="exampleModalLabel">Tools Profile</h5>
+                                        <button type="button" class="close btn-modal-nw-popup" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p class="popup-content-text"> </p>
+                                    </div>
+                                    <div class="modal-footer text-center">
+
+                                        <div class="nbtn-center">  <button type="submit" class="btn btn-primary btn-w" id="btnbutton" onclick="checboxidsstored()">Ok</button></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+<script>
+    function Validation() {
+        debugger;
+        $("p").text("Number of Tools Returned = " + count);
+    }
+</script>
+<script>
+    var count = 0;
+    var ToolName = [];
+    var i = 0;
+    $('table tr td').on('click', '.cbCheck', function () {
+        if ($(this).is(':checked')) {
+            // alert($(this).val());
+            ToolName[i++] = $(this).val();
+            //ToolName.splice(ToolName.indexOf(item), 1);
+            count++;
+            //console.log(ToolName);
+        }
+        else {
+            count--;
+            var item = $(this).val();
+            // alert($(this).val());
+            //ToolName[i++] = $(this).val();
+            ToolName.splice(ToolName.indexOf(item), 1);
+            // console.log(ToolName);
+        }
+
+
+    });
+</script>
+
+<script>
+         function checboxidsstored() {
+             debugger;
+             if (count > 0) {
+                   $.ajax({
+                    url: '/SuperAdmin/ToolsEdit',
+                    type: "post",
+                    data: { ToolName: ToolName },
+                    success: function (result) {
+                        if (result == 0)
+                        {
+                             window.location.href = '@Url.Action("Login", "Login")';
+                        }
+                        else
+                        {
+                            window.location = '/SuperAdmin/GarageDetails'
+                        }
+                    },
+                });
+
+             }
+			 else
+			 {
+                 setTimeout(function () { $('#exampleModal').trigger('click'); }, 5)
+             }
+            }
+</script>
+@*@model IEnumerable<A1Carpentry.Models.ToolsModel>
+    @using System.Linq
+
+    @{
+        ViewBag.Title = "ToolsEditprofile";
+    }
+
+    <h2>ToolsEditprofile</h2>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    </head>
+    <body data-sa-theme="1">
+
+
+        @using (Html.BeginForm("ToolsEdit", "SuperAdmin", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+        {
+
+            @Html.AntiForgeryToken() // this is for prevent CSRF attack
+            @Html.ValidationSummary(true)
+
+            <section class="content">
+                <div class="content__inner">
+                    <header class="content__title">
+                        <h1> Tools Edit profile </h1>
+                    </header>
+
+                    <div class="text-center">
+
+                        <span style="display:none" id="lblError">
+                            <b style="color:red">  Please enter all fields to proceed. </b>
+                        </span>
+                        <span style="display:none" id="lblDateError">
+                            <b style="color:red">   End date cannot be less than start date. </b>
+                        </span>
+                        <span style="display:none" id="errormessage">
+                            <b style="color:red"> Please select current date or above. </b>
+                        </span>
+
+
+                        @if (ViewData["errormessage"] != null)
+                        {
+                            <p id="successMessage"> <b style="color:red">@ViewData["errormessage"]</b></p>
+                        }
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="col-sm-9">
+                                <div class="col-md-5">
+                                    <ul class="list-group">
+                                        <li class="list-group-item-heading list-group-item-action">
+                                            <h4 class="list-group-item-text">Tool Names</h4>
+                                        </li>
+
+                                        @foreach (var item in Model)
+                                        {
+                                            <li class="list-group-item">
+                                                <div class="list-group-item">
+                                                    @if (item.ToolID > 0)
+                                                    {
+                                                        if ((ViewBag.toolnames as List<A1Carpentry.Models.ToolsModel>).Any(c => c.ToolID == item.ToolID))
+                                                        {
+                                                            <input type="checkbox" id="ToolName" name="ToolName" checked value="@item.ToolID" />@item.ToolName
+                                                        }
+                                                        else
+                                                        {
+                                                            <input type="checkbox" id="ToolName" name="ToolName" value="@item.ToolID" />@item.ToolName
+                                                        }
+                                                    }
+
+                                                </div>
+                                            </li>
+                                        }
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">	<div class="text-center">  <button type="submit" onclick="return Validation()" class="btn btn-primary btn-new">Submit</button> </div></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+        }
+        </body>
+    </html>*@
+@*<script>
+        var count = 0;
+        $(document).ready(function () {
+            debugger;
+            var table = $('#data-table').DataTable();
+            $('#data-table tbody').on('click', '.checkbox', function () {
+                if (this.checked == false) {
+                   // console.log(table.row(this.closest('tr')).data());
+                    count--;
+                  //  alert(count);
+                    //list = table.row(this.closest('tr')).data();
+                    // console(list);
+                }
+            });
+            $('#data-table tbody').on('click', '.checkbox', function () {
+                if (this.checked == true) {
+                   // console.log(table.row(this.closest('tr')).data());
+                    count++;
+                   // alert(count);
+                    //list = table.row(this.closest('tr')).data();
+                    // console(list);
+                }
+            });
+        });
+        function Validation() {
+            debugger;
+            $("p").text("Returned Tools " + count);
+            //alert(count);
+            //console.log(count);
+        }
+    </script>*@
+
+
+
+
+
+@*@model IEnumerable<A1Carpentry.Models.ToolsModel>
+        @using System.Linq
+
+        @{
+            ViewBag.Title = "ToolsEditprofile";
+
+        }
+
+        <h2>ToolsEditprofile</h2>
+        <!DOCTYPE html>
+        <html lang="en">
+
+
+        <head>
+            <style>
+                .popup-content-text {
+                    text-align: center;
+                    color: #fff;
+                    font-size: 16px;
+                }
+
+                .my-custom-scrollbar {
+                    position: relative;
+                    height: 100px;
+                    overflow: auto;
+                }
+
+                .table-wrapper-scroll-y {
+                    display: block;
+                }
+
+
+                .carp-scroll {
+                    height: 220px;
+                    width: 350px;
+                    overflow-y: scroll;
+                }
+
+
+                .chkbox-brd {
+                    border: none
+                }
+
+                .custom-scrollbar-css::-webkit-scrollbar-thumb {
+                    border-radius: 1rem;
+                    background-color: #00d2ff;
+                    background-image: linear-gradient(to top, #00d2ff 0%, #3a7bd5 100%);
+                }
+
+                .btn-modal-nw-popup {
+                    margin-top: -19px;
+                    height: 40px;
+                }
+
+                .nbtn-center {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                .btn-w {
+                    width: 120px;
+                }
+            </style>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        </head>
+    <body data-sa-theme="1">
+
+        @Html.AntiForgeryToken() // this is for prevent CSRF attack
+        @Html.ValidationSummary(true)
+        <section class="content">
+            <header class="content__title">
+                <h1> Garage Tools </h1>
+            </header>
+
+            <div class="statbox widget box box-shadow">
+                <div class="widget-content widget-content-area">
+                    <div class="table-responsive mb-4" id="displayeddata">
+
+
+                        <table id="data-table" class="table style-2 table-bordered  table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Inventry Number</th>
+                                    <th>Tool Serial Number</th>
+                                    <th>Tool Name</th>
+                                    <th>Add Tools</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+
+                                    if (item.ToolID > 0)
+                                    {
+                                        if ((ViewBag.toolnames as List<A1Carpentry.Models.ToolsModel>
+                                            ).Any(c => c.ToolID == item.ToolID))
+                                        {
+                                            <tr>
+                                                <td>@item.InventryNumber</td>
+                                                <td>@item.ToolSerialNumber</td>
+                                                <td>@item.ToolName</td>
+                                                <td>
+                                                    <input type="checkbox" id="ToolName" class="cbCheck" name="checkbox" value="@item.ToolID">
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-sm-12 p-5 p-3">
+                        <div class="text-center">
+                            <a href="@Url.Action("GarageDetails","SuperAdmin", new { })" class="btn btn-danger btn-new">Back</a>
+                            <button type="button" onclick="return Validation()" class="btn btn-primary btn-new" data-toggle="modal" data-target="#exampleModal">Return</button>
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog " role="document">
+                                    <div class="modal-content modal-popup-bg">
+                                        <div class="modal-header modal-header-bg-new">
+                                            <h5 class="modal-title" id="exampleModalLabel">Tools Profile</h5>
+                                            <button type="button" class="close btn-modal-nw-popup" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p class="popup-content-text"> </p>
+                                        </div>
+                                        <div class="modal-footer text-center">
+
+                                            <div class="nbtn-center">  <button type="submit" class="btn btn-primary btn-w" id="btnbutton" onclick="checboxidsstored()">Ok</button></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </section>
+    </body>
+        </html>*@
+@*<script>
+        function Validation() {
+            debugger;
+            $("p").text("Number of Tools Returned = " + count);
+        }
+    </script>*@
+@*<script>
+        var count = 0;
+        var ToolName = [];
+        var i = 0;
+        $('table tr td').on('click', '.cbCheck', function () {
+            if ($(this).is(':checked')) {
+               // alert($(this).val());
+                 ToolName[i++] = $(this).val();
+                //ToolName.splice(ToolName.indexOf(item), 1);
+                count++;
+                //console.log(ToolName);
+            }
+            else {
+                count--;
+                var item = $(this).val();
+               // alert($(this).val());
+                //ToolName[i++] = $(this).val();
+                 ToolName.splice(ToolName.indexOf(item), 1);
+                // console.log(ToolName);
+            }
+        });
+    </script>*@
+
+@*<script>
+         function checboxidsstored() {
+             debugger
+             if (count > 0) {
+                   $.ajax({
+                    url: '/SuperAdmin/ToolsEdit',
+                    type: "post",
+                    data: { ToolName: ToolName },
+                    success: function (result) {
+                        if (result == 0)
+                        {
+                             window.location.href = '@Url.Action("Login", "Login")';
+                        }
+                        else
+                        {
+                            window.location = '/SuperAdmin/GarageDetails'
+                        }
+                    },
+                });
+
+             } else {
+                 debugger;
+                 setTimeout(function () { $('#exampleModal').trigger('click'); }, 10)
+             }
+            }
+    </script>*@
+
+@*@model IEnumerable<A1Carpentry.Models.ToolsModel>
+    @using System.Linq
+
+    @{
+        ViewBag.Title = "ToolsEditprofile";
+    }
+
+    <h2>ToolsEditprofile</h2>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    </head>
+    <body data-sa-theme="1">
+
+
+        @using (Html.BeginForm("ToolsEdit", "SuperAdmin", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+        {
+
+            @Html.AntiForgeryToken() // this is for prevent CSRF attack
+            @Html.ValidationSummary(true)
+
+            <section class="content">
+                <div class="content__inner">
+                    <header class="content__title">
+                        <h1> Tools Edit profile </h1>
+                    </header>
+
+                    <div class="text-center">
+
+                        <span style="display:none" id="lblError">
+                            <b style="color:red">  Please enter all fields to proceed. </b>
+                        </span>
+                        <span style="display:none" id="lblDateError">
+                            <b style="color:red">   End date cannot be less than start date. </b>
+                        </span>
+                        <span style="display:none" id="errormessage">
+                            <b style="color:red"> Please select current date or above. </b>
+                        </span>
+
+
+                        @if (ViewData["errormessage"] != null)
+                        {
+                            <p id="successMessage"> <b style="color:red">@ViewData["errormessage"]</b></p>
+                        }
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="col-sm-9">
+                                <div class="col-md-5">
+                                    <ul class="list-group">
+                                        <li class="list-group-item-heading list-group-item-action">
+                                            <h4 class="list-group-item-text">Tool Names</h4>
+                                        </li>
+
+                                        @foreach (var item in Model)
+                                        {
+                                            <li class="list-group-item">
+                                                <div class="list-group-item">
+                                                    @if (item.ToolID > 0)
+                                                    {
+                                                        if ((ViewBag.toolnames as List<A1Carpentry.Models.ToolsModel>).Any(c => c.ToolID == item.ToolID))
+                                                        {
+                                                            <input type="checkbox" id="ToolName" name="ToolName" checked value="@item.ToolID" />@item.ToolName
+                                                        }
+                                                        else
+                                                        {
+                                                            <input type="checkbox" id="ToolName" name="ToolName" value="@item.ToolID" />@item.ToolName
+                                                        }
+                                                    }
+
+                                                </div>
+                                            </li>
+                                        }
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">	<div class="text-center">  <button type="submit" onclick="return Validation()" class="btn btn-primary btn-new">Submit</button> </div></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+        }
+        </body>
+    </html>*@
+@*<script>
+        var count = 0;
+        $(document).ready(function () {
+            debugger;
+            var table = $('#data-table').DataTable();
+            $('#data-table tbody').on('click', '.checkbox', function () {
+                if (this.checked == false) {
+                    console.log(table.row(this.closest('tr')).data());
+                    count--;
+                  //  alert(count);
+                    //list = table.row(this.closest('tr')).data();
+                    // console(list);
+                }
+            });
+            $('#data-table tbody').on('click', '.checkbox', function () {
+                if (this.checked == true) {
+                    console.log(table.row(this.closest('tr')).data());
+                    count++;
+                   // alert(count);
+                    //list = table.row(this.closest('tr')).data();
+                    // console(list);
+                }
+            });
+        });
+        function Validation() {
+            debugger;
+            $("p").text("Returned Tools " + count);
+            //alert(count);
+            //console.log(count);
+        }
+
+    </script>*@

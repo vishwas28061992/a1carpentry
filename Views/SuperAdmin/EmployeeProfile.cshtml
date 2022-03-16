@@ -1,0 +1,338 @@
+﻿@model A1Carpentry.Models.UsersModel
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+
+</head>
+<body data-sa-theme="1">
+
+
+    @using (Html.BeginForm("ToolsDetailsinsuperadmin", "SuperAdmin", FormMethod.Get, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+    {
+
+        @Html.AntiForgeryToken() // this is for prevent CSRF attack
+        @Html.ValidationSummary(true)
+
+
+        @Html.HiddenFor(a => a.UserID)
+
+        <section class="content">
+            <div class="content__inner">
+                <header class="content__title">
+                    <h1> Create Employee Profile </h1>
+                </header>
+
+                <div class="text-center">
+                    <span style="display:none" id="lblError">
+                        <b style="color:red">Please enter all fields to proceed</b>
+                    </span>
+                    @if (ViewData["errormessage"] != null)
+                    {
+                        <p id="successMessage"><b style="color:red"> @ViewData["errormessage"]</b></p>
+                    }
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control", maxlength = "15", autocomplete = "off", placeholder = "First Name*" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.LastName, new { @class = "form-control", maxlength = "15", autocomplete = "off", placeholder = "Last Name*" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control", autocomplete = "off", placeholder = "Email*" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    @Html.PasswordFor(m => m.Password, new { @class = "form-control", autocomplete = "off", placeholder = "Password*" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    @Html.DropDownListFor(m => m.RoleID, new SelectList(Model.Roles, "RoleID", "RoleName"), " -- Select Role* -- ", new { @class = "form-control a-select ", id = "RoleID" })  @*form-select-new*@
+
+                                </div>
+
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.Rate, "{0:G29}", new { @class = "form-control", maxlength = "9", autocomplete = "off", placeholder = "Rate ($)*", onkeypress = "javascript:return isNumber(this,event)" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+
+                            </div>
+
+
+
+                            @*<div class="col-sm-6">
+                                    <div class="form-group">
+                                        @Html.TextBoxFor(m => m.ToolName, new { @class = "form-control", maxlength = "20", autocomplete = "off", placeholder = "Tool Name*" })
+
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        @Html.TextBoxFor(m => m.ToolSerialNumber, new { @class = "form-control", maxlength = "20", autocomplete = "off", placeholder = "Tool Serial Number*" })
+                                        <i class="form-group__bar"></i>
+                                    </div>
+                                </div>*@
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.Status, new { @class = "form-control", maxlength = "20", autocomplete = "off", placeholder = "Status*" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+                            </div>
+
+
+                            @*<div class="col-sm-6">
+                                    <div class="form-group">
+                                        @Html.TextBoxFor(m => m.SocialInsuranceNo, new { @class = "form-control", maxlength = "9", autocomplete = "off", placeholder = "Social Insurance Number*", onkeypress = "javascript:return isNumber(event)" })
+                                        <i class="form-group__bar"></i>
+                                    </div>
+
+                                </div>*@
+
+                            <div class="col-sm-6">
+
+                                <div class="form-group">
+                                    <input type="file" id="uploadedFile" name="file" class="dropzone">
+                                </div>
+
+                            </div>
+
+
+                            @*</div>
+                                    <div class="col-sm-12">	<div class="text-center">  <button type="submit" onclick="return Validation()" class="btn btn-primary btn-new">Submit</button> </div></div>
+
+                                </div>*@
+                            <div class="col-sm-12 pt-5 p-3">
+                                <div class="text-center">
+                                    <button type="submit" onclick="return Validation()" class="btn btn-primary btn-new">Next</button>
+                                    @*<button type="submit" onclick="return Validation()" class="btn btn-primary btn-new">Next</button> </div></div>*@  @*<a href="@Url.Action("ToolsDetailsinsuperadmin", "SuperAdmin", new {})" class="btn btn-primary btn-new">Next</a>*@
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+        </section>
+    }
+
+    <button type="button" class="open-AddBookDialog shadow-none btn btn-primary btn-new"display="none" data-toggle="modal" id="btnSubmit" data-target="#exampleModalCenterpopwindow">Submit</button>
+    <div class="modal fade" id="exampleModalCenterpopwindow" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Create Employee</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="popup-content-text">   </p>
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" data-dismiss="modal" aria-label="Close" class="btn btn-primary">ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+</html>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+<script>
+    function isNumber(el, evt) {
+        var charCode = (evt.which) ? evt.which : event.keyCode;
+        var number = el.value.split('.');
+        if (charCode != 46 && charCode > 31 && (charCode < 48 || charCode > 57)) {
+            return false;
+        }
+
+        //just one dot
+        if(number.length>1 && charCode == 46){
+             return false;
+        }
+
+        //get the carat position
+        var caratPos = getSelectionStart(el);
+        var dotPos = el.value.indexOf(".");
+        if( caratPos > dotPos && dotPos>-1 && (number[1].length > 2)){
+            return false;
+        }
+
+        return true;
+    }
+
+    function getSelectionStart(o) {
+	    if (o.createTextRange) {
+		    var r = document.selection.createRange().duplicate()
+		    r.moveEnd('character', o.value.length)
+		    if (r.text == '') return o.value.length
+		    return o.value.lastIndexOf(r.text)
+	    }
+        else
+            return o.selectionStart
+    }
+</script>
+
+<script type="text/javascript">
+
+
+    function Validation() {
+        debugger;
+        var validations = true;
+
+        var firstName = document.getElementById("FirstName").value;
+        var lastName = document.getElementById("LastName").value;
+        var password = document.getElementById("Password").value;
+        var email = document.getElementById("Email").value;
+        var roleId = document.getElementById("RoleID").value;
+        var rate = document.getElementById("Rate").value;
+        //var socialInsuranceNo = document.getElementById("SocialInsuranceNo").value;
+
+        //var toolName = document.getElementById("ToolName").value;
+        //var toolSerialNumber = document.getElementById("ToolSerialNumber").value;
+        var status = document.getElementById("Status").value;
+
+        //var aa = document.getElementById("aaa").value;
+
+
+
+        if (firstName == "" || firstName == null || firstName == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+
+        if (lastName == "" || lastName == null || lastName == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+
+
+        if (password == "" || password == null || password == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+
+        if (email == "" || email == null || email == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+
+        if (roleId == 0 || roleId == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+
+        //if (rate == "" || rate == null || rate == undefined || rate == 0) {
+        //    document.getElementById("lblError").style.display = "inline";
+        //    validations = false;
+        //}
+
+        //if (socialInsuranceNo == "" || socialInsuranceNo == null || socialInsuranceNo == undefined) {
+        //    document.getElementById("lblError").style.display = "inline";
+        //    validations = false;
+        //}
+
+
+        //if (toolName == "" || toolName == null || toolName == undefined) {
+        //    document.getElementById("lblError").style.display = "inline";
+        //    validations = false;
+        //}
+
+        //if (toolSerialNumber == "" || toolSerialNumber == null || toolSerialNumber == undefined) {
+        //    document.getElementById("lblError").style.display = "inline";
+        //    validations = false;
+        //}
+
+        //if (status == "" || status == null || status == undefined) {
+        //    document.getElementById("lblError").style.display = "inline";
+        //    validations = false;
+        //}
+
+        return validations;
+
+    }
+
+
+</script>
+
+
+
+
+
+<script>
+
+    function LoadTasksById(PreTasksID, taskID) {
+        debugger
+        $.ajax({
+            url: '/SuperAdmin/GetTasksByPreTasksID',
+            data: { PreTasksID: PreTasksID },
+            success: function (response) {
+                if (response != null) {
+                    $('#TaskDescription').val(response.PreTaskDescription);
+
+                } else {
+                    $("p").text("Something Went Wrong");
+                    document.getElementById("btnSubmit").click();
+                    //alert("Something went wrong");
+                }
+            },
+            failure: function (response) {
+                $("p").text(response.responseText);
+                document.getElementById("btnSubmit").click();
+               // alert(response.responseText);
+            },
+            error: function (response) {
+                $("p").text(response.responseText);
+                document.getElementById("btnSubmit").click();
+               // alert(response.responseText);
+            }
+        })
+    };
+
+
+</script>
+

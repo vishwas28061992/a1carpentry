@@ -1,0 +1,11 @@
+Logs for: A1Carpentry , A1Carpentry
+[Thursday, July 16, 2020 09:52:52 PM] Information 14432 >> count 0 in jobNumber (Job)
+[Thursday, July 16, 2020 09:52:57 PM] Information 14432 >> Could not saved SaveTasks in database (Post)
+[Thursday, July 16, 2020 09:59:09 PM] Error 14432 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2185
+[Thursday, July 16, 2020 09:59:19 PM] Error 14432 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2185
+[Thursday, July 16, 2020 10:23:31 PM] Information 14432 >> count 0 in jobNumber (Job)
+[Thursday, July 16, 2020 10:23:36 PM] Information 14432 >> Could not saved SaveTasks in database (Post)

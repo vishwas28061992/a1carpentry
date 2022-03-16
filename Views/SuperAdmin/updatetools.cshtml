@@ -1,0 +1,131 @@
+﻿@model A1Carpentry.Models.UsersModel
+@using System.Linq
+@{
+    ViewBag.Title = "updatetools";
+    var employeeData = (A1Carpentry.Models.UsersModel)ViewData["EmployeeData"];
+}
+<h2>updatetools</h2>
+<html lang="en">
+<head>
+</head>
+<body data-sa-theme="1">
+    @*@using (Html.BeginForm("EmployeeDetails", "SuperAdmin", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+    {*@
+        @*@Html.HiddenFor(employeeData => employeeData.UserID)*@
+        <section class="content">
+            <header class="content__title">
+                <h1>Tools Details</h1>
+            </header>
+            <div class="statbox widget box box-shadow">
+                <div class="widget-content widget-content-area">
+                    <div class="table-responsive mb-4" id="displayeddata">
+                        <table id="data-table" class="table style-2 table-bordered  table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Inventry Number</th>
+                                    <th>Tool Serial Number</th>
+                                    <th>Tool Name</th>
+                                    <th>Add Tools</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.Tools)
+                                {
+                                    if (((employeeData.Tools).Any(c => c.ToolID == item.ToolID)))
+                                    {
+                                        <tr>
+                                            <td>@item.InventryNumber</td>
+                                            <td>@item.ToolSerialNumber</td>
+                                            <td>@item.ToolName</td>
+                                            <td>                              
+                                                <input type="checkbox" id="ToolName" checked class="cbCheck" name="checkbox" value="@item.ToolID">
+                                            </td>
+                                        </tr>
+                                    }
+                                    else
+                                    {
+                                        <tr>
+                                            <td>@item.InventryNumber</td>
+                                            <td>@item.ToolSerialNumber</td>
+                                            <td>@item.ToolName</td>
+                                            <td>                                              
+                                                <input type="checkbox" id="ToolName" class="cbCheck" name="checkbox" value="@item.ToolID">
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-sm-12 pt-5 p-3">
+                        <div class="text-center">
+                            <button type="submit" onclick="return checboxidsstored()" class="btn btn-primary btn-new">Submit</button>  @*<a href="@Url.Action("moretasksadded", "SuperAdmin", new { })" class="btn btn-primary btn-new">Next</a>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    @*}*@
+</body>
+</html>
+<script>
+    var count = 0;
+    var ToolNames = [];
+    var i = 0;
+    $('table tr td').on('click', '.cbCheck', function () {
+        if($(this).is(':checked')) {
+            ToolNames[i++] = $(this).val();
+          //  alert($(this).val());
+            //ToolName.splice(ToolName.indexOf(item), 1);
+            count++;
+            //console.log(ToolName);
+        }
+        else {
+                ToolNames[i++] = $(this).val();
+           // alert($(this).val());
+          //  console.log(ToolNames);
+            
+         //   var item = $(this).val();
+            // alert($(this).val());
+          
+         //  ToolName.splice(ToolName.indexOf(item), 1);
+            // console.log(ToolName);
+        }
+
+       // console.log(ToolNames);
+    });
+</script>
+<script>
+    function unique(array) {
+        return array.reduce((a, b) => {
+            let isIn = a.find(element => {
+                return element === b;
+            });
+            if (!isIn) {
+                a.push(b);
+            }
+            return a;
+        }, []);
+    }
+</script>
+<script>
+    function checboxidsstored() {
+        debugger
+        var ToolName = unique(ToolNames);           
+                $.ajax({
+                    url: '/SuperAdmin/EmployeeDetails',
+                    type: "post",
+                    data: { ToolName: ToolName },
+                    success: function (result) {
+                        if (result == 0)
+                        {
+                             window.location.href = '@Url.Action("Login", "Login")';
+                        }
+                        else
+                        {
+                            window.location = '/SuperAdmin/EmployeeDetails'
+                        }
+                    },
+                });
+            }
+</script>

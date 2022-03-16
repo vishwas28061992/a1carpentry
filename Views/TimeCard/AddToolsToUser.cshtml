@@ -1,0 +1,157 @@
+﻿
+@model A1Carpentry.Models.UsersModel
+@using System.Linq
+@{
+    ViewBag.Title = "AddToolsToUser";
+    var employeeData = (A1Carpentry.Models.UsersModel)ViewData["EmployeeData"];
+}
+  
+<html lang="en">
+<body data-sa-theme="1">
+    @*@using (Html.BeginForm("EmployeeDetails", "SuperAdmin", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+        {*@
+    @*@Html.HiddenFor(employeeData => employeeData.UserID)*@
+    <section class="content">
+        <header class="content__title">
+            <h1>Add Tools</h1>
+        </header>
+        <div class="statbox widget box box-shadow">
+            <div class="widget-content widget-content-area">
+                <div class="table-responsive mb-4" id="displayeddata">
+                    <table id="data-table" class="table style-2 table-bordered  table-hover">
+                        <thead>
+                            <tr>
+                                <th>Inventry Number</th>
+                                <th>Tool Serial Number</th>
+                                <th>Tool Name</th>
+                                <th>Add Tools</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.Tools)
+                            {
+                                if (((employeeData.Tools).Any(c => c.ToolID == item.ToolID)))
+                                {
+                                   
+                                }
+                                else
+                                {
+                                    <tr>
+                                        <td>@item.InventryNumber</td>
+                                        <td>@item.ToolSerialNumber</td>
+                                        <td>@item.ToolName</td>
+                                        <td>
+                                            <input type="checkbox" id="ToolName" class="cbCheck" name="checkbox" value="@item.ToolID">
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-sm-12 pt-5 p-3">
+                    <div class="text-center">
+                        <button type="button" onclick="return Validation()" class="btn btn-primary btn-new" data-toggle="modal" data-target="#exampleModal">Submit</button>
+                        @*<a href="@Url.Action("moretasksadded", "SuperAdmin", new { })" class="btn btn-primary btn-new">Next</a>*@
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog " role="document">
+                                <div class="modal-content modal-popup-bg">
+                                    <div class="modal-header modal-header-bg-new">
+                                        <h5 class="modal-title" id="exampleModalLabel">Add Tools</h5>
+                                        <button type="button" class="close btn-modal-nw-popup" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p class="popup-content-text"> </p>
+                                    </div>
+                                    <div class="modal-footer text-center">
+
+                                        <div class="nbtn-center">  <button type="submit" class="btn btn-primary btn-w" id="btnbutton" onclick="return checboxidsstored()">OK</button></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    @*}*@
+</body>
+</html>
+<script>
+    var count = 0;
+    var ToolName = [];
+    var i = 0;
+    $('table tr td').on('click', '.cbCheck', function () {
+        if ($(this).is(':checked')) {
+            ToolName[i++] = $(this).val();
+            //  alert($(this).val());
+            //ToolName.splice(ToolName.indexOf(item), 1);
+            count++;
+            //console.log(ToolName);
+        }
+        else {
+            count--;
+            ToolNames[i++] = $(this).val();
+            var item = $(this).val();
+            // alert($(this).val());
+            //  console.log(ToolNames);
+
+            //   var item = $(this).val();
+            // alert($(this).val());
+
+            ToolName.splice(ToolName.indexOf(item), 1);
+            // console.log(ToolName);
+        }
+
+        // console.log(ToolNames);
+    });
+</script>
+<script>
+    function unique(array) {
+        return array.reduce((a, b) => {
+            let isIn = a.find(element => {
+                return element === b;
+            });
+            if (!isIn) {
+                a.push(b);
+            }
+            return a;
+        }, []);
+    }
+</script>
+<script>
+    function checboxidsstored()
+    {
+        debugger;
+        //var c = unique(ToolNames);
+        if (ToolName.length == 0) {
+            window.location = '/TimeCard/AddToolsToUser'
+        } else {
+            $.ajax({
+                url: '/TimeCard/SaveUserTools',
+                type: "post",
+                data: { ToolName: ToolName },
+                success: function (result) {
+                    if (result == 0) {
+                        window.location.href = '/';
+                    }
+                    else {
+                        window.location = '/TimeCard/ToolsDetails'
+                    }
+                },
+            });
+         }
+     }
+</script>
+<script>
+    function Validation() {
+        debugger;
+	    if(count==0)
+		    $("p").text("Tools Not Added  " );
+		else
+            $("p").text("Number of Tools Added = " + count);
+    }
+</script>

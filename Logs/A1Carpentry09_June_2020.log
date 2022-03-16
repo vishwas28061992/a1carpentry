@@ -1,0 +1,75 @@
+Logs for: A1Carpentry , A1Carpentry
+[Tuesday, June 09, 2020 07:14:03 PM] Error 10120 >> Error occured in EmployeeProfile (Post)Value cannot be null.
+Parameter name: input   at System.Text.RegularExpressions.Regex.Match(String input)
+   at A1Carpentry.CommonUtils.CommonUtils.ValidateEmail(String email) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\CommonUtils\CommonUtils.cs:line 22
+   at A1Carpentry.Controllers.SuperAdminController.ToolsDetailsinsuperadmin(UsersModel objUser, HttpPostedFileBase file) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 385
+[Tuesday, June 09, 2020 07:20:05 PM] Error 16000 >> Error occured in RolesList Unable to connect to any of the specified MySQL hosts.   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at A1Carpentry.DBhelper.SqlHelper.RolesList() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 177
+[Tuesday, June 09, 2020 07:20:13 PM] Error 16000 >> Error occured in RolesList Unable to connect to any of the specified MySQL hosts.   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at A1Carpentry.DBhelper.SqlHelper.RolesList() in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 177
+[Tuesday, June 09, 2020 08:14:24 PM] Error 19072 >> Error occured in EmployeeProfile (Post)Value cannot be null.
+Parameter name: input   at System.Text.RegularExpressions.Regex.Match(String input)
+   at A1Carpentry.CommonUtils.CommonUtils.ValidateEmail(String email) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\CommonUtils\CommonUtils.cs:line 22
+   at A1Carpentry.Controllers.SuperAdminController.ToolsDetailsinsuperadmin(UsersModel objUser, HttpPostedFileBase file) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 385
+[Tuesday, June 09, 2020 08:14:44 PM] Error 19072 >> Error occured in EmployeeProfile (Post)Value cannot be null.
+Parameter name: input   at System.Text.RegularExpressions.Regex.Match(String input)
+   at A1Carpentry.CommonUtils.CommonUtils.ValidateEmail(String email) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\CommonUtils\CommonUtils.cs:line 22
+   at A1Carpentry.Controllers.SuperAdminController.ToolsDetailsinsuperadmin(UsersModel objUser, HttpPostedFileBase file) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 385
+[Tuesday, June 09, 2020 08:18:57 PM] Error 17984 >> Error occured in EmployeeProfile (Post)Value cannot be null.
+Parameter name: input   at System.Text.RegularExpressions.Regex.Match(String input)
+   at A1Carpentry.CommonUtils.CommonUtils.ValidateEmail(String email) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\CommonUtils\CommonUtils.cs:line 22
+   at A1Carpentry.Controllers.SuperAdminController.ToolsDetailsinsuperadmin(UsersModel objUser, HttpPostedFileBase file) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 385
+[Tuesday, June 09, 2020 08:23:50 PM] Error 17984 >> Error occured in EmployeeProfile (Post)Value cannot be null.
+Parameter name: input   at System.Text.RegularExpressions.Regex.Match(String input)
+   at A1Carpentry.CommonUtils.CommonUtils.ValidateEmail(String email) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\CommonUtils\CommonUtils.cs:line 22
+   at A1Carpentry.Controllers.SuperAdminController.ToolsDetailsinsuperadmin(UsersModel objUser, HttpPostedFileBase file) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 385
+[Tuesday, June 09, 2020 08:32:04 PM] Error 14644 >> Error occured in EmployeeProfile Value cannot be null.
+Parameter name: source   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at A1Carpentry.Controllers.SuperAdminController.employeetools(UsersModel objJobs, List`1 ToolName) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 153
+[Tuesday, June 09, 2020 08:39:13 PM] Error 14868 >> Error occured in EmployeeProfile (Post)Cannot apply indexing with [] to an expression of type 'System.Dynamic.DynamicObject'   at CallSite.Target(Closure , CallSite , Object , String , List`1 )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute3[T0,T1,T2,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2)
+   at A1Carpentry.Controllers.SuperAdminController.ToolsDetailsinsuperadmin(UsersModel objUser, HttpPostedFileBase file) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 427
+[Tuesday, June 09, 2020 08:41:04 PM] Error 14868 >> Error occured in EmployeeProfile (Post)Cannot apply indexing with [] to an expression of type 'System.Dynamic.DynamicObject'   at CallSite.Target(Closure , CallSite , Object , String , List`1 )
+   at A1Carpentry.Controllers.SuperAdminController.ToolsDetailsinsuperadmin(UsersModel objUser, HttpPostedFileBase file) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 427
+[Tuesday, June 09, 2020 08:46:46 PM] Error 16088 >> Error occured in EmployeeProfile (Post)Cannot apply indexing with [] to an expression of type 'System.Dynamic.DynamicObject'   at CallSite.Target(Closure , CallSite , Object , String , List`1 )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecute3[T0,T1,T2,TRet](CallSite site, T0 arg0, T1 arg1, T2 arg2)
+   at A1Carpentry.Controllers.SuperAdminController.ToolsDetailsinsuperadmin(UsersModel objUser, HttpPostedFileBase file) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 427
+[Tuesday, June 09, 2020 08:48:51 PM] Error 16088 >> Error occured in EmployeeProfile (Post)Cannot apply indexing with [] to an expression of type 'System.Dynamic.DynamicObject'   at CallSite.Target(Closure , CallSite , Object , String , List`1 )
+   at A1Carpentry.Controllers.SuperAdminController.ToolsDetailsinsuperadmin(UsersModel objUser, HttpPostedFileBase file) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 427
+[Tuesday, June 09, 2020 08:50:12 PM] Error 16088 >> Error occured in EmployeeProfile (Post)Cannot apply indexing with [] to an expression of type 'System.Dynamic.DynamicObject'   at CallSite.Target(Closure , CallSite , Object , String , List`1 )
+   at A1Carpentry.Controllers.SuperAdminController.ToolsDetailsinsuperadmin(UsersModel objUser, HttpPostedFileBase file) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 427
+[Tuesday, June 09, 2020 08:51:23 PM] Error 16088 >> Error occured in EmployeeProfile (Post)Cannot apply indexing with [] to an expression of type 'System.Dynamic.DynamicObject'   at CallSite.Target(Closure , CallSite , Object , String , List`1 )
+   at A1Carpentry.Controllers.SuperAdminController.ToolsDetailsinsuperadmin(UsersModel objUser, HttpPostedFileBase file) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 427
+[Tuesday, June 09, 2020 09:11:15 PM] Error 14520 >> Error occured in EmployeeProfile Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendEmail(UsersModel ObjUser) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1498
+   at A1Carpentry.Controllers.SuperAdminController.employeetools(UsersModel objJobs, List`1 ToolName) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 161
+[Tuesday, June 09, 2020 09:19:02 PM] Error 12648 >> Error occured in EmployeeProfile (Post)Value cannot be null.
+Parameter name: input   at System.Text.RegularExpressions.Regex.Match(String input)
+   at A1Carpentry.CommonUtils.CommonUtils.ValidateEmail(String email) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\CommonUtils\CommonUtils.cs:line 22
+   at A1Carpentry.Controllers.SuperAdminController.ToolsDetailsinsuperadmin(UsersModel objUser, HttpPostedFileBase file) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 385
+[Tuesday, June 09, 2020 09:28:22 PM] Error 2748 >> Error occured in EmployeeProfile Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendEmail(UsersModel ObjUser)
+   at A1Carpentry.Controllers.SuperAdminController.employeetools(UsersModel objJobs, List`1 ToolName)
+[Tuesday, June 09, 2020 09:30:11 PM] Error 2748 >> Error occured in EmployeeProfile Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendEmail(UsersModel ObjUser)
+   at A1Carpentry.Controllers.SuperAdminController.employeetools(UsersModel objJobs, List`1 ToolName)
+[Tuesday, June 09, 2020 09:42:08 PM] Error 7832 >> Error occured in EmployeeProfile Value cannot be null.
+Parameter name: source   at System.Linq.Enumerable.Select[TSource,TResult](IEnumerable`1 source, Func`2 selector)
+   at A1Carpentry.Controllers.SuperAdminController.employeetools(UsersModel objJobs, List`1 ToolName) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 153
+[Tuesday, June 09, 2020 09:46:36 PM] Error 7832 >> Error occured in EmployeeProfile Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendEmail(UsersModel ObjUser) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1498
+   at A1Carpentry.Controllers.SuperAdminController.employeetools(UsersModel objJobs, List`1 ToolName) in C:\Users\pc\source\repos\A1Carpentry MySql 04_04_19 (1)\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 161

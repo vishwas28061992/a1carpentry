@@ -1,0 +1,275 @@
+﻿@model IEnumerable<A1Carpentry.Models.ReportsModel>
+
+
+
+@{
+    ViewBag.Title = "Reports";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int Sno = 1;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <style>
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+        html {
+            box-sizing: border-box;
+            font-family: sans-serif;
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            -ms-overflow-style: scrollbar
+        }
+
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box !important
+        }
+    </style>
+
+</head>
+
+<body data-sa-theme="1">
+
+    <section class="content container-fluid">
+        <header class="content__title">
+            <h1>Reports</h1>
+            <div class="text-center">
+                <span class="col-sm-3" style="color:red;font-weight:bold;display:none" id="lblError">
+                    <b>Please enter valid dates to proceed.</b>
+                </span>
+                <span class="col-sm-3" style="color:red;font-weight:bold;display:none" id="Error">
+                    <b>Start date should not be greater then end date.</b>
+                </span>
+
+
+                <span class="col-sm-3" style="color:red;font-weight:bold;display:none" id="Errormessage">
+                    <b>Please select start date and end date.</b>
+                </span>
+
+            </div>
+            
+
+        </header>
+
+
+
+        <div class="card">
+            <div class="card-body">
+
+                <div class="row">
+                    @*<div class="col-md-6">
+
+
+
+            <div class="form-group">
+                <input type="text" class="form-control datetime-picker" placeholder="Start a date & time" id="StartDate" autocomplete="off" />
+                <i class="form-group__bar"></i>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <input type="text" class="form-control datetime-picker" placeholder="End a date & time" id="EndDate" autocomplete="off" />
+                <i class="form-group__bar"></i>
+            </div>
+        </div>*@
+
+                    <div class="col-md-6">
+
+
+
+                        <div class="form-group">
+                            <input type="text" class="form-control date-picker" placeholder="Select Start a date" id="StartDate" autocomplete="off" />
+                            <i class="form-group__bar"></i>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control date-picker" placeholder="Select End a date" id="EndDate" autocomplete="off" />
+                            <i class="form-group__bar"></i>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12">	<div class="text-center">  <button type="submit" onclick="return Search()" class="btn btn-primary btn-new py-3 my-sm-4"id="load2" data-loading-text="<i class='fa fa-spinner fa-spin '></i> Processing Generate Report">Generate Report</button> </div></div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="statbox widget box box-shadow">
+            <div class="widget-content widget-content-area">
+
+
+
+                <div class="table-responsive mb-4">
+                    <table id="data-table" class="table style-2 table-bordered  table-hover">
+                        <thead>
+                            <tr>
+                                <th>SNo</th>
+                                <th>User Name</th>
+                                <th>Job Name</th>
+                                <th>Job Type</th>
+                                <th>Job Number</th>
+                                <th>Task</th>
+                                <th>Created By</th>
+                                <th>Start Date</th>
+                                <th>End Date</th>
+                                <th>Duration</th>
+                            @*<th>Duration</th>*@
+                                <th>Status</th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@(Sno++)</td>
+                                    <td>@item.UserName</td>
+                                    <td>@item.JobName</td>
+                                    <td>@item.JobType</td>
+                                    <td>@item.JobNumber</td>
+                                    <td>@item.TaskName</td>
+                                    <td>@item.CreatedBy</td>
+                                    <td>@item.StartDate</td>
+                                    <td>@item.EndDate</td>
+                                    <td>@item.Duration</td>
+                                    @*<td>@item.Hours</td>*@
+                                    @*<td>@item.StatusString</td>*@
+                                    @if (@item.Status== 1)
+                                    {
+                                        <td>approved</td>
+                                    }
+                                    @if (@item.Status == 2)
+                                    {
+                                        <td>denied</td>
+                                    }
+                                    @if (@item.Status == 3)
+                                    {
+                                        <td>re-approved</td>
+                                    }
+                                    @if (@item.Status == 0)
+                                    {
+                                        <td>pending</td>
+                                    }
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+<script type="text/javascript">
+
+    function Search() {
+        debugger
+
+        var validations = true;
+        var startDate = document.getElementById("StartDate").value;
+        var endDate = document.getElementById("EndDate").value;
+
+      
+        var d = new Date(Date.now());
+        var date_format = d.getFullYear().toString() + "-" + ((d.getMonth() + 1).toString().length == 2 ? (d.getMonth() + 1).toString() : "0" + (d.getMonth() + 1).toString()) + "-" + (d.getDate().toString().length == 2 ? d.getDate().toString() : "0" + d.getDate().toString()) + " " + (d.getHours().toString().length == 2 ? d.getHours().toString() : "0" + d.getHours().toString()) + ":" + ((parseInt(d.getMinutes() / 5) * 5).toString().length == 2 ? (parseInt(d.getMinutes() / 5) * 5).toString() : "0" + (parseInt(d.getMinutes() / 5) * 5).toString()) + ":00";
+             
+
+       
+        if (startDate > date_format || endDate > date_format ) {
+            document.getElementById("lblError").style.display = "inline";
+            Validations = false;
+        }
+        else
+        if (startDate > endDate) {
+            document.getElementById("Error").style.display = "inline";     
+            Validations = false;
+        }
+        else if (startDate != "" && endDate != "") {
+            GetReports(startDate, endDate);
+        }
+        else {
+            document.getElementById("Errormessage").style.display = "inline";
+            //alert("Please select start date and end date");
+            Validations = false;
+        }
+
+        return validations;
+    };
+
+
+
+    function GetReports(startDate, endDate) {
+        debugger
+        $.ajax({
+            url: '/SuperAdmin/GenerateReports',
+            data: { startDate: startDate, endDate: endDate  },
+            success: function (result) {
+                if (result == true) {
+                    window.location.href = '@Url.Action("DownloadFile", "SuperAdmin")';
+                }
+                else {
+                    window.location.href = '@Url.Action("DownloadFile", "SuperAdmin")';
+                }
+
+
+            },
+
+        });
+
+
+    };
+
+</script>
+<script>
+
+    $('.btn').on('click', function () {
+        var $this = $(this);
+        $this.button('loading');
+        setTimeout(function () {
+            $this.button('reset');
+        }, 90000);
+    });
+
+</script>

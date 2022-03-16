@@ -1,0 +1,190 @@
+﻿
+@model A1Carpentry.Models.JobDetailsModel
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+
+</head>
+<body data-sa-theme="1">
+
+
+    @using (Html.BeginForm("updatedsupervisor", "Supervisor", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+    {
+
+        @Html.AntiForgeryToken() // this is for prevent CSRF attack
+        @Html.ValidationSummary(true)
+
+        @Html.HiddenFor(m => m.JobDetailID)
+        <input type="hidden" id="UserId" value="@Model.JobDetailID" />
+
+
+        <section class="content">
+            <div class="content__inner">
+                <header class="content__title">
+                    <h1> Update Supervisor Details </h1>
+                </header>
+
+                <div>
+                    <span style="display:none" id="lblError">
+                        <b style="color:red">Please enter all fields to proceed</b>
+                    </span>
+                    @if (ViewData["errormessage"] != null)
+                    {
+                        <p id="successMessage"><b style="color:red"> @ViewData["errormessage"] </b></p>
+                    }
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label><b>Job Name</b></label>
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.JobName, new { @class = "form-control", autocomplete = "off", placeholder = "Job Name*" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+
+                            </div>
+                            <div class="col-sm-6">
+                                <label><b>Job Task</b></label>
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.JobTask, new { @class = "form-control", autocomplete = "off", placeholder = "Job Task*" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-sm-6">
+                                <label><b>Job Type</b></label>
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.JobType, new { @class = "form-control", autocomplete = "off", placeholder = "Job Type*" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+
+                            </div>
+                            <div class="col-sm-6">
+                                <label><b>start adate and time</b></label>
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.StartTime, new { @class = "form-control datetime-picker", autocomplete = "off", placeholder = "start a date & time*" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+                            <div class="col-sm-6">
+                                <label><b>end date and time</b></label>
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.EndTime, new { @class = "form-control datetime-picker", autocomplete = "on", placeholder = "end a date & time*" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <label><b>select Approve/Denied</b></label>
+                                <div class="form-group">
+                                    
+                                        @Html.DropDownList("@model.Approval", new List<SelectListItem>
+                                        {
+                                           new SelectListItem{ Text="Approved", Value = "1" },
+                                           new SelectListItem{ Text="Denied", Value = "2" },
+                                         
+                                        
+                                        })
+                                    
+                                    <i class="form-group__bar"></i>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-12">	<div class="text-center">  <button type="submit" onclick="return Validation()" class="btn btn-primary btn-new">Update</button> </div></div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </section>
+    }
+
+
+
+
+
+
+
+</body>
+</html>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+
+<script type="text/javascript">
+
+
+    function validation() {
+        debugger;
+        var validations = true;
+
+        var jobname = document.getelementbyid("Jobname").value;
+        var jobtask = document.getelementbyid("Jobtask").value;
+        var jobtype = document.getelementbyid("JobType").value;
+        var starttime = document.getelementbyid("StartTime").value;
+        var enddate = document.getelementbyid("EndTime").value;
+
+
+
+        if (jobname == "" || jobname == null || jobname == undefined) {
+            document.getelementbyid("lblerror").style.display = "inline";
+            validations = false;
+        }
+
+        if (jobtask == "" || jobtask == null || jobtask == undefined) {
+            document.getelementbyid("lblerror").style.display = "inline";
+            validations = false;
+        }
+
+        if (jobtype == "" || jobtype == null || jobtype == undefined) {
+            document.getelementbyid("lblerror").style.display = "inline";
+            validations = false;
+        }
+
+
+        if (starttime == "" || starttime == null || starttime == undefined) {
+            document.getelementbyid("lblerror").style.display = "inline";
+            validations = false;
+        }
+
+        if (enddate == "" || enddate == null || enddate == undefined) {
+            document.getelementbyid("lblerror").style.display = "inline";
+            validations = false;
+        }
+
+        return validations;
+
+    }
+
+
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#date").datetimepicker();
+    });
+</script>

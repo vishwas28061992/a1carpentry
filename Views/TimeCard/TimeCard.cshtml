@@ -1,0 +1,545 @@
+﻿@model A1Carpentry.Models.JobDetailsModel
+
+
+@{
+
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+
+    <style>
+        .stopwatch {
+            font-size: 5rem;
+            height: 10%;
+            line-height: 3.5rem;
+        }
+
+        .time1 {
+            font-size: 2rem;
+            height: 10%;
+            line-height: 3.5rem;
+            color: dodgerblue;
+        }
+
+        .results {
+            border-color: lime;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .controls {
+            position: fixed;
+            text-align: center;
+            top: 1em;
+            width: 100%;
+        }
+
+        .button {
+            color: #bbb;
+            font-size: 4vw;
+            margin: 0 0.5em;
+            text-decoration: none;
+        }
+
+        .wide {
+            width: 260px;
+            font-size: 20px;
+            background: transparent;
+            border: 1px solid #d4dae3;
+            border-radius: 25px;
+            text-align: center;
+            color: #116299;
+        }
+
+        .at-location {
+        }
+    </style>
+
+</head>
+<body data-sa-theme="1">
+
+    @using (Html.BeginForm("TimeCard", "TimeCard", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+    {
+        <section class="content">
+            <div class="content__inner">
+                <header class="content__title">
+                    <h1>Time Card</h1>
+                </header>
+                <div class="text-center">
+                    <span class="col-sm-3" style="color:red;font-weight:bold;display:none" id="lblError">
+                        <b> Please enter all fields to proceed </b>
+                    </span>
+                    @if (ViewData["errormessage"] != null)
+                    {
+                        <p class="alert alert-danger" id="successMessage"> <b>@ViewData["errormessage"]</b></p>
+                    }
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    @Html.DropDownListFor(m => m.JobID, new SelectList(Model.lstJobs, "JobID", "JobNumber"), " -- Select Job Number* --", new { @class = "form-control a-select ", id = "JobID" })
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.JobName, new { @class = "form-control", autocomplete = "off", placeholder = "JobName*" })
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    @Html.DropDownListFor(m => m.TaskID, new SelectList(Model.lstTasks, "TaskID", "TaskName"), "-- Select Job Task* --", new { @class = "form-control a-select ", id = "TaskID" })
+
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    @Html.DropDownListFor(m => m.JobTypeID, new SelectList(Model.lstJobTypes, "JobTypeID", "JobType"), " -- Select Job Type* -- ", new { @class = "form-control a-select ", id = "JobTypeID" })
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-sm-4" style="padding-top:0px;">
+                                <div class="col-sm-4" style="display:none; font-size:16px;  color:dodgerblue;" id="divLoc">
+                                    <h2 class="display_t">Your Current Location:</h2> <br>
+                                    <label style="color:#6c757d;"><b>Latitude -</b> <span id="lati"></span></label>
+                                    @Html.HiddenFor(a => a.Latitude, new { id = "latt" })
+                                    <label style="color:#6c757d;"><b>Longitude - </b><span id="longi"></span> </label>
+                                    @Html.HiddenFor(a => a.Longitude, new { id = "longgi" })
+                                    @Html.HiddenFor(a => a.StartTime, new { id = "start" })
+                                    @Html.HiddenFor(a => a.EndTime, new { id = "end" })
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a id="gMap" href="" target="_blank" style="color:orange">Show on Map</a>
+                                    @*<label style="font-size:16px; color:gold;">Please click on submit to start your job..!!</label>*@
+                                    <div id="errDiv"></div>
+                                </div>
+                                @if (Model.Post == false)
+                                {
+                                    <a href="#" id="btnStart" style="display:none" class="btn btn-success btn-new" onclick="stopwatch.start();">START</a>
+                                }
+                            </div>
+                            <div class="col-sm-4" style="padding-top:0px; text-align:center">
+                                @*<div class="stopwatch"></div>
+            <ul class="results"></ul>*@
+                                <div id="CurrentTime" class="time1" style="display:none">
+                                    <span style="color:#6c757d; font-size: 16px; padding-left: 0px;">Your time has started at </span> <br /> @Html.TextBoxFor(x => x.ShowTime, new { @class = "wide", @readonly = "readonly" })<br /><span style="color:#6c757d; font-size: 16px; padding-left: 15px;">Click on submit to start your job..</span>
+                                </div>
+                                @if (Model.Post == true)
+                                {
+                                    <div id="CurrentTime" class="time1">
+                                        <span style="color:#6c757d; font-size: 16px;">Your time has started at  </span> <br /> <span class="wide"> @TempData["StartedTime"]</span>  <br /><span style="color:#6c757d; font-size: 16px; padding-left: 15px;">Click on end and upload files and submit..</span>
+                                    </div>
+                                }
+                            </div>  
+                            <div class="col-sm-4" style="padding-top:60px; display:none;" id="divStop">
+                                <a href="#" id="btnStop" class="btn btn-danger btn-new" onClick="stopwatch.stop();">End</a>
+                            </div> 
+                            @if (Model.Post == true)
+                            {
+                                <div class="col-sm-4" style="padding-top:60px;" id="divStop">
+                                    <a href="#" id="btnStop1" class="btn btn-danger btn-new" onClick="stop();">END</a>
+                                </div>
+                            }
+                                @*<div class="col-sm-4" style="display:none; font-size:16px;  color:darkorange;" id="divLoc">
+                                    <label>Latitude - <span id="lati"></span></label>
+                                    @Html.HiddenFor(a => a.Latitude, new { id = "latt" })
+                                    <label>Longitude - <span id="longi"></span> </label>
+                                    @Html.HiddenFor(a => a.Longitude, new { id = "longgi" })
+                                    @Html.HiddenFor(a => a.StartTime, new { id = "start" })
+                                    @Html.HiddenFor(a => a.EndTime, new { id = "end" })
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <a id="gMap" href="" target="_blank">Show on Map</a>
+                                    <label style="font-size:16px; color:gold;">Please click on submit to start your job..!!</label>
+                                    <div id="errDiv"></div>
+                                </div>*@
+                            <div class="form-group" style="display:none;" id="divUpload">
+                                <input type="file" id="uploadedFile" name="file" class="dropzone">
+                            </div>
+                            <div class="col-sm-10" style="padding-top:60px;">	<div class="text-center">  <button type="submit" onclick="return Validation()" class="btn btn-primary btn-new">Submit</button> <a href="@Url.Action("TimeCardManualEntry","TimeCard")" class="btn btn-info btn-new">Manual</a></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    }
+</body>
+</html>
+@section Scripts{
+    @*@Scripts.Render("~/bundles/jqueryval")*@
+}
+<script type="text/javascript">
+    function Validation() {
+        debugger;
+        var validations = true;
+        var jobID = document.getElementById("JobID").value;
+        var taskID = document.getElementById("TaskID").value;
+        var jobTypeID = document.getElementById("JobTypeID").value;
+        if (jobID == 0 || jobID == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+        if (taskID == 0 || taskID == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+        if (jobTypeID == 0 || jobTypeID == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+
+
+        return validations;
+
+    }
+
+
+</script>
+
+<script type="text/javascript">
+
+    class Stopwatch {
+        constructor(display, results) {
+            this.running = false;
+            this.display = display;
+            this.results = results;
+            this.laps = [];
+            this.reset();
+            this.print(this.times);
+        }
+
+        reset() {
+            this.times = [0, 0, 0];
+        }
+
+        start() {
+            debugger;
+
+            if (!this.time) this.time = performance.now();
+            if (!this.running) {
+                this.running = true;
+                requestAnimationFrame(this.step.bind(this));
+
+                var currentdate = new Date().toLocaleString();
+
+
+                $("#StartTime").val(currentdate);
+
+
+                document.getElementById("btnStart").style.display = "none";
+                document.getElementById("divStop").style.display = "inline";
+
+
+
+            }
+        }
+
+        lap() {
+            let times = this.times;
+            let li = document.createElement('li');
+            li.innerText = this.format(times);
+            this.results.appendChild(li);
+        }
+
+        stop() {
+            debugger;
+            this.running = false;
+            this.time = null;
+            document.getElementById("btnStop").style.display = "none";
+            document.getElementById("divLoc").style.display = "none";
+
+            document.getElementById("divUpload").style.display = "inline";
+
+
+            var currentdate = new Date().toLocaleString();
+
+
+            $("#end").val(currentdate);
+
+
+        }
+
+        restart() {
+            if (!this.time) this.time = performance.now();
+            if (!this.running) {
+                this.running = true;
+                requestAnimationFrame(this.step.bind(this));
+            }
+            this.reset();
+        }
+
+        clear() {
+            clearChildren(this.results);
+        }
+
+        step(timestamp) {
+            if (!this.running) return;
+            this.calculate(timestamp);
+            this.time = timestamp;
+            this.print();
+            requestAnimationFrame(this.step.bind(this));
+        }
+
+        calculate(timestamp) {
+            var diff = timestamp - this.time;
+            // Hundredths of a second are 100 ms
+            this.times[2] += diff / 10;
+            // Seconds are 100 hundredths of a second
+            if (this.times[2] >= 100) {
+                this.times[1] += 1;
+                this.times[2] -= 100;
+            }
+            // Minutes are 60 seconds
+            if (this.times[1] >= 60) {
+                this.times[0] += 1;
+                this.times[1] -= 60;
+            }
+        }
+
+        print() {
+            this.display.innerText = this.format(this.times);
+        }
+
+        format(times) {
+            return `\
+    ${pad0(times[0], 2)}:\
+    ${pad0(times[1], 2)}:\
+    ${pad0(Math.floor(times[2]), 2)}`;
+        }
+    }
+
+    function pad0(value, count) {
+        var result = value.toString();
+        for (; result.length < count; --count)
+            result = '0' + result;
+        return result;
+    }
+
+    function clearChildren(node) {
+        while (node.lastChild)
+            node.removeChild(node.lastChild);
+    }
+
+    let stopwatch = new Stopwatch(
+        document.querySelector('.stopwatch'),
+        document.querySelector('.results'));
+</script>
+
+<script>
+
+    $('#JobID').change(function () {
+        debugger;
+        LoadTasksByJobId($(this).val(), '')
+    });
+
+    function LoadTasksByJobId(JobID, taskID) {
+        debugger
+        $.ajax({
+            url: '/TimeCard/GetTasksByJobID',                                       // Changed
+            data: { JobID: JobID },
+            success: function (data) {
+                //alert(JSON.stringify(data));
+                var ddTask = $('#TaskID');
+                ddTask.children().remove();
+                ddTask.append($("<option>").val("").text("-- Select Job Task* --"))
+                $.each(data, function (i, record) {
+                    ddTask.append($('<option>').val(record.TaskID).text(record.TaskName));
+                })
+
+                $('#TaskID').append(ddTask);
+
+                if (taskID != '') {
+                    $('#TaskID').val(taskID);
+
+                }
+
+                if (JobID != '') {
+                    $('#JobName').val(data[0].JobName);
+                    $('#JobTypeID').val(data[0].TaskTypeID);
+
+
+
+                }
+
+
+            }, async: false
+        })
+    };
+
+
+</script>
+
+<script>
+    $(function () {
+        var error = $('#errDiv');
+        $('#btnStart').click(function () {
+            debugger;
+
+            var date = new Date().toLocaleString('en-US', { hour12: false }).split(" ");
+
+            // Now we can access our time at date[1], and monthdayyear
+            var time = date[1];
+            var mdy = date[0];
+
+            // We then parse  the mdy into parts
+            mdy = mdy.split('/');
+            var month = parseInt(mdy[0]);
+            var day = parseInt(mdy[1]);
+            var year = parseInt(mdy[2]);
+
+            // Putting it all together
+            var formattedDate = year + '-' + month + '-' + day + ' ' + time;
+
+            $("#ShowTime").val(formattedDate);
+
+            document.getElementById("CurrentTime").style.display = "inline";
+            var currentdate = new Date().toLocaleString();
+
+
+            document.getElementById("btnStart").style.display = "none";
+            //document.getElementById("divStop").style.display = "inline";
+            if (Modernizr.geolocation) {
+                navigator.geolocation.getCurrentPosition(currentPosition, positionError);
+
+
+            }
+            else {
+                error.html("GeoLocation API of HTML 5 is not supported");
+            }
+        });
+
+        function currentPosition(currentPos) {
+            debugger
+            var coordinates = currentPos.coords;
+            $('#lati').text(coordinates.latitude);
+            $('#longi').text(coordinates.longitude);
+
+            var lattiii = coordinates.latitude;
+            var longgiii = coordinates.longitude;
+
+            var date = new Date().toLocaleString('en-US', { hour12: false }).split(" ");
+
+            // Now we can access our time at date[1], and monthdayyear
+            var time = date[1];
+            var mdy = date[0];
+
+            // We then parse  the mdy into parts
+            mdy = mdy.split('/');
+            var month = parseInt(mdy[0]);
+            var day = parseInt(mdy[1]);
+            var year = parseInt(mdy[2]);
+
+            // Putting it all together
+            var formattedDate = year + '-' + month + '-' + day + ' ' + time;
+
+
+
+            $("#start").val(formattedDate);
+
+            $("#latt").val(lattiii);
+            $("#longgi").val(longgiii);
+            document.getElementById("divLoc").style.display = "inline";
+            var googleMap = $('#gMap');
+            googleMap.attr("href", "http://maps.google.com/maps?q=" + coordinates.latitude + "," + coordinates.longitude);
+
+
+        }
+
+        function positionError(errCode) {
+            switch (errCode.code) {
+                case 0:
+                    error.html("Unknown Error - has occured");
+                    break;
+                case 1:
+                    error.html("Permission Denied - By the user");
+                    break;
+                case 2:
+                    error.html("Position/Location Unavailable");
+                    break;
+                case 3:
+                    error.html("Timeout");
+                    break;
+            }
+        }
+    });
+</script>
+
+<script>
+    function stop() {
+        debugger
+        this.running = false;
+        this.time = null;
+        document.getElementById("btnStop1").style.display = "none";
+        document.getElementById("divLoc").style.display = "none";
+
+        document.getElementById("divUpload").style.display = "inline";
+
+
+        var date = new Date().toLocaleString('en-US', { hour12: false }).split(" ");
+
+        // Now we can access our time at date[1], and monthdayyear
+        var time = date[1];
+        var mdy = date[0];
+
+        // We then parse  the mdy into parts
+        mdy = mdy.split('/');
+        var month = parseInt(mdy[0]);
+        var day = parseInt(mdy[1]);
+        var year = parseInt(mdy[2]);
+
+        // Putting it all together
+        var formattedDate = year + '-' + month + '-' + day + ' ' + time;
+
+
+        $('#end').val(formattedDate);
+
+
+    }
+
+
+</script>
+
+
+<script type="text/javascript">
+
+    $('#TaskID').change(function () {
+        debugger;
+        var jobID = document.getElementById("JobID").value;
+        var taskID = document.getElementById("TaskID").value;
+        var jobTypeID = document.getElementById("JobTypeID").value;
+
+        if (jobTypeID != 0 && jobTypeID != undefined && jobID != 0 && jobID != undefined && taskID != 0 && taskID != undefined) {
+            document.getElementById("btnStart").style.display = "inline-block";
+
+        }
+
+    });
+</script>
+<script>
+    function changejobid() {
+
+
+        debugger;
+        var jobID = document.getElementById("JobID").value;
+        var taskID = document.getElementById("TaskID").value;
+        var jobTypeID = document.getElementById("JobTypeID").value;
+
+        if (jobTypeID != 0 && jobTypeID != undefined && jobID != 0 && jobID != undefined && taskID != 0 && taskID != undefined) {
+            document.getElementById("btnStart").style.display = "inline-block";
+
+        }
+
+    }
+
+</script>

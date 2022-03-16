@@ -1,0 +1,91 @@
+﻿@model A1Carpentry.Models.JobDetailsModel
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+
+
+    <style>
+
+        .JobDone {
+            font-size: 2rem;
+           
+        }
+
+            .JobDone h3 {
+                font-size: 1.8rem;
+                height: 10%;
+                line-height: 3.5rem;
+                color: #1bb510;
+                font-weight: 400;
+            } 
+        .JobDone label{
+            font-size: 1.3rem;
+            height: 10%;
+            line-height: 3.5rem;
+            color: #000;
+        }
+    </style>
+
+</head>
+<body data-sa-theme="1">
+       
+        @Html.AntiForgeryToken() 
+        @Html.ValidationSummary(true)
+    
+        <section class="content">
+            <div class="content__inner">
+                <header class="content__title">
+                    <h1> Job Done Message </h1>
+                </header>
+
+              
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group JobDone">
+                                    <h3> Your job is successfully done..!!</h3> <br />
+                                    <label> Start Time :  @Model.StartTime</label> <br />
+                                    <label> End Time : @Model.EndTime</label>
+                                    <i class="form-group__bar"></i>
+                                </div>
+
+                            </div>
+
+                            <div class="col-sm-6">
+                                
+                                <a class="btn btn-primary btn-new" href="@Url.Action("TimeCard","TimeCard")">
+                                Start New Job
+                                </a> 
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </section>
+   
+    
+</body>
+</html>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+

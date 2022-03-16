@@ -1,0 +1,883 @@
+﻿﻿@*@model IEnumerable<A1Carpentry.Models.ToolsModel>
+    @using System.Linq
+
+    @{
+        ViewBag.Title = "ToolsEditprofile";
+    }
+
+    <h2>ToolsEditprofile</h2>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    </head>
+    <body data-sa-theme="1">
+
+
+        @using (Html.BeginForm("ToolsEdit", "SuperAdmin", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+        {
+
+            @Html.AntiForgeryToken() // this is for prevent CSRF attack
+            @Html.ValidationSummary(true)
+
+            <section class="content">
+                <div class="content__inner">
+                    <header class="content__title">
+                        <h1> Tools Edit profile </h1>
+                    </header>
+
+                    <div class="text-center">
+
+                        <span style="display:none" id="lblError">
+                            <b style="color:red">  Please enter all fields to proceed. </b>
+                        </span>
+                        <span style="display:none" id="lblDateError">
+                            <b style="color:red">   End date cannot be less than start date. </b>
+                        </span>
+                        <span style="display:none" id="errormessage">
+                            <b style="color:red"> Please select current date or above. </b>
+                        </span>
+
+
+                        @if (ViewData["errormessage"] != null)
+                        {
+                            <p id="successMessage"> <b style="color:red">@ViewData["errormessage"]</b></p>
+                        }
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="col-sm-9">
+                                <div class="col-md-5">
+                                    <ul class="list-group">
+                                        <li class="list-group-item-heading list-group-item-action">
+                                            <h4 class="list-group-item-text">Tool Names</h4>
+                                        </li>
+
+                                        @foreach (var item in Model)
+                                        {
+                                            <li class="list-group-item">
+                                                <div class="list-group-item">
+                                                    @if (item.ToolID > 0)
+                                                    {
+                                                        if ((ViewBag.toolnames as List<A1Carpentry.Models.ToolsModel>).Any(c => c.ToolID == item.ToolID))
+                                                        {
+                                                            <input type="checkbox" id="ToolName" name="ToolName" checked value="@item.ToolID" />@item.ToolName
+                                                        }
+                                                        else
+                                                        {
+                                                            <input type="checkbox" id="ToolName" name="ToolName" value="@item.ToolID" />@item.ToolName
+                                                        }
+                                                    }
+
+                                                </div>
+                                            </li>
+                                        }
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-12  pt-5  p-3">	<div class="text-center">  <button type="submit" onclick="return Validation()" class="btn btn-primary btn-new">Submit</button> </div></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+        }
+        </body>
+    </html>*@
+@*@model IEnumerable<A1Carpentry.Models.ToolsModel>
+    @using System.Linq
+
+    @{
+        ViewBag.Title = "ToolsEditprofile";
+
+    }
+
+    <h2>ToolsEditprofile</h2>
+    <!DOCTYPE html>
+    <html lang="en">
+
+
+    <head>
+        <style>
+            .my-custom-scrollbar {
+                position: relative;
+                height: 112px;
+                overflow: auto;
+            }
+
+            .table-wrapper-scroll-y {
+                display: block;
+            }
+
+
+            .carp-scroll {
+                height: 220px;
+                width: 350px;
+                overflow-y: scroll;
+            }
+
+
+            .chkbox-brd {
+                border: none
+            }
+
+            .custom-scrollbar-css::-webkit-scrollbar-thumb {
+                border-radius: 1rem;
+                background-color: #00d2ff;
+                background-image: linear-gradient(to top, #00d2ff 0%, #3a7bd5 100%);
+            }
+        </style>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    </head>
+    <body data-sa-theme="1">
+        @using (Html.BeginForm("ToolsEdit", "SuperAdmin", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken() // this is for prevent CSRF attack
+            @Html.ValidationSummary(true)
+            <section class="content">
+                <header class="content__title">
+                    <h1> Return Tools </h1>
+                </header>
+                <div class="card mb-4">
+                    <div class="card-body p-5">
+
+                        <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                            <table class="table table-bordered table-striped mb-0">
+                                <tbody>
+                                    <tr>
+                                        <div class="col-sm-12">
+                                            <div class="">
+                                                <div class="row">
+                                                    @foreach (var item in Model)
+                                                    {
+                                                        //<div class="form-control chkbox-brd ">
+                                                        if (item.ToolID > 0)
+                                                        {
+                                                            if ((ViewBag.toolnames as List<A1Carpentry.Models.ToolsModel>
+                                                                ).Any(c => c.ToolID == item.ToolID))
+                                                            {
+                                                                <div class="col-lg-3 col-sm-3">
+                                                                    <input type="checkbox" id="ToolName" name="ToolName" checked value="@item.ToolID">
+                                                                    <label class="" for="customCheck">@item.ToolName</label>
+                                                                </div>
+
+                                                            }
+                                                            else
+                                                            {
+                                                                <div class="col-lg-3 col-sm-3">
+                                                                    <input type="checkbox" id="ToolName" name="ToolName" value="@item.ToolID">
+                                                                    <label class="" for="customCheck">@item.ToolName</label>
+                                                                </div>
+                                                            }
+
+                                                        }
+                                                        //</div>
+                                                    }
+
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                        </div>*@
+
+@*<div id="content-1" class="carp-scroll  custom-scrollbar-css p-2">*@
+
+
+@*@foreach (var item in Model)
+    {
+        <div class="form-control chkbox-brd ">
+            @if (item.ToolID > 0)
+            {
+                if ((ViewBag.toolnames as List<A1Carpentry.Models.ToolsModel>
+                    ).Any(c => c.ToolID == item.ToolID))
+                {
+                    <input type="checkbox" id="ToolName" name="ToolName" checked value="@item.ToolID">
+                    <label class="" for="customCheck">@item.ToolName</label>
+                }
+                else
+                {
+                    <input type="checkbox" id="ToolName" name="ToolName" value="@item.ToolID">
+                    <label class="" for="customCheck">@item.ToolName</label>
+                }
+            }
+        </div>
+    }*@
+
+
+
+@*<ul class="list-style">
+
+        @foreach (var item in Model)
+        {
+
+
+            if (item.ToolID > 0)
+            {
+                if ((ViewBag.toolnames as List<A1Carpentry.Models.ToolsModel>).Any(c => c.ToolID == item.ToolID))
+                {
+
+                    <li> <input type="checkbox" id="ToolName" name="ToolName" checked value="@item.ToolID" />@item.ToolName</li>
+                }
+                else
+                {
+                    <li>
+                        <input type="checkbox" id="ToolName" name="ToolName" value="@item.ToolID" />
+                        @item.ToolName
+                    </li>
+                }
+            }
+        }
+    </ul>*@
+
+
+@*</div>*@
+@*<div class="col-sm-12 p-5 p-3">
+                            <div class="text-center">  <button type="submit" onclick="return Validation()" class="btn btn-primary btn-new">Return</button> </div>
+                            <a href="@Url.Action("GarageDetails","SuperAdmin", new { })" class="btn btn-danger btn-new">Back</a>
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+
+
+
+            </section>
+        }
+    </body>
+    </html>
+
+
+    <script>
+        $(function () {
+
+            $("#content-1").mCustomScrollbar({
+
+                theme: "rounded-dots-dark"
+
+
+            });
+        });
+
+
+    </script>*@
+@*﻿@model IEnumerable<A1Carpentry.Models.ToolsModel>
+    @{
+        ViewBag.Title = "TotalToolsdetails";
+    }
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <style>
+            html {
+                box-sizing: border-box;
+                font-family: sans-serif;
+                line-height: 1.15;
+                -webkit-text-size-adjust: 100%;
+                -ms-text-size-adjust: 100%;
+                -ms-overflow-style: scrollbar
+            }
+
+            *,
+            ::after,
+            ::before {
+                box-sizing: border-box !important
+            }
+
+            .aria-label {
+            }
+        </style>
+    </head>
+    <body data-sa-theme="1">
+        <section class="content">
+            <header class="content__title">
+                <h1>Tools Details</h1>
+            </header>
+            <div class="statbox widget box box-shadow">
+                <div class="widget-content widget-content-area">
+                    <div class="table-responsive mb-4" id="displayeddata">
+                        <table id="data-table" class="table style-2 table-bordered  table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Inventry Number</th>
+                                    <th>Tool Serial Number</th>
+                                    <th>Tool Name</th>
+                                    <th>Tool Type</th>
+                                    <th>Assined Employee</th>
+                                    <th>Edit/Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    if (item.ToolID > 0)
+                                    {
+                                        <tr>
+                                            <td>@item.InventryNumber</td>
+                                            <td>@item.ToolSerialNumber</td>
+                                            <td>@item.ToolName</td>
+                                            <td>@item.ToolType</td>
+                                            <td>
+                                                @foreach (var lst in (ViewBag.userstools as List<A1Carpentry.Models.UsersModel>))
+                                                {
+                                                    for (var i = 0; i < lst.TooldsArray.Length; i++)
+                                                    {
+                                                        if (lst.TooldsArray[i] == @item.ToolID)
+                                                        {
+                                                              @lst.Username
+
+                                                        }
+
+                                                    }
+
+                                                }*@
+
+
+
+@*@if ((ViewBag.userstools as List<A1Carpentry.Models.UsersModel>).Any(c => c.ToolID == item.ToolID))
+    {
+        foreach(var lst in (ViewBag.userstools as List<A1Carpentry.Models.UsersModel>))
+        {
+            @lst.Username
+        }
+    }*@
+
+@*</td>
+                                            <td>
+                                                <a href="@Url.Action("UpdateToolsProfile","SuperAdmin", new { id = @item.ToolID, IsEdit = true })" class="shadow-none badge badge-warning">Edit</a>
+                                                <br />
+                                                <br />
+                                                  <button type="button" class="open-AddBookDialog shadow-none badge badge-danger" data-toggle="modal" onclick="senduserid(@item.ToolID)" data-target="#exampleModalCenter">
+                                                    Delete
+                                                </button>
+                                            </td>
+
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Tools Details</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="popup-content-text"> Are you sure delete this Record </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                        <button type="button" id="Save" onclick="return SubmitDetails()" class="btn btn-primary">Yes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>
+
+    <script>
+            var id;
+        function senduserid(data) {
+                id = data;
+            //alert(data);
+        }
+
+    </script>
+    <script>
+         function SubmitDetails() {
+            debugger
+          $.ajax({
+              url: '/SuperAdmin/DeleteToolsProfile',                 // Changed
+              type: "Get",
+              data: { id: id },
+
+
+
+              success: function (result) {
+                  debugger;
+                  if (result <= 0) {
+                      debugger;
+                        window.location.href = '@Url.Action("TotalToolsdetails", "SuperAdmin")';
+                    }
+                  else {
+                      debugger;
+                        window.location.href = '@Url.Action("Login", "Login")';
+                    }
+                }
+            })
+
+        };
+    </script>*@
+
+
+
+
+
+﻿﻿@*@model IEnumerable<A1Carpentry.Models.ToolsModel>
+    @using System.Linq
+
+    @{
+        ViewBag.Title = "ToolsEditprofile";
+    }
+
+    <h2>ToolsEditprofile</h2>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    </head>
+    <body data-sa-theme="1">
+
+
+        @using (Html.BeginForm("ToolsEdit", "SuperAdmin", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+        {
+
+            @Html.AntiForgeryToken() // this is for prevent CSRF attack
+            @Html.ValidationSummary(true)
+
+            <section class="content">
+                <div class="content__inner">
+                    <header class="content__title">
+                        <h1> Tools Edit profile </h1>
+                    </header>
+
+                    <div class="text-center">
+
+                        <span style="display:none" id="lblError">
+                            <b style="color:red">  Please enter all fields to proceed. </b>
+                        </span>
+                        <span style="display:none" id="lblDateError">
+                            <b style="color:red">   End date cannot be less than start date. </b>
+                        </span>
+                        <span style="display:none" id="errormessage">
+                            <b style="color:red"> Please select current date or above. </b>
+                        </span>
+
+
+                        @if (ViewData["errormessage"] != null)
+                        {
+                            <p id="successMessage"> <b style="color:red">@ViewData["errormessage"]</b></p>
+                        }
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="col-sm-9">
+                                <div class="col-md-5">
+                                    <ul class="list-group">
+                                        <li class="list-group-item-heading list-group-item-action">
+                                            <h4 class="list-group-item-text">Tool Names</h4>
+                                        </li>
+
+                                        @foreach (var item in Model)
+                                        {
+                                            <li class="list-group-item">
+                                                <div class="list-group-item">
+                                                    @if (item.ToolID > 0)
+                                                    {
+                                                        if ((ViewBag.toolnames as List<A1Carpentry.Models.ToolsModel>).Any(c => c.ToolID == item.ToolID))
+                                                        {
+                                                            <input type="checkbox" id="ToolName" name="ToolName" checked value="@item.ToolID" />@item.ToolName
+                                                        }
+                                                        else
+                                                        {
+                                                            <input type="checkbox" id="ToolName" name="ToolName" value="@item.ToolID" />@item.ToolName
+                                                        }
+                                                    }
+
+                                                </div>
+                                            </li>
+                                        }
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-12  pt-5  p-3">	<div class="text-center">  <button type="submit" onclick="return Validation()" class="btn btn-primary btn-new">Submit</button> </div></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+        }
+        </body>
+    </html>*@
+@*@model IEnumerable<A1Carpentry.Models.ToolsModel>
+    @using System.Linq
+
+    @{
+        ViewBag.Title = "ToolsEditprofile";
+
+    }
+
+    <h2>ToolsEditprofile</h2>
+    <!DOCTYPE html>
+    <html lang="en">
+
+
+    <head>
+        <style>
+            .my-custom-scrollbar {
+                position: relative;
+                height: 112px;
+                overflow: auto;
+            }
+
+            .table-wrapper-scroll-y {
+                display: block;
+            }
+
+
+            .carp-scroll {
+                height: 220px;
+                width: 350px;
+                overflow-y: scroll;
+            }
+
+
+            .chkbox-brd {
+                border: none
+            }
+
+            .custom-scrollbar-css::-webkit-scrollbar-thumb {
+                border-radius: 1rem;
+                background-color: #00d2ff;
+                background-image: linear-gradient(to top, #00d2ff 0%, #3a7bd5 100%);
+            }
+        </style>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    </head>
+    <body data-sa-theme="1">
+        @using (Html.BeginForm("ToolsEdit", "SuperAdmin", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken() // this is for prevent CSRF attack
+            @Html.ValidationSummary(true)
+            <section class="content">
+                <header class="content__title">
+                    <h1> Return Tools </h1>
+                </header>
+                <div class="card mb-4">
+                    <div class="card-body p-5">
+
+                        <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                            <table class="table table-bordered table-striped mb-0">
+                                <tbody>
+                                    <tr>
+                                        <div class="col-sm-12">
+                                            <div class="">
+                                                <div class="row">
+                                                    @foreach (var item in Model)
+                                                    {
+                                                        //<div class="form-control chkbox-brd ">
+                                                        if (item.ToolID > 0)
+                                                        {
+                                                            if ((ViewBag.toolnames as List<A1Carpentry.Models.ToolsModel>
+                                                                ).Any(c => c.ToolID == item.ToolID))
+                                                            {
+                                                                <div class="col-lg-3 col-sm-3">
+                                                                    <input type="checkbox" id="ToolName" name="ToolName" checked value="@item.ToolID">
+                                                                    <label class="" for="customCheck">@item.ToolName</label>
+                                                                </div>
+
+                                                            }
+                                                            else
+                                                            {
+                                                                <div class="col-lg-3 col-sm-3">
+                                                                    <input type="checkbox" id="ToolName" name="ToolName" value="@item.ToolID">
+                                                                    <label class="" for="customCheck">@item.ToolName</label>
+                                                                </div>
+                                                            }
+
+                                                        }
+                                                        //</div>
+                                                    }
+
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                        </div>*@
+
+@*<div id="content-1" class="carp-scroll  custom-scrollbar-css p-2">*@
+
+
+@*@foreach (var item in Model)
+    {
+        <div class="form-control chkbox-brd ">
+            @if (item.ToolID > 0)
+            {
+                if ((ViewBag.toolnames as List<A1Carpentry.Models.ToolsModel>
+                    ).Any(c => c.ToolID == item.ToolID))
+                {
+                    <input type="checkbox" id="ToolName" name="ToolName" checked value="@item.ToolID">
+                    <label class="" for="customCheck">@item.ToolName</label>
+                }
+                else
+                {
+                    <input type="checkbox" id="ToolName" name="ToolName" value="@item.ToolID">
+                    <label class="" for="customCheck">@item.ToolName</label>
+                }
+            }
+        </div>
+    }*@
+
+
+
+@*<ul class="list-style">
+
+        @foreach (var item in Model)
+        {
+
+
+            if (item.ToolID > 0)
+            {
+                if ((ViewBag.toolnames as List<A1Carpentry.Models.ToolsModel>).Any(c => c.ToolID == item.ToolID))
+                {
+
+                    <li> <input type="checkbox" id="ToolName" name="ToolName" checked value="@item.ToolID" />@item.ToolName</li>
+                }
+                else
+                {
+                    <li>
+                        <input type="checkbox" id="ToolName" name="ToolName" value="@item.ToolID" />
+                        @item.ToolName
+                    </li>
+                }
+            }
+        }
+    </ul>*@
+
+
+@*</div>*@
+@*<div class="col-sm-12 p-5 p-3">
+                            <div class="text-center">  <button type="submit" onclick="return Validation()" class="btn btn-primary btn-new">Return</button> </div>
+                            <a href="@Url.Action("GarageDetails","SuperAdmin", new { })" class="btn btn-danger btn-new">Back</a>
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+
+
+
+            </section>
+        }
+    </body>
+    </html>
+
+
+    <script>
+        $(function () {
+
+            $("#content-1").mCustomScrollbar({
+
+                theme: "rounded-dots-dark"
+
+
+            });
+        });
+
+
+    </script>*@
+﻿@model IEnumerable<A1Carpentry.Models.ToolsModel>
+@{
+    ViewBag.Title = "TotalToolsdetails";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+        html {
+            box-sizing: border-box;
+            font-family: sans-serif;
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            -ms-overflow-style: scrollbar
+        }
+
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box !important
+        }
+
+        .aria-label {
+        }
+    </style>
+</head>
+<body data-sa-theme="1">
+    <section class="content">
+        <header class="content__title">
+            <h1>Tools Details</h1>
+        </header>
+        <div class="statbox widget box box-shadow">
+            <div class="widget-content widget-content-area">
+                <div class="table-responsive mb-4" id="displayeddata">
+                    <table id="data-table" class="table style-2 table-bordered  table-hover">
+                        <thead>
+                            <tr>
+                                <th>Inventry Number</th>
+                                <th>Tool Serial Number</th>
+                                <th>Tool Name</th>
+                                <th>Tool Type</th>
+                                <th>Assined Employee</th>
+                                <th>Edit/Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                if (item.ToolID > 0)
+                                {
+                                    <tr>
+                                        <td>@item.InventryNumber</td>
+                                        <td>@item.ToolSerialNumber</td>
+                                        <td>@item.ToolName</td>
+                                        <td>@item.ToolType</td>
+                                        <td>
+                                            @foreach (var lst in (ViewBag.userstools as List<A1Carpentry.Models.UsersModel>))
+                                            {
+                                                for (var i = 0; i < lst.TooldsArray.Length; i++)
+                                                {
+                                                    if (lst.TooldsArray[i] == @item.ToolID)
+                                                    {
+                                                        <span>&nbsp;</span><span>@lst.Username</span><span>&nbsp;|</span>
+
+                                                    }
+
+                                                }
+
+                                            }
+
+
+
+                                            @*@if ((ViewBag.userstools as List<A1Carpentry.Models.UsersModel>).Any(c => c.ToolID == item.ToolID))
+                                                {
+                                                    foreach(var lst in (ViewBag.userstools as List<A1Carpentry.Models.UsersModel>))
+                                                    {
+                                                        @lst.Username
+                                                    }
+                                                }*@
+
+                                        </td>
+                                        <td>
+                                            <a href="@Url.Action("UpdateToolsProfile","SuperAdmin", new { id = @item.ToolID, IsEdit = true })" class="shadow-none badge badge-warning">Edit</a>
+                                            <br />
+                                            <br />
+                                            <button type="button" class="open-AddBookDialog shadow-none badge badge-danger" data-toggle="modal" onclick="senduserid(@item.ToolID)" data-target="#exampleModalCenter">
+                                                Delete
+                                            </button>
+                                        </td>
+
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Tools Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="popup-content-text"> Are you sure delete this Record </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                    <button type="button" id="Save" onclick="return SubmitDetails()" class="btn btn-primary">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    var id;
+    function senduserid(data) {
+        id = data;
+        //alert(data);
+    }
+
+</script>
+<script>
+     function SubmitDetails() {
+        debugger
+      $.ajax({
+          url: '/SuperAdmin/DeleteToolsProfile',                 // Changed
+          type: "Get",
+          data: { id: id },
+
+
+
+          success: function (result) {
+              debugger;
+              if (result <= 0) {
+                  debugger;
+                    window.location.href = '@Url.Action("TotalToolsdetails", "SuperAdmin")';
+                }
+              else {
+                  debugger;
+                    window.location.href = '@Url.Action("Login", "Login")';
+                }
+            }
+        })
+
+    };
+</script>

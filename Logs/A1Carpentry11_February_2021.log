@@ -1,0 +1,47 @@
+Logs for: A1Carpentry , A1Carpentry
+[Thursday, February 11, 2021 10:57:04 PM] Error 368 >> Exception occured in : GetJobProfileSummary The string was not recognized as a valid DateTime. There is an unknown word starting at index 0.   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.Convert.ToDateTime(String value, IFormatProvider provider)
+   at System.String.System.IConvertible.ToDateTime(IFormatProvider provider)
+   at System.Convert.ToDateTime(Object value)
+   at A1Carpentry.DBhelper.SqlHelper.GetJobProfileSummary() in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 1466
+[Thursday, February 11, 2021 11:01:19 PM] Error 368 >> Error occured in EmployeeProfile Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendEmail(UsersModel ObjUser) in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1498
+   at A1Carpentry.Controllers.SuperAdminController.employeetools(UsersModel objJobs, List`1 ToolName) in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 161
+[Thursday, February 11, 2021 11:09:01 PM] Error 9076 >> Error occured in EmployeeProfile (Post)Value cannot be null.
+Parameter name: input   at System.Text.RegularExpressions.Regex.Match(String input)
+   at A1Carpentry.CommonUtils.CommonUtils.ValidateEmail(String email) in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\CommonUtils\CommonUtils.cs:line 22
+   at A1Carpentry.Controllers.SuperAdminController.ToolsDetailsinsuperadmin(UsersModel objUser, HttpPostedFileBase file) in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 385
+[Thursday, February 11, 2021 11:09:11 PM] Error 9076 >> Error occured in EmployeeProfile (Post)Value cannot be null.
+Parameter name: input   at System.Text.RegularExpressions.Regex.Match(String input)
+   at A1Carpentry.CommonUtils.CommonUtils.ValidateEmail(String email) in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\CommonUtils\CommonUtils.cs:line 22
+   at A1Carpentry.Controllers.SuperAdminController.ToolsDetailsinsuperadmin(UsersModel objUser, HttpPostedFileBase file) in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 385
+[Thursday, February 11, 2021 11:09:28 PM] Error 9076 >> Error occured in EmployeeProfile (Post)Value cannot be null.
+Parameter name: input   at System.Text.RegularExpressions.Regex.Match(String input)
+   at A1Carpentry.CommonUtils.CommonUtils.ValidateEmail(String email) in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\CommonUtils\CommonUtils.cs:line 22
+   at A1Carpentry.Controllers.SuperAdminController.ToolsDetailsinsuperadmin(UsersModel objUser, HttpPostedFileBase file) in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 385
+[Thursday, February 11, 2021 11:15:12 PM] Error 9076 >> Error occured in EmployeeProfile Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at A1Carpentry.Controllers.SuperAdminController.SendEmail(UsersModel ObjUser) in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 1498
+   at A1Carpentry.Controllers.SuperAdminController.employeetools(UsersModel objJobs, List`1 ToolName) in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 161
+[Thursday, February 11, 2021 11:15:52 PM] Error 9076 >> Error occured in EmployeeProfile (Post)Value cannot be null.
+Parameter name: input   at System.Text.RegularExpressions.Regex.Match(String input)
+   at A1Carpentry.CommonUtils.CommonUtils.ValidateEmail(String email) in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\CommonUtils\CommonUtils.cs:line 22
+   at A1Carpentry.Controllers.SuperAdminController.ToolsDetailsinsuperadmin(UsersModel objUser, HttpPostedFileBase file) in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 385
+[Thursday, February 11, 2021 11:16:41 PM] Error 9076 >> Error occured in EmployeeProfile (Post)Value cannot be null.
+Parameter name: input   at System.Text.RegularExpressions.Regex.Match(String input)
+   at A1Carpentry.CommonUtils.CommonUtils.ValidateEmail(String email) in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\CommonUtils\CommonUtils.cs:line 22
+   at A1Carpentry.Controllers.SuperAdminController.ToolsDetailsinsuperadmin(UsersModel objUser, HttpPostedFileBase file) in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 385
+[Thursday, February 11, 2021 11:18:00 PM] Error 9076 >> Error occured in GetPreTasksById Invalid attempt to Read when reader is closed.   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.Read()
+   at A1Carpentry.DBhelper.SqlHelper.GetPreTasksById(Int32 PreTaskID) in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\DBhelper\SqlHelper.cs:line 2153
+[Thursday, February 11, 2021 11:22:00 PM] Error 9076 >> Error occured in EmployeeProfile (Post)Value cannot be null.
+Parameter name: input   at System.Text.RegularExpressions.Regex.Match(String input)
+   at A1Carpentry.CommonUtils.CommonUtils.ValidateEmail(String email) in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\CommonUtils\CommonUtils.cs:line 22
+   at A1Carpentry.Controllers.SuperAdminController.ToolsDetailsinsuperadmin(UsersModel objUser, HttpPostedFileBase file) in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 385
+[Thursday, February 11, 2021 11:28:15 PM] Error 9076 >> Error occured in EmployeeProfile (Post)Value cannot be null.
+Parameter name: input   at System.Text.RegularExpressions.Regex.Match(String input)
+   at A1Carpentry.CommonUtils.CommonUtils.ValidateEmail(String email) in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\CommonUtils\CommonUtils.cs:line 22
+   at A1Carpentry.Controllers.SuperAdminController.ToolsDetailsinsuperadmin(UsersModel objUser, HttpPostedFileBase file) in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 385
+[Thursday, February 11, 2021 11:29:46 PM] Error 9076 >> Error occured in EmployeeProfile (Post)Value cannot be null.
+Parameter name: input   at System.Text.RegularExpressions.Regex.Match(String input)
+   at A1Carpentry.CommonUtils.CommonUtils.ValidateEmail(String email) in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\CommonUtils\CommonUtils.cs:line 22
+   at A1Carpentry.Controllers.SuperAdminController.ToolsDetailsinsuperadmin(UsersModel objUser, HttpPostedFileBase file) in D:\Dr\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SuperAdminController.cs:line 385

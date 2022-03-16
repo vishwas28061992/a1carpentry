@@ -1,0 +1,6 @@
+Logs for: A1Carpentry , A1Carpentry
+[Friday, June 07, 2019 11:41:00 AM] Information 12236 >> count 0 in TaskNumber (PreTasks)
+[Friday, June 07, 2019 03:18:06 PM] Error 1000 >> Error occured in ReasonSubmit (JsonResult)Input string was not in a correct format.   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at A1Carpentry.Controllers.SupervisorController.ReasonSubmit(String Reason, String JobDId) in C:\Users\lambda\Desktop\ATT Lighter Version\A1Carpentry MySql 04_04_19\A1Carpentry\Controllers\SupervisorController.cs:line 118

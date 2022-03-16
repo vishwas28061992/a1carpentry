@@ -1,0 +1,353 @@
+﻿@model A1Carpentry.Models.JobDetailsModel
+
+@{
+
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+</head>
+<body data-sa-theme="1">
+
+
+    @using (Html.BeginForm("TimeCardManualEntry", "TimeCard", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+    {
+
+        @Html.AntiForgeryToken() // this is for prevent CSRF attack
+        @Html.ValidationSummary(true)
+
+        @*@Html.HiddenFor(a => a.JobID)
+            @Html.HiddenFor(a => a.JobDetailID)*@
+
+
+
+        <section class="content">
+            <div class="content__inner">
+                <header class="content__title">
+                    <h1> Time Card Manual Entry </h1>
+                </header>
+
+                <div>
+                    <span class="alert alert-danger" style="display:none" id="lblError">
+                        <b> Please enter all fields to proceed.</b>
+                    </span>
+                    <span class="alert alert-danger" style="display:none" id="lblDateError">
+                        <b> End date cannot be less than start date </b>
+                    </span>
+                    @if (ViewData["errormessage"] != null)
+                    {
+                        <p class="alert alert-danger" id="successMessage"><b> @ViewData["errormessage"] </b></p>
+                    }
+
+                    @if (ViewData["successmessage"] != null)
+                    {
+                        <p class="alert alert-success" id="successMessage"><b> @ViewData["successmessage"] </b></p>
+                    }
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+
+                        <div class="row">
+                            <div class="col-sm-6">
+
+                                <div class="form-group">
+                                    @*@Html.TextBoxFor(m => m.JobName, new { @class = "form-control", autocomplete = "off", placeholder = "Job Profile*" })*@
+                                    @Html.DropDownListFor(m => m.JobID, new SelectList(Model.lstJobs, "JobID", "JobNumber"), " -- Select Job Number* --", new { @class = "form-control a-select ", id = "JobID" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+
+
+                            </div>
+                            <div class="col-sm-6" id="divTaskIdDDL">
+
+                                <div class="form-group">
+                                    @*@Html.TextBoxFor(m => m.JobTask, new { @class = "form-control", autocomplete = "off", placeholder = "Job Task*" })*@
+                                    @Html.DropDownListFor(m => m.TaskID, new SelectList(Model.lstTasks, "TaskID", "TaskName"), "-- Select Job Task* --", new { @class = "form-control a-select ", id = "TaskID" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+
+                            </div>
+
+                            <div class="col-sm-6" id="divJobTaskText">
+
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.JobTask, new { @class = "form-control", autocomplete = "off", placeholder = "Job Task*" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+
+                            </div>
+
+                            <div class="col-sm-6">
+
+                                <div class="form-group">
+                                    @*@Html.TextBoxFor(m => m.JobType, new { @class = "form-control", autocomplete = "off", placeholder = "Job Type*" })*@
+                                    @Html.DropDownListFor(m => m.JobTypeID, new SelectList(Model.lstJobTypes, "JobTypeID", "JobType"), " -- Select Job Type* -- ", new { @class = "form-control a-select ", id = "JobTypeID" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.StartTime, new { @class = "form-control datetime-picker", autocomplete = "off", placeholder = "Start a date & time*" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    @Html.TextBoxFor(m => m.EndTime, new { @class = "form-control datetime-picker", autocomplete = "off", placeholder = "End a date & time*" })
+                                    <i class="form-group__bar"></i>
+                                </div>
+                            </div>
+
+
+                            <div class="col-sm-6">
+                                <input type="file" id="uploadedFile" name="file" class="dropzone">
+                            </div>
+
+
+
+
+                            <div class="form-group">
+                                <a href="#" id="btnGetLocation" class="btn btn-success btn-new">GET LOCATION</a>
+                            </div>
+
+                            <div class="col-sm-4" style="display:none; font-size:16px;  color:gold;" id="divLoc">
+                                <label>YOUR CURRENT LOCATION:</label> <br>
+                                <label>Latitude - <span id="lati"></span></label>
+                                @Html.HiddenFor(a => a.Latitude, new { id = "latt" })
+                                <label>Longitude - <span id="longi"></span> </label>
+                                @Html.HiddenFor(a => a.Longitude, new { id = "longgi" })
+                                @Html.HiddenFor(a => a.StartTime, new { id = "start" })
+                                @Html.HiddenFor(a => a.EndTime, new { id = "end" })
+
+
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a id="gMap" href="" target="_blank">Show on Map</a>
+                                @*<label style="font-size:16px; color:gold;">Please click on submit to start your job..!!</label>*@
+                                <div id="errDiv"></div>
+
+                            </div>
+
+
+                            <div class="col-sm-12">	<div class="text-center">  <button type="submit" onclick="return Validation()" class="btn btn-primary btn-new">Submit</button> </div></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    }
+
+
+
+
+
+
+
+</body>
+</html>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+
+<script>
+    function isNumber(evt) {
+        var iKeyCode = (evt.which) ? evt.which : evt.keyCode
+        if (iKeyCode != 46 && iKeyCode > 31 && (iKeyCode < 48 || iKeyCode > 57))
+            return false;
+
+        return true;
+    }
+</script>
+
+
+<script>
+
+
+    function Validation() {
+        debugger;
+        var validations = true;
+
+        var jobID = document.getElementById("JobID").value;
+        var taskID = document.getElementById("TaskID").value;
+        var jobTask = document.getElementById("JobTask").value;
+        var jobTypeID = document.getElementById("JobTypeID").value;
+        var startDate = document.getElementById("StartTime").value;
+        var endDate = document.getElementById("EndTime").value;
+
+
+
+        if (jobID == 0 || jobID == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+
+        //if (taskID == 0 && jobTask == "") {
+        //    document.getElementById("lblError").style.display = "inline";
+        //    validations = false;
+        //}
+
+        if (jobTypeID == 0 || jobTypeID == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+
+
+        if (startDate == "" || startDate == null || startDate == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+
+        if (endDate == "" || endDate == null || endDate == undefined) {
+            document.getElementById("lblError").style.display = "inline";
+            validations = false;
+        }
+
+
+        if (startDate > endDate) {
+            document.getElementById("lblDateError").style.display = "inline";
+            validations = false;
+        }
+
+
+        return validations;
+
+    }
+
+
+</script>
+
+
+<script>
+    $(function () {
+        var error = $('#errDiv');
+        $('#btnGetLocation').click(function () {
+            debugger;
+
+            var currentdate = new Date().toLocaleString();
+
+            $("#start").val(currentdate);
+
+
+            if (Modernizr.geolocation) {
+                navigator.geolocation.getCurrentPosition(currentPosition, positionError);
+
+
+            }
+            else {
+                error.html("GeoLocation API of HTML 5 is not supported");
+            }
+        });
+
+        function currentPosition(currentPos) {
+            debugger
+            var coordinates = currentPos.coords;
+            $('#lati').text(coordinates.latitude);
+            $('#longi').text(coordinates.longitude);
+
+            var lattiii = coordinates.latitude;
+            var longgiii = coordinates.longitude;
+
+            $("#latt").val(lattiii);
+            $("#longgi").val(longgiii);
+            document.getElementById("divLoc").style.display = "inline";
+            var googleMap = $('#gMap');
+            googleMap.attr("href", "http://maps.google.com/maps?q=" + coordinates.latitude + "," + coordinates.longitude);
+
+
+        }
+
+        function positionError(errCode) {
+            switch (errCode.code) {
+                case 0:
+                    error.html("Unknown Error - has occured");
+                    break;
+                case 1:
+                    error.html("Permission Denied - By the user");
+                    break;
+                case 2:
+                    error.html("Position/Location Unavailable");
+                    break;
+                case 3:
+                    error.html("Timeout");
+                    break;
+            }
+        }
+    });
+</script>
+
+<script>
+
+    $('#JobID').change(function () {
+        debugger;
+        LoadTasksByJobId($(this).val(), '')
+    });
+
+    function LoadTasksByJobId(JobID, taskID) {
+        debugger
+        $.ajax({
+            url: '/TimeCard/GetTasksByJobID',                 // Changed
+            data: { JobID: JobID },
+            success: function (data) {
+                var ddTask = $('#TaskID');
+                ddTask.children().remove();
+                ddTask.append($("<option>").val("").text("-- Select Job Task* --"))
+                $.each(data, function (i, record) {
+                    ddTask.append($('<option>').val(record.TaskID).text(record.TaskName));
+                })
+                $('#TaskID').append(ddTask);
+
+                if (taskID != '')
+                    $('#TaskID').val(taskID);
+                if (JobID != '') {
+
+                    $('#JobTypeID').val(data[0].TaskTypeID);
+
+
+                }
+
+            }, async: false
+        })
+    };
+
+
+</script>
+
+<script>
+
+    $('#TaskID').change(function () {
+        debugger;
+        var jobID = document.getElementById("JobID").value;
+        var taskID = document.getElementById("TaskID").value;
+
+
+        if (jobID != 0 && jobID != undefined && taskID != 0 && taskID != undefined) {
+            document.getElementById("divJobTaskText").style.display = "none";
+
+        }
+
+    });
+</script>
+
+
+<script>
+
+    $('#JobTask').click(function () {
+        debugger;
+        document.getElementById("divTaskIdDDL").style.display = "none";
+    });
+</script>

@@ -1,0 +1,311 @@
+﻿﻿@model IEnumerable<A1Carpentry.Models.PreTasksModel>
+@{
+    ViewBag.Title = "TasksDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+        .popup-content-text {
+            text-align: center;
+            color: #fff;
+            font-size: 20px;
+        }
+        html {
+            box-sizing: border-box;
+            font-family: sans-serif;
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            -ms-overflow-style: scrollbar
+        }
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box !important
+        }
+    </style>
+</head>
+<body data-sa-theme="1">
+    <section class="content container-fluid">
+        <header class="content__title">
+            <h1>Tasks Details</h1>
+        </header>
+        <div class="statbox widget box box-shadow">
+            <div class="widget-content widget-content-area">
+                <div class="table-responsive mb-4">
+                    <table id="data-table" class="table style-2 table-bordered  table-hover">
+                        <thead>
+                            <tr>
+                                @*<th>PreTask ID</th>*@
+                                <th>Task Number</th>
+                                <th>Task Name</th>
+                                <th>Task Description</th>
+                                <th>Job Type</th>
+                                <th>Edit/Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    @*<td>@item.PreTaskID</td>*@
+                                    <td>@item.PreTaskNumber</td>
+                                    <td>@item.PreTaskName</td>
+                                    <td>@item.PreTaskDescription</td>
+                                    @*<td>@item.JobTypeID</td>*@
+                                    @foreach (var lst in item.JobTypes)
+                                    {
+                                        <td>@lst.JobType</td>
+                                    }
+                                    <td>
+                                        <a href="@Url.Action("UpdatePreTaskProfile","SuperAdmin", new { id = @item.PreTaskID, IsEdit = true })" class="shadow-none badge badge-warning">Edit</a>
+                                        <br />
+                                        <br />
+                                        @*<a href="@Url.Action("DeletePreTaskProfile","SuperAdmin", new { id = @item.PreTaskID})" class="shadow-none badge badge-success">Yes</a>*@
+                                        <button type="button" class="open-AddBookDialog shadow-none badge badge-danger btn-nw-danger" data-toggle="modal" onclick="senduserid(@item.PreTaskID)" data-target="#exampleModalCenter">
+                                            Delete
+                                        </button>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Task Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="popup-content-text"> Are you sure want to delete this Task</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                    <button type="button" id="Save" onclick="return SubmitDetails()" class="btn btn-primary">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    var id;
+    function senduserid(data) {
+        id = data;
+        //alert(data);
+    }
+</script>
+<script type="text/javascript">
+    $(document).on("click", ".open-AddBookDialog", function () {
+        debugger;
+        $('.exampleModalCenter').modal('show');
+    });
+</script>
+<script>
+     function SubmitDetails() {
+        debugger
+      $.ajax({
+          url: '/SuperAdmin/DeletePreTaskProfile',                 // Changed
+          type: "Get",
+          data: { id: id },
+
+
+          success: function (result) {
+              debugger;
+              if (result == true) {
+                  debugger;
+                    window.location.href = '@Url.Action("TasksDetails", "SuperAdmin")';
+                }
+              else {
+                
+                    window.location.href = '@Url.Action("Login", "Login")';
+                }
+            }
+        })
+
+    };
+</script>
+
+
+
+
+
+
+
+
+
+
+@*@model IEnumerable<A1Carpentry.Models.PreTasksModel>
+
+
+    @{
+        ViewBag.Title = "TasksDetails";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <style>
+            .popup-content-text {
+                text-align: center;
+                color: #fff;
+                font-size: 20px;
+            }
+
+            html {
+                box-sizing: border-box;
+                font-family: sans-serif;
+                line-height: 1.15;
+                -webkit-text-size-adjust: 100%;
+                -ms-text-size-adjust: 100%;
+                -ms-overflow-style: scrollbar
+            }
+
+            *,
+            ::after,
+            ::before {
+                box-sizing: border-box !important
+            }
+        </style>
+    </head>
+
+    <body data-sa-theme="1">
+
+        <section class="content container-fluid">
+            <header class="content__title">
+                <h1>Tasks Details</h1>
+            </header>
+
+
+
+            <div class="statbox widget box box-shadow">
+
+                <div class="widget-content widget-content-area">
+
+
+                    <div class="table-responsive mb-4">
+                        <table id="data-table" class="table style-2 table-bordered  table-hover">
+                            <thead>
+                                <tr>*@
+@*<th>PreTask ID</th>*@
+@*<th>Task Number</th>
+            <th>Task Name</th>
+            <th>Task Description</th>
+            <th>Job Type</th>
+
+            <th>Edit/Delete</th>
+
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {*@
+<tr>
+    @*<td>@item.PreTaskID</td>*@
+    @*<td>@item.PreTaskNumber</td>
+        <td>@item.PreTaskName</td>
+        <td>@item.PreTaskDescription</td>*@
+    @*<td>@item.JobTypeID</td>*@
+    @*@foreach (var lst in item.JobTypes)
+            {
+                <td>@lst.JobType</td>
+            }
+
+        <td>
+            <a href="@Url.Action("UpdatePreTaskProfile","SuperAdmin", new { id = @item.PreTaskID, IsEdit = true })" class="shadow-none badge badge-warning">Edit</a>
+            <br />
+            <br />*@
+    @*<a href="@Url.Action("DeletePreTaskProfile","SuperAdmin", new { id = @item.PreTaskID})" class="shadow-none badge badge-success">Yes</a>*@
+    @*<button type="button" class="open-AddBookDialog shadow-none badge badge-danger" data-toggle="modal" onclick="senduserid(@item.PreTaskID)" data-target="#exampleModalCenter">
+                                                Delete
+                                            </button>
+                                        </td>
+                                        </tr>
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="popup-content-text"> Are you sure delete this Record </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                            <button type="button" id="Save" onclick="return SubmitDetails()" class="btn btn-primary">Yes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </body>
+        </html>
+
+        <script>
+            var id;
+            function senduserid(data) {
+                id = data;
+                //alert(data);
+            }
+        </script>
+
+        <script type="text/javascript">
+            $(document).on("click", ".open-AddBookDialog", function () {
+                debugger;
+                $('.exampleModalCenter').modal('show');
+            });
+        </script>
+        <script>
+             function SubmitDetails() {
+                debugger
+              $.ajax({
+                  url: '/SuperAdmin/DeletePreTaskProfile',                 // Changed
+                  type: "Get",
+                  data: { id: id },
+
+
+                  success: function (result) {
+                      debugger;
+                      if (result == true) {
+                          debugger;
+                            window.location.href = '@Url.Action("TasksDetails", "SuperAdmin")';
+                        }
+                      else {
+                          debugger;
+                            //window.location.href = '@Url.Action("Login", "Login")';
+                        }
+                    }
+                })
+
+            };
+        </script>*@
+
+

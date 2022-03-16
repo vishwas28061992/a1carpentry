@@ -1,0 +1,154 @@
+﻿@model A1Carpentry.Models.JobsModel
+@{
+    ViewBag.Title = "MoreToolProfile";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+
+
+        html {
+            box-sizing: border-box;
+            font-family: sans-serif;
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            -ms-overflow-style: scrollbar
+        }
+
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box !important
+        }
+    </style>
+</head>
+
+<body data-sa-theme="1">
+
+    <section class="content container-fluid">
+        <header class="content__title">
+            <h1>More Garege  details </h1>
+        </header>
+
+
+
+       <div class="statbox widget box box-shadow">
+
+           <div class="widget-content widget-content-area">
+
+
+
+
+
+
+
+
+               <div class="table-responsive mb-4">
+                   <table id="data-table" class="table style-2 table-bordered  table-hover">
+                       <thead>
+                           <tr>
+
+                               <th>Task Name</th>
+                               <th>Tool Names</th>
+                               <th>Tool Inventry Numbers </th>
+                               <th>Work Status by user</th>
+                               <th>supervior status</th>
+                               <th></th>
+      
+                           </tr>
+                       </thead>
+                       <tbody>
+                           <tr>
+                               <td>Fixing pipe, fixing pipe </td>
+                               <td>
+
+                                        @*@foreach (var item in)
+                                        {
+                                            @item.ToolName
+                                            <label>,</label>
+                                        }*@
+                                    </td>
+                            
+                               <td>A123,A124,A125,A126,A127,A128</td>
+                               <td>Inprogress</td>
+                               <td>Deny</td>
+                               
+                               <td>
+                                   <a href="@Url.Action("ToolsEditprofile","SuperAdmin", new { id =@Model,str=@Model})" class="shadow-none badge badge-info">Tools Edit</a>
+                               </td>
+                               
+                           </tr>
+                         
+
+                       </tbody>
+                   </table>
+               </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+               @*<div class="row">
+            <div class="col-md-3">
+                <label>Tool Assign To :  </label>
+            </div>
+            <div class="col-md-9">   @Model.username</div>
+            <div class="col-md-3">
+                <label>Job Number :      </label>
+            </div>
+            <div class="col-md-9">
+                @Model.JobNumber
+            </div>
+            <div class="col-md-3">
+                <label>Job Name:        </label>
+            </div>
+            <div class="col-md-9">
+                @Model.JobName
+            </div>
+            <div class="col-md-3"><label>Tool Taken  Date:      </label></div>
+            <div class="col-md-9">      @Model.StartDate</div>
+            <div class="col-md-3">
+                <label>Tool Return Date:        </label>
+            </div>
+            <div class="col-md-9"> @Model.EndDate</div>
+            <div class="col-md-3 ">
+                <label>Tool Names:      </label>
+            </div>
+            <div class="col-md-9 ">
+
+                    @foreach (var item in Model.Tools)
+                    {
+                        @item.ToolName
+                        <label>,</label>
+                    }
+
+                    <a href="@Url.Action("ToolsEditprofile","SuperAdmin", new { id =@Model.JobID,str=@Model.ToolIds})" class="shadow-none badge badge-info">Tools Edit</a>
+
+            </div>
+        </div>*@
+
+               @*<label>TOOLIDS:         </label>@Model.ToolIds<br />*@
+
+
+
+
+           </div>
+        </div>
+    </section>
+</body>
+</html>
+
+

@@ -1,0 +1,260 @@
+﻿@model IEnumerable<A1Carpentry.Models.JobDetailsModel>
+
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int Sno = 1;
+    //int jobDetailsid = 0;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <style>
+
+
+        html {
+            box-sizing: border-box;
+            font-family: sans-serif;
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            -ms-overflow-style: scrollbar
+        }
+
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box !important
+        }
+    </style>
+
+
+
+</head>
+<body data-sa-theme="1">
+
+    @Html.Hidden("SomeValue", new { id = "hat" });
+
+    <section class="content">
+        <header class="content__title">
+            <h1>Supervisor Approval</h1>
+        </header>
+
+        @if (ViewData["successmessage"] != null)
+        {
+            <p class="alert alert-success" id="successMessage">@ViewData["successmessage"]</p>
+        }
+
+        <div class="statbox widget box box-shadow">
+
+            <div class="widget-content widget-content-area">
+
+                <div class="table-responsive mb-4">
+                    <table id="data-table" class="table style-2 table-bordered  table-hover">
+                        <thead>
+                            <tr>
+                                <th>SNo</th>
+                                <th>Job Details ID</th>
+                                <th>Work Done Image</th>
+                                <th>Name</th>
+                                <th>Job Name</th>
+                                <th>Job Task</th>
+                                <th>Job Type</th>
+                                <th>Start Date</th>
+                                <th>End Date</th>
+                                <th>&nbsp;</th>
+                                <th>&nbsp;</th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+
+                            @foreach (var item in Model)
+                            {
+
+
+                                <tr>
+                                    <td>@(Sno++)</td>
+                                    <td>@item.JobDetailID</td>
+                                    <td>
+                                        <a href="@Url.Action("ShowImage","Supervisor", new {adminId=@item.JobDetailID,userName=@item.UserName,jobName=@item.JobName,jobTask=@item.JobTask,jobType=@item.JobType,endDate=@item.EndTime,startDate =@item.StartTime,path = @item.AttachmentFilePath, id = "Supervisor"} )">
+                                            <img class="img-thumbnail rounded-circle" height="50" width="50" src="~/files/@item.AttachmentFilePath">
+                                        </a>
+                                    </td>
+                                    <td>@item.UserName</td>
+                                    <td>@item.JobName</td>
+                                    <td>@item.JobTask</td>
+                                    <td>@item.JobType</td>
+                                    <td>@item.StartTime</td>
+                                    <td>@item.EndTime</td>
+
+
+                                    @if (item.Approval == 0)
+                                    {
+                                        <td>
+                                            <a href="@Url.Action("Approval","Supervisor", new { id = @item.JobDetailID})" class="shadow-none badge badge-warning">Approve</a>
+                                        </td>
+
+                                        <td>
+                                            <label for="myalue" id="123" class="123" style="vertical-align: middle; display:none"></label>
+                                            <a data-toggle="modal" data-target="#exampleModalCenter" data-id="@item.JobDetailID" title="Add this item" class="open-AddBookDialog shadow-none badge badge-danger" href="#">Deny</a>
+                                            @*<a href="@Url.Action("ReasonSubmit","Supervisor", new { id = @item.JobDetailID, IsDenied = true })" data-toggle="modal" data-target="#exampleModalCenter" class="123 shadow-none badge badge-danger" >Deny</a>*@
+
+                                        </td>
+                                    }
+                                    else if (item.Approval == 1)
+                                    {
+                                        <td>
+                                            <button class="shadow-none badge badge-success" disabled="disabled">Approved</button>
+                                        </td>
+                                        <td></td>
+                                    }
+                                    else if (item.Approval == 2)
+                                    {
+                                        <td>
+                                            <button class="shadow-none badge badge-danger" disabled="disabled">Denied</button>
+                                        </td>
+                                        <td></td>
+                                    }
+                                    else if (item.Approval == 3)
+                                    {
+                                        <td>
+                                            <button class="shadow-none badge badge-success" disabled="disabled">Re-Approved</button>
+                                        </td>
+                                        <td></td>
+                                    }
+
+
+                                </tr>
+                            }
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Deniel Reason</h5>
+                    <button type="button" style="color:white" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="form-group col-md-12">
+                    @Html.TextArea("DenyTextReason", new { @class = " popup_text textarea-autosize DenyTextReason", cols = "50", placeholder = "Why Denial ?", id = "DenyTextReason" })
+                    <i class="form-group__bar"></i>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" name="hiddenValue" id="hiddenValue" value="" />
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    @*<button type="button"class="btn btn-secondary" data-dismiss="modal" id="close" onclick="return CloseDetails()">Close</button>*@
+                    <button type="button" id="Save" onclick="return SubmitDetails()" class="btn btn-warning">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+@*<script type="text/javascript" src="~/Sample.js"></script>*@
+<script type="text/javascript">
+    $(document).on("click", ".open-AddBookDialog", function () {
+        debugger;
+        var my_id_value = $(this).data('id');
+        $(".modal-body #hiddenValue").val(my_id_value);
+        $('#123').text(my_id_value);
+        $('.exampleModalCenter').modal('show');
+    });
+
+</script>
+
+@*$(document).on("click", ".deck-title", function() {
+        //.....
+    });*@
+
+@*<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".open-AddBookDialog").click(function () {
+                debugger;
+                var my_id_value = $(this).data('id');
+                $(".modal-body #hiddenValue").val(my_id_value);
+                $('#123').text(my_id_value);
+                $('.exampleModalCenter').modal('show');
+                alert("The paragraph was clicked.");
+            });
+        });
+    </script>*@
+
+
+<script type="text/javascript">
+
+    $('#myModal').on('shown.bs.modal', function () {
+        debugger
+
+        $('#myInput').trigger('focus')
+    });
+
+
+</script>
+
+
+
+<script type="text/javascript">
+
+
+
+    $(document).on("click", ".open-AddBookDialog", function () {
+        debugger;
+        var my_id_value = $(this).data('id');
+        $(".modal-body #hiddenValue").val(my_id_value);
+        $('#123').text(my_id_value);
+        $('.exampleModalCenter').modal('show');
+    });
+
+    function SubmitDetails() {
+        debugger
+        var Reason = $("#DenyTextReason").val();
+        var JobDId123 = $(".modal-body #hiddenValue").val();
+        var JobDId = $("#123").text();
+        //var 123 = $("#123").text();
+
+        $.ajax({
+            url: '/Supervisor/ReasonSubmit',                 // Changed
+            data: { Reason: Reason, JobDId: JobDId},
+            success: function (result) {
+                if (result == true) {
+                    window.location.href = '@Url.Action("AdminNotification", "Supervisor")';
+                }
+                else {
+                    window.location.href = '@Url.Action("SupervisorApproval", "Supervisor")';
+                }
+            }
+        })
+    };
+
+</script>
